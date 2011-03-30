@@ -231,7 +231,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 LS_OPTION='--color=auto'
-if [ -z `ls "${LS_OPTION}" / 2>/dev/null` ]; then
+
+ls ${LS_OPTION} / 2> /dev/null
+if [ $? -eq 0 ]; then
     LS_OPTION='-G'
 fi
 
