@@ -234,6 +234,8 @@ LS_OPTION='--color=auto'
 
 ls ${LS_OPTION} / &> /dev/null
 if [ $? -eq 0 ]; then
+    # do nothing
+else
     LS_OPTION='-G'
 fi
 
