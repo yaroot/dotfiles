@@ -1,0 +1,25 @@
+[user]
+    name  = real name
+    email = email@example.com
+[alias]
+    br  = branch
+    brl = branch -av
+    rl  = remote -v
+    a   = add
+    c   = commit -m
+    ca  = commit -am
+    r   = remote
+    co  = checkout
+    ps  = push
+    pl  = pull
+    s   = status
+    st  = stash
+    m   = merge
+    l   = log --oneline --graph --decorate
+[color]
+    ui  = auto
+[merge]
+    tool = vimdiff
+[core]
+    editor = vim
+
