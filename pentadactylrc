@@ -1,0 +1,4 @@
+
+map <esc> :stop<cr>
+
+" vim: set ft=pentadactyl:
