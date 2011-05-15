@@ -23,7 +23,7 @@ fi
 ( sleep 3s && ibus-daemon --xim &)
 if [ "`acpi -b`" ]; then
     ( sleep 3s && wicd-client &)
-    ( sleep 1s && synclient TouchpadOff=1 &)
+    #( sleep 1s && synclient TouchpadOff=1 &)
 fi
 ( sleep 4s && xbindkeys -f $HOME/.xbindkeysrc & )
 #( sleep 2s && urxvtd -q -o -f &)
