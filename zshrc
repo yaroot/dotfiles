@@ -254,12 +254,10 @@ alias -g L='| less'
 alias -g G='| grep --color=auto -n'
 alias grep='grep --color=auto -n'
 alias iftop='iftop -B'
-#alias chrome='( chromium --proxy-server=localhost:8123 &)'
 alias hdtemp='netcat localhost 7634'
 alias pc='proxychains'
 alias vbox='VirtualBox &'
 alias kb="xmodmap -e 'keycode 66 = Escape' -e 'clear Lock'"
-#alias fin='find . -iname '
 alias tty-clock='tty-clock -c'
 alias rd='rdesktop -u administrator -g 1024x768 -x m -r clipboard'
 #alias rdd='rdesktop -u administrator -g 1600x1000 -r sound:local -r clipboard -5 -x 0x80 -z -b'
@@ -283,22 +281,14 @@ alias vd='vimdiff'
 alias gd='gvimdiff'
 alias wifi='wicd-curses'
 alias getweather='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
-alias insaur='sudo pacman -U *pkg.tar.xz'
-alias vm='VBoxManage'
-alias finc='tsocks finch'
-alias gentoo='~/.gprefix'
-alias mutt="TERM='rxvt-unicode-256color' mutt"
 alias m="man"
 alias p="pinfo"
-alias pac="pacman"
+
+# suffix alias
+alias -s git='git clone'
 
 # dir alias
-hash -d pkg=~/.home/pkgbuilds
-hash -d vim=~/.vim
-hash -d repos=~/repos
-hash -d home=~/.home
-#hash -d http=~/htdocs
-hash -d usr=~/.usr
+hash -d vim=$HOME/.vim
 #}}}
 
 #{{{ completion configuration
