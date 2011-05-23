@@ -1,0 +1,10 @@
+
+altscreen on
+startup_message off
+crlf off
+
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+#caption always "%{yK} $USER@%H | %{yK}%c | %{yK}%-w%{yK}%50>%{yb}%n %t%{-}%+w%<%{- yK}"
+
