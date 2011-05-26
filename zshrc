@@ -4,9 +4,7 @@ export PAGER=`which less`
 export LESSOPEN="|lesspipe.sh %s"
 export EDITOR=`which vim`
 
-if [ -f $HOME/.myenvrc ]; then
-    source $HOME/.myenvrc
-fi
+source $HOME/.myenvrc
 #}}}
 
 #{{{ Settings
