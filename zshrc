@@ -238,8 +238,6 @@ else
 fi
 
 alias ls="ls ${LS_OPTION}"
-alias ll="ls -ahl ${LS_OPTION}"
-alias la="ls -hl ${LS_OPTION}"
 
 alias more='less'
 
