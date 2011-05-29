@@ -1,0 +1,12 @@
+
+# vim files
+*~
+*.sw[a-z]
+
+# Mac OSX
+.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
