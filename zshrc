@@ -1,10 +1,9 @@
+#!/bin/zsh
 
 #{{{ Environment variables
 export PAGER=`which less`
 export LESSOPEN="|lesspipe.sh %s"
 export EDITOR=`which vim`
-
-source $HOME/.myenvrc
 #}}}
 
 #{{{ Settings
