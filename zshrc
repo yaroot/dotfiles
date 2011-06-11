@@ -39,9 +39,9 @@ autoload -U zmv
 autoload -U zargs
 #autoload -U promptinit
 #promptinit
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' formats '[%b]'
+#autoload -Uz vcs_info
+#zstyle ':vcs_info:*' enable git
+#zstyle ':vcs_info:git:*' formats '[%b]'
 #}}}
 
 # prompts {{{
@@ -69,7 +69,7 @@ else
 #    esac
 
     PS1='%(0?.%F{green}.%F{red})%(0#.#.>)%f '
-    RPS1='%F{red}%m %F{blue}${vcs_info_msg_0_} %F{green}%~'
+    RPS1='%F{red}%m %F{green}%~'
     PS2='%B%F{white}%_%f%(0?.%F{green}.%F{red})%(0#.#.>)%f '
     RPS2=$RPS1
     PS3='%B%F{white}?#%f%(0?.%F{green}.%F{red})%(0#.#.>)%f '
@@ -163,12 +163,6 @@ compctl -g '/var/run/daemons/*(:t)' dstop drestart
 ### }}}
 
 #{{{ Functions
-
-function precmd()
-{
-    vcs_info
-}
-
 
 function x()
 {
