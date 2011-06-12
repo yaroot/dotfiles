@@ -15,6 +15,7 @@
     s   = status
     st  = stash
     m   = merge
+    sm  = submodule
     l   = log --oneline --graph --decorate
 [color]
     ui  = auto
