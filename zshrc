@@ -194,5 +194,9 @@ function fin()
     find . -iname "*$1*"
 }
 
+function quite(){
+    "$@" 2>&1 > /dev/null
+}
+
 #}}}
 
