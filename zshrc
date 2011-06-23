@@ -2,8 +2,9 @@
 
 #{{{ Environment variables
 export PAGER=`which less`
-export LESSOPEN="|lesspipe.sh %s"
 export EDITOR=`which vim`
+which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
+which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 #}}}
 
 #{{{ Settings
