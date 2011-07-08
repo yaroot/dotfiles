@@ -16,7 +16,8 @@
     st  = stash
     m   = merge
     sm  = submodule
-    l   = log --oneline --graph --decorate
+    #l   = log --oneline --graph --decorate
+    l   = log --pretty='%h %ad%x09%an %d%x09%s' --decorate
 [color]
     ui  = auto
 [merge]
