@@ -106,8 +106,8 @@ URxvt.cursorColor: green
 
 !! clickable url
 URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      /usr/bin/firefox
-URxvt.matcher.button:   1
+URxvt.urlLauncher:      urxvt-url.sh
+URxvt.matcher.button:   3
 !}}}
 
 !{{{ xscreensaver
