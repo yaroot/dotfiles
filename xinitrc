@@ -13,7 +13,7 @@ fi
 # Slow the mouse
 ( sleep 1s && xset m 10/10 ) &
 # Sync two X clipboard
-( sleep 2s && autocutsel -fork) &
+#( sleep 2s && autocutsel -fork) &
 ( sleep 2s && autocutsel -selection PRIMARY -fork ) &
 # load X configs
 ( sleep 3s && xrdb $HOME/.Xdefaults ) &
