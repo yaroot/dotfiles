@@ -77,6 +77,7 @@ else
     RPS3=$RPS1
     ZCALCPROMPT='%F{blue}%1v>%f '
 fi
+#}}}
 
 #{{{ alias
 alias ..='cd ..'
@@ -125,7 +126,6 @@ alias ht='htop'
 alias sdo='sudo su ${USER} -c'
 alias s='sudo'
 alias g='git'
-alias gs='git status'
 alias fuckgfw='ssh -CD'
 alias v='gvim'
 alias vd='vimdiff'
