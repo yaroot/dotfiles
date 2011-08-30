@@ -102,9 +102,15 @@ macro index P '<pipe-message>cat > ~/' 'save message as'
 
 #######################
 
-source ~/.mutt/gpg.rc
+source ~/.mutt/gpg.rc # copy from mutt samples
 source ~/.mutt/colors
 
+source ~/.mutt/gpg
+
+#set pgp_autosign=yes
+#set pgp_sign_as=0xXXXXXXXX
+#set pgp_replyencrypt=yes
+#set pgp_timeout=1800
 
 source ~/.mutt/account
 
