@@ -1,0 +1,123 @@
+
+
+###############
+#   Account   #
+###############
+
+#########################
+
+set header_cache                    = ~/.mutt/cache/headers
+set message_cachedir                = ~/.mutt/cache/bodies
+set certificate_file                = ~/.mutt/certificates
+set mailcap_path                    = ~/.mutt/mailcap
+
+set editor                          = 'vim'
+
+set imap_keepalive                  = 100
+set timeout                         = 3
+set mail_check                      = 0
+set sort_alias                      = alias
+set reverse_alias
+unset move
+#set delete                         # ask for confirm
+unset confirmappend
+#set quit                           # ask for confirm
+unset mark_old
+set beep_new                        # beep on new mail
+set pipe_decode                     # strip headers and eval mimes
+set thorough_search                 # strip headers and eval mimes
+
+# index (act like gmail)
+set sort                            = threads
+set sort_aux                        = reverse-last-date-received
+set uncollapse_jump                 # don't collapse on unread
+set sort_re                         # based on regex
+set reply_regexp                    = '^(([Rr][Ee]>(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*'
+
+# pager
+set pager_index_lines               = 5
+set pager_context                   = 5
+set pager_stop                      # don't go to next message automatically
+set menu_scroll                     # scroll in menus
+set smart_wrap                      # don't split words
+set tilde                           # show tildes like in vim
+unset markers                       # no ugly plus signs
+alternative_order                   text/plain text/enriched text/html
+set quote_regexp                    = '^( {0,4}[>|:#%]| {0,4}[a-zA-Z0-9]+[>\]+)+'
+auto_view text/html application/mswordp # I want to read human language
+
+# formats
+set date_format                     = '%m/%d/%y at %I:%M%p'
+set index_format                    = '%3C [%Z] %D %-15.15F %s'
+set alias_format                    = '%4n %t %-20a  %r'
+
+# composing
+#set realname                        = ''
+set envelope_from
+#set sig_dashes
+set edit_headers
+set fast_reply
+set sendmail_wait                   = 1
+#set askcc
+set fcc_attach
+unset mime_forward
+set forward_format                  = 'Fwd: %s'
+set forward_decode
+set attribution                     = 'On %d, %n wrote:'
+set reply_to
+set reverse_name
+set include
+set forward_quote
+
+
+# headers to show
+ignore *                            # cleanup
+unignore from: to: cc: date: subject:
+hdr_order from: to: cc: date: subject:
+
+# bindings
+bind pager /                search
+bind pager k                previous-line
+bind pager j                next-line
+bind pager gg               top
+bind pager G                bottom
+bind index gg               first-entry
+bind index G                last-entry
+bind index K                previous-unread
+bind index J                next-unread
+bind index k                previous-entry
+bind index j                next-entry
+bind index K                previous-undeleted
+bind index J                next-undeleted
+bind index,pager \CB        previous-page
+bind index,pager \CF        next-page
+bind index,pager R          group-reply
+
+macro index \Cr "<tag-prefix><clear-flag>N' 'mark tagged masseges as read'
+macro index B '<limit>~b ' 'search message bodies'
+macro index I '<change-folder>!<enter>' 'go to Inbox'
+
+macro index P '<pipe-message>cat > ~/' 'save message as'
+
+
+#######################
+
+source ~/.mutt/gpg.rc
+source ~/.mutt/colors
+
+
+source ~/.mutt/account
+
+# set from = 'login@gmail.com'
+# set realname = 'name'
+# 
+# set imap_user = 'login@gmail.com'
+# #set imap_pass = '' # ask passwd
+# set smtp_url = "smtp://login@smtp.gmail.com:587/"
+# #set smtp_pass = '' # askpasswd
+# 
+# set folder = "imaps://imap.gmail.com:993"
+# set spoolfile = "+INBOX"
+# set postponed ="+[Gmail]/Drafts"
+# #set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
+

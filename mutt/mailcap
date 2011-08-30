@@ -1,0 +1,4 @@
+#text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+application/msword; wvHtml --charset=gb2312 %s - | lynx --dump -stdin; nametemplate=%s.html; copiousoutput
+# vim: set ft=mailcap:
