@@ -106,7 +106,7 @@ alias -g L='| less'
 alias -g G='| grep --color=auto -n'
 alias grep='grep --color=auto -n'
 alias iftop='iftop -B'
-alias hdtemp='netcat localhost 7634'
+alias hdtemp='echo `netcat localhost 7634`'
 alias pc='proxychains'
 alias vbox='VirtualBox &'
 alias kb="xmodmap -e 'keycode 66 = Escape' -e 'clear Lock'"
