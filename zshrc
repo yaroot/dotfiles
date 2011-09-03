@@ -131,6 +131,7 @@ alias vd='vimdiff'
 alias gd='gvimdiff'
 alias wifi='wicd-curses'
 alias getweather='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
+alias bjgetweather='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZBAA.TXT'
 alias m="man"
 alias p="pinfo"
 
