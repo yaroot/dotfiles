@@ -1,0 +1,17 @@
+
+
+#       Add types
+
+#   https://github.com/protocool/ack-tmbundle/wiki/recognizing-files
+#
+#   ack --type-add ruby=haml some_text
+#
+#   --type-add
+#   ruby=haml
+#
+
+
+--type-add=ruby=.haml,.rake,.rsel
+
+
+
