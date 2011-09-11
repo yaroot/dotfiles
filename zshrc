@@ -199,5 +199,21 @@ function quite(){
     "$@" 2>&1 > /dev/null
 }
 
+function git_new_bare()
+{
+    if [[ -z "$1" ]];
+    then
+        echo >2 'Usage: git_new ${repo_name}'
+        exit 1
+    fi
+
+    base_dir=`pwd`
+    repo_name="$1"
+    mkdir -p ${repo_name}
+    cd ${repo_name}
+    git init --bare
+    cd "${base_dir}"
+}
+
 #}}}
 
