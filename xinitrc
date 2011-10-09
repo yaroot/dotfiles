@@ -68,7 +68,7 @@ function launchdwm()
 }
 
 case $1 in
-    xfce)         exec ck-launch-session startxfce4;;
+    xfce*)         exec ck-launch-session startxfce4;;
     wmii)         exec wmii             ;;
     *)            launchdwm             ;;
 esac
