@@ -7,9 +7,10 @@ fi
 # Set keymap
 #setxkbmap -layout de
 
-# Map [CapsLock] to [Esc]
+# Map [CapsLock] to [Ctrl]
 ( sleep 1s && xmodmap -e 'clear Lock' ) &
-( sleep 1s && xmodmap -e 'keycode 66 = Escape'  ) &
+( sleep 1s && xmodmap -e 'keycode 66 = Control_L'  ) &
+#( sleep 1s && xmodmap -e 'keycode 66 = Escape'  ) &
 # Slow the mouse
 ( sleep 1s && xset m 10/10 ) &
 # Sync two X clipboard
