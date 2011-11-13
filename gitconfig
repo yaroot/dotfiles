@@ -1,6 +1,6 @@
 [user]
-    name  = real name
-    email = email@example.com
+    #name  = 
+    #email = 
 [alias]
     br  = branch
     brl = branch -av
