@@ -131,14 +131,14 @@ alias tpon='synclient TouchpadOff=0'
 #alias emacs='emacs -nw'
 alias ht='htop'
 alias sdo='sudo su ${USER} -c'
-alias s='sudo'
+alias s='sudo '
 alias g='git'
-alias v='gvim'
+alias v='vim'
 alias vd='vimdiff'
 alias gd='gvimdiff'
 alias wifi='wicd-curses'
-alias getweather='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
-alias bjgetweather='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZBAA.TXT'
+alias weathersh='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
+alias weatherbj='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZBAA.TXT'
 alias m="man"
 alias p="pinfo"
 
