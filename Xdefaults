@@ -105,9 +105,9 @@ URxvt.buffered: true
 URxvt.cursorColor: green
 
 !! clickable url
-URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      urxvt-url.sh
-URxvt.matcher.button:   3
+!URxvt.perl-ext-common:  default,matcher
+!URxvt.urlLauncher:      urxvt-url.sh
+!URxvt.matcher.button:   3
 !}}}
 
 !{{{ xscreensaver
