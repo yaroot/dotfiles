@@ -12,6 +12,7 @@
     co  = checkout
     ps  = push
     pl  = pull
+    pr  = pull --rebase
     s   = status
     st  = stash
     m   = merge
