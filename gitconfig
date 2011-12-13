@@ -1,6 +1,6 @@
 [user]
-    #name  = 
-    #email = 
+    name  = 
+    email = 
 [alias]
     br  = branch
     brl = branch -av
@@ -17,12 +17,13 @@
     st  = stash
     m   = merge
     sm  = submodule
-    #l   = log --oneline --graph --decorate
-    l   = log --pretty='%h %ad%x09%an %d%x09%s' --graph
+    l   = log --oneline --graph --decorate
+    #l   = log --pretty='%h %ad%x09%an %d%x09%s' --graph
 [color]
     ui  = auto
 [merge]
     tool = vimdiff
 [core]
     editor = vim
+	quotepath = false
 
