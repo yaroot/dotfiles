@@ -2,23 +2,23 @@
     name  = 
     email = 
 [alias]
+    a   = add
     br  = branch
     brl = branch -av
-    rl  = remote -v
-    a   = add
     c   = commit -m
     ca  = commit -am
-    r   = remote
     co  = checkout
-    ps  = push
+    m   = merge
     pl  = pull
     pr  = pull --rebase
+    ps  = push
+    rb  = rebase
+    r   = remote
+    rl  = remote -v
     s   = status
-    st  = stash
-    m   = merge
     sm  = submodule
+    st  = stash
     l   = log --oneline --graph --decorate
-    #l   = log --pretty='%h %ad%x09%an %d%x09%s' --graph
 [color]
     ui  = auto
 [merge]
