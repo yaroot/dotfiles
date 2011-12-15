@@ -45,6 +45,12 @@ autoload -U colors
 colors
 autoload -U zmv
 autoload -U zargs
+
+# ESC-v brings you $EDITOR !
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 #autoload -U promptinit
 #promptinit
 #autoload -Uz vcs_info
