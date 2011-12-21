@@ -7,6 +7,10 @@
     brl = branch -av
     c   = commit -m
     ca  = commit -am
+    cm  = commit
+    cam = commit -a
+    cw  = commit --cleanup=whitespace
+    caw = commit -a --cleanup=whitespace
     co  = checkout
     m   = merge
     pl  = pull
