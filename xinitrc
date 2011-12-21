@@ -50,9 +50,10 @@ function other_stuffs()
 
 function status_text()
 {
+
     while true; do
         sleep 10s
-        xsetroot -name "$(acpi -b | cut -d ',' -f2)  $(date +'%a %b %d %Y %H:%M')            "
+        xsetroot -name "$(acpi -b | cut -d ',' -f2) $(acpi -a)   $(date +'%a %b %d %Y %H:%M')            "
     done
 }
 
