@@ -9,15 +9,7 @@ Open ssh session and start X forwarding
 
 # Some utils to ease the life
 
-* (g)vim, macvim
-* zsh, tmux
-* dwm
-* firefox w/ pentadactyl
-* ack
 * duff
-* proxychains, tsocks, polipo
-* ranger
 * bwm-ng, iftraf, ethstatus
-* urxvt, iTerm2
 * csshX, pdsh, ClusterSSH, mussh
 
