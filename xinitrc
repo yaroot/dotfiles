@@ -48,21 +48,11 @@ function other_stuffs()
     #xsetroot -solid midnightblue
 }
 
-function status_text()
-{
-
-    while true; do
-        sleep 10s
-        xsetroot -name "$(acpi -b | cut -d ',' -f2) $(acpi -a)   $(date +'%a %b %d %Y %H:%M')            "
-    done
-}
-
 function launchdwm()
 {
-    other_stuffs
-    status_text &
+    ( $HOME/.dwmstatus )&
 
-    touch $HOME/.dwm.log
+    rm -f $HOME/.dwm.log
 
     while true; do
         $HOME/.dwm > $HOME/.dwm.log 2>&1
