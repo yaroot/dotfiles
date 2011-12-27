@@ -110,6 +110,9 @@ alias ls="ls ${LS_OPTION}"
 
 alias more='less'
 
+if [ $TERM = 'screen' ]; then
+    alias mutt='TERM=xterm-256color mutt'
+fi
 
 which colordiff &> /dev/null
 if [ $? -eq 0  ]; then
