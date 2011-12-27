@@ -110,7 +110,7 @@ alias ls="ls ${LS_OPTION}"
 
 alias more='less'
 
-if [ $TERM = 'screen' ]; then
+if [ `uname` = 'Darwin' ]; then
     alias mutt='TERM=xterm-256color mutt'
 fi
 
