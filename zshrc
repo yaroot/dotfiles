@@ -97,20 +97,15 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-LS_OPTION='--color=auto'
-
-ls ${LS_OPTION} / &> /dev/null
-if [ $? -eq 0 ]; then
-    # do nothing
-else
-    LS_OPTION='-G'
+if [[ `uname` = 'Linux' || `uname` = 'Cygwin' ]]; then
+    alias ls="ls --color=auto"
+else # BSD
+    alias ls="ls -G"
 fi
-
-alias ls="ls ${LS_OPTION}"
 
 alias more='less'
 
-if [ `uname` = 'Darwin' ]; then
+if [ "$TERM" = 'screen' ]; then
     alias mutt='TERM=xterm-256color mutt'
 fi
 
