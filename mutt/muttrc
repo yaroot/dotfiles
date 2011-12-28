@@ -112,6 +112,7 @@ source ~/.mutt/gpg
 #set pgp_replyencrypt=yes
 #set pgp_timeout=1800
 
+source ~/.mutt/lists
 source ~/.mutt/account
 
 # set from = 'login@gmail.com'
