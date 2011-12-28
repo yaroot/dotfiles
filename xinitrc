@@ -36,24 +36,22 @@ if [ -x ~/.wallpaperrc ]; then
     ( bash ~/.wallpaperrc &)
 fi
 
-function other_stuffs()
+function launchdwm()
 {
-    # Set mouse
-    xsetroot -cursor_name left_ptr
 
+    ( sleep 1s && $HOME/.dwmstatus )&
+
+    xsetroot -cursor_name left_ptr &
+
+    # systray
     ( sleep 2s && trayer --expand true --widthtype request --height 8 --transparent true --alpha 255 --edge top --align right & )
-    #( sleep 2s && trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --height 8 --transparent true --tint 0x000000 ) &
 
     # background color
     #xsetroot -solid midnightblue
-}
-
-function launchdwm()
-{
-    ( $HOME/.dwmstatus )&
 
     rm -f $HOME/.dwm.log
 
+    # run forever
     while true; do
         $HOME/.dwm > $HOME/.dwm.log 2>&1
     done
