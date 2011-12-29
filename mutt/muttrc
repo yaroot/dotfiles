@@ -15,14 +15,15 @@ set editor                          = 'vim'
 
 set imap_keepalive                  = 100
 set timeout                         = 3
-set mail_check                      = 0
+set mail_check                      = 30        # check mail every 30 secs
 set sort_alias                      = alias
 set reverse_alias
+unset record                        # don't save sent
 unset move
 #set delete                         # ask for confirm
 unset confirmappend
 #set quit                           # ask for confirm
-unset mark_old
+unset mark_old                      # read/new is enough
 set beep_new                        # beep on new mail
 set pipe_decode                     # strip headers and eval mimes
 set thorough_search                 # strip headers and eval mimes
