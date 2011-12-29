@@ -103,7 +103,7 @@ macro index P '<pipe-message>cat > ~/' 'save message as'
 #######################
 
 source ~/.mutt/gpg.rc # copy from mutt samples
-source ~/.mutt/colors
+
 
 source ~/.mutt/gpg
 
@@ -112,6 +112,10 @@ source ~/.mutt/gpg
 #set pgp_replyencrypt=yes
 #set pgp_timeout=1800
 
+
+# zenburn from https://bitbucket.org/trovao/configs/src
+source ~/.mutt/zenburn
+
 source ~/.mutt/lists
 source ~/.mutt/account
 
@@ -119,9 +123,9 @@ source ~/.mutt/account
 # set realname = 'name'
 # 
 # set imap_user = 'login@gmail.com'
-# #set imap_pass = '' # ask passwd
+# #set imap_pass = ''
 # set smtp_url = "smtp://login@smtp.gmail.com:587/"
-# #set smtp_pass = '' # askpasswd
+# #set smtp_pass = ''
 # 
 # set folder = "imaps://imap.gmail.com:993"
 # set spoolfile = "+INBOX"
