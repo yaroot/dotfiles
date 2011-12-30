@@ -12,6 +12,10 @@
     cw  = commit --cleanup=whitespace
     caw = commit -a --cleanup=whitespace
     co  = checkout
+    d   = diff
+    dc  = diff --cached
+    dw  = diff -w
+    dcw = diff --cached -w
     m   = merge
     pl  = pull
     pr  = pull --rebase
