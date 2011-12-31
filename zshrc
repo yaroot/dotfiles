@@ -105,7 +105,7 @@ fi
 
 alias more='less'
 
-if [ "$TERM" = 'screen' ]; then
+if [[ "$TERM" = 'screen' || "$TERM" = 'xterm' ]]; then
     alias mutt='TERM=xterm-256color mutt'
 fi
 
