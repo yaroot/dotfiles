@@ -12,6 +12,17 @@ export PAGER=`which less`
 export EDITOR=`which vim`
 which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
 which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
+
+
+# update SSH_AUTH_SOCK
+if [[ "x$TMUX" != "x" ]]; then
+    sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
+    if [[ "x$sock_path" != "x" ]]; then
+        eval "${sock_path}; export SSH_AUTH_SOCK;"
+    fi
+    unset sock_path
+fi
+
 #}}}
 
 #{{{ Settings
