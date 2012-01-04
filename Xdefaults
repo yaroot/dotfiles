@@ -1,12 +1,7 @@
 !! ~/.Xdefaults
-!! run 'xrdb *filename*' to enable the settings
+!! run `xrdb .Xdefaults` to enable the settings
 
-!{{{ Xcursor
-! symlink works fine
-!Xcursor.theme: Polar
-!}}}
 
-!{{{ URxvt
 URxvt.depth:32
 URxvt.background:rgba:0000/0000/0000/cccc
 !!URxvt.background:[80]#000000
@@ -60,10 +55,10 @@ URxvt.scrollBar:false
 URxvt.secondaryScroll: true # enable Shift-PageUp/Down in screen
 URxvt.saveLines:2000
 
-URxvt.font:xft:DejaVu sans Mono:size=9,xft:WenQuanYi Micro Hei:size=10
+!URxvt.font:xft:DejaVu sans Mono:size=9,xft:WenQuanYi Micro Hei:size=10
+URxvt.font:xft:tamsyn-10,xft:WenQuanYi Micro Hei:size=10
+URxvt.boldFont:xft:tamsyn-10:bold,xft:WenQuanYi Micro Hei:size=10,bold
 
-!!URxvt.font:-misc-simsun-medium-r-normal--0-0-0-0-p-0-gb2312.1980-0,xft:WenQuanYi Bitmap Song-17:Normal  
-!!urxvt.mfont:xft:WenQuanYi Zen Hei-17:Normal
 URxvt.preeditType:Root
 URxvt.imLocale:zh_CN.UTF-8
 urxvt.imFont:fixed
@@ -78,9 +73,7 @@ URxvt.cursorColor: green
 !URxvt.perl-ext-common:  default,matcher
 !URxvt.urlLauncher:      urxvt-url.sh
 !URxvt.matcher.button:   3
-!}}}
 
-!{{{ xscreensaver
 !font settings
 xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
 xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
@@ -108,29 +101,6 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       8
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-!}}}
-
-!{{{      X T E R M
-!
-!
-!xterm*internalBorder:        0
-!xterm*loginShell:         true
-xterm*scrollBar:         false
-xterm*cursorBlink:       false
-!xterm*geometry:         80x26
-!xterm*saveLines:         65535
-xterm*dynamicColors:        on
-!xterm*highlightSelection: true
-! Catch URL's?
-!xterm*charClass:     33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:48
-! Appearance
-xterm*utf8:          2
-xterm*eightBitInput: true
-xterm*faceName:      terminus:pixelsize=9
-!xterm*cursorColor:   #FFFFFF
-xterm*cursorColor:   #11ff11
-xterm*background:    #000000
-xterm*foreground:    #ffffff
 
 ! Zenburn
 !xterm*background:  #222222
@@ -151,7 +121,6 @@ xterm*foreground:    #ffffff
 !xterm*color13:     #ec93d3
 !xterm*color14:     #93e0e3
 !xterm*color15:     #ffffff
-
 
 ! IR_Black
 !URxvt*background: #000000
