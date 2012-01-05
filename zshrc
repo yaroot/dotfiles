@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 #{{{ transparent for xterm
-if [[ $TERM == "xterm" ]]; then
+if [ $TERM = "xterm" ]; then
     [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
 fi
 #}}}
@@ -13,14 +13,16 @@ export EDITOR=`which vim`
 which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
 which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
-
 # update SSH_AUTH_SOCK
-if [[ "x$TMUX" != "x" ]]; then
-    sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
-    if [[ "x$sock_path" != "x" ]]; then
+if [ "x$TMUX" != "x" ]; then
+    local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
+    if [ "x$sock_path" != "x" ]; then
         eval "${sock_path}; export SSH_AUTH_SOCK;"
     fi
-    unset sock_path
+fi
+
+if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
+    source "${HOME}/.keychain/${HOST}-sh"
 fi
 
 #}}}
@@ -74,7 +76,7 @@ bindkey -M vicmd v edit-command-line
 #promptinit
 #prompt walters
 
-if [[ $TERM == dumb ]]; then
+if [ $TERM = dumb ]; then
     PS1="> "
     PS2="%_ $PS1"
     PS3="?# $PS1"
@@ -108,7 +110,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-if [[ `uname` = 'Linux' || `uname` = 'Cygwin' ]]; then
+if [ `uname` = 'Linux' ] || [ `uname` = 'Cygwin' ]; then
     alias ls="ls --color=auto"
 else # BSD
     alias ls="ls -G"
@@ -116,7 +118,7 @@ fi
 
 alias more='less'
 
-if [[ "$TERM" = 'screen' || "$TERM" = 'xterm' ]]; then
+if [ "$TERM" = 'screen' ] || [ "$TERM" = 'xterm' ]; then
     alias mutt='TERM=xterm-256color mutt'
 fi
 
@@ -223,8 +225,7 @@ function quite(){
 
 function git_new_bare()
 {
-    if [[ -z "$1" ]];
-    then
+    if [ -z "$1" ]; then
         echo >2 'Usage: git_new ${repo_name}'
         exit 1
     fi
