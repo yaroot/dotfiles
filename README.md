@@ -13,3 +13,5 @@ Open ssh session and start X forwarding
 * bwm-ng, iftraf, ethstatus
 * csshX, pdsh, ClusterSSH, mussh
 
+more good stuff [here](http://kmandla.wikispaces.com/)
+
