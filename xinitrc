@@ -5,9 +5,14 @@
 #setxkbmap -layout de
 
 # Map [CapsLock] to [Ctrl]
-xmodmap -e 'clear Lock' &
-xmodmap -e 'keycode 66 = Control_L' &
-# xmodmap -e 'keycode 66 = Escape' &
+#xmodmap -e 'clear Lock'
+#xmodmap -e 'keycode 66 = Escape'
+xmodmap -e 'remove Lock = Caps_Lock'
+xmodmap -e 'remove Control = Control_L'
+xmodmap -e 'keysym Caps_Lock = Control_L'
+# xmodmap -e 'add Lock = Caps_Lock'
+xmodmap -e 'add Control = Control_L'
+
 
 # Slow the mouse
 xset m 10/10 &
