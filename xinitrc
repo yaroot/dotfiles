@@ -13,13 +13,11 @@ xmodmap -e 'keysym Caps_Lock = Control_L'
 # xmodmap -e 'add Lock = Caps_Lock'
 xmodmap -e 'add Control = Control_L'
 
-
 # Slow the mouse
 xset m 10/10 &
 
 # load X configs
 xrdb $HOME/.Xdefaults &
-
 
 ( sleep 2 && xcompmgr &)
 ( sleep 30 && xscreensaver -no-splash &)
@@ -33,6 +31,8 @@ xrdb $HOME/.Xdefaults &
 #( sleep 2s && autocutsel -fork &)
 ( sleep 3 && autocutsel -selection PRIMARY -fork &)
 
+# VirtualBox guest
+( sleep 5 && VBoxClient-all &)
 
 # java fix
 ( sleep 5 && wmname LG3D &)
