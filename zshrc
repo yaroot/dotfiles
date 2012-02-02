@@ -17,7 +17,7 @@ which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 if [ "x$TMUX" != "x" ]; then
     local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
     if [ "x$sock_path" != "x" ]; then
-        eval "SSH_AUTH_SOCK=${sock_path}; export SSH_AUTH_SOCK;"
+        eval "${sock_path}; export SSH_AUTH_SOCK;"
     fi
 fi
 
