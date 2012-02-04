@@ -122,6 +122,11 @@ if [ "$TERM" = 'screen' ] || [ "$TERM" = 'xterm' ]; then
     alias mutt='TERM=xterm-256color mutt'
 fi
 
+which npm &> /dev/null
+if [ $? -eq 0 ]; then
+    eval npm completion 2 > /dev/null
+fi
+
 which colordiff &> /dev/null
 if [ $? -eq 0  ]; then
     alias diff='colordiff'
