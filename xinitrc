@@ -21,7 +21,7 @@ xrdb $HOME/.Xdefaults &
 
 ( sleep 2 && xcompmgr &)
 ( sleep 30 && xscreensaver -no-splash &)
-( sleep 15 ibus-daemon --xim &)
+( sleep 15 && ibus-daemon --xim &)
 ( sleep 1 && wicd-client &)
 #( sleep 1 && synclient TouchpadOff=1 &)
 ( sleep 4 && xbindkeys -f $HOME/.xbindkeysrc & )
