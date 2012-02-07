@@ -124,7 +124,7 @@ fi
 
 which npm &> /dev/null
 if [ $? -eq 0 ]; then
-    eval npm completion 2 > /dev/null
+    eval "$(npm completion 2>/dev/null)"
 fi
 
 which colordiff &> /dev/null
