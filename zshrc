@@ -25,6 +25,7 @@ if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
     source "${HOME}/.keychain/${HOST}-sh"
 fi
 
+export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 #}}}
 
 #{{{ Settings
@@ -52,7 +53,9 @@ unsetopt notify
 bindkey -v # vim fellow
 zstyle :compinstall filename "$HOME/.zshrc"
 
+
 autoload -U compinit
+fpath=($fpath $HOME/._zshcomp)
 compinit
 autoload -U colors
 colors
