@@ -55,7 +55,7 @@ function launchdwm()
     xsetroot -cursor_name left_ptr &
 
     # systray
-    ( sleep 1 && trayer --expand true --widthtype request --height 8 --transparent true --alpha 255 --edge top --align right & )
+    ( sleep 1 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
 
     # background color
     #xsetroot -solid midnightblue
