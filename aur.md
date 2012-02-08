@@ -1,4 +1,5 @@
 
+* trayer-srg/trayer-dwm
 * iptux
 * cower-legacy
 * packer
