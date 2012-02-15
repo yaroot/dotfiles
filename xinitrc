@@ -39,12 +39,12 @@ xrdb $HOME/.Xdefaults &
 
 # Set wallpaper
 if [ -x ~/.wallpaperrc ]; then
-    ( ~/.wallpaperrc &)
+    (~/.wallpaperrc &)
     # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
 fi
 
-if [ -x ~/.startuprc ]; then
-    ( ~/.startuprc &)
+if [ -f ~/.startuprc ]; then
+    (source ~/.startuprc)
 fi
 
 function launchdwm()
