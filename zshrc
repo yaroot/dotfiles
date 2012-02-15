@@ -166,7 +166,6 @@ alias weathersh='curl http://weather.noaa.gov/pub/data/observations/metar/decode
 alias weatherbj='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZBAA.TXT'
 alias m="man"
 alias p="pinfo"
-alias pacman_rmqdt='sudo pacman -Rsn  `pacman -Qdt | cut -f 1 -d " "`'
 
 # suffix alias
 alias -s git='git clone'
