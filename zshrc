@@ -6,12 +6,15 @@ if [ $TERM = "xterm" ]; then
 fi
 #}}}
 
-
 #{{{ Environment variables
 export PAGER=`which less`
 export EDITOR=`which vim`
 which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
 which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
+
+if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
+    source "${HOME}/.keychain/${HOST}-sh"
+fi
 
 # update SSH_AUTH_SOCK
 if [ "x$TMUX" != "x" ]; then
@@ -19,10 +22,6 @@ if [ "x$TMUX" != "x" ]; then
     if [ "x$sock_path" != "x" ]; then
         eval "${sock_path}; export SSH_AUTH_SOCK;"
     fi
-fi
-
-if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
-    source "${HOME}/.keychain/${HOST}-sh"
 fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
