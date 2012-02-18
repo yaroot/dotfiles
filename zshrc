@@ -114,7 +114,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-if [ `uname` = 'Linux' ] || [ `uname` = 'Cygwin' ]; then
+if [ `uname` = 'Linux' ] || [ `uname -o` = 'Cygwin' ]; then
     alias ls="ls --color=auto"
 else # BSD
     alias ls="ls -G"
