@@ -186,10 +186,10 @@ zstyle ':completion:*:kill:*:processes' command 'ps wx -o pid,tty,time,args'
 zstyle ':completion:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:processes-names' command 'ps -wxho command'
 
-compdef _pacman {pacman-color,clyde,powerpill,bauerbill}=pacman
-compdef _pacman parsablepackagesize=pacman
-compdef _cp cpf=cp
-compdef _mkdir mkf=mkdir
+#compdef _pacman {pacman-color,clyde,powerpill,bauerbill}=pacman
+#compdef _pacman parsablepackagesize=pacman
+#compdef _cp cpf=cp
+#compdef _mkdir mkf=mkdir
 compctl -g '/etc/rc.d/*(:t)' dstart
 compctl -g '/var/run/daemons/*(:t)' dstop drestart
 ### }}}
