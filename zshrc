@@ -54,7 +54,9 @@ zstyle :compinstall filename "$HOME/.zshrc"
 
 
 autoload -U compinit
-fpath=($fpath $HOME/._zshcomp)
+if [ -d "$HOME/._zshcomp" ]; then
+    fpath=($fpath $HOME/._zshcomp)
+fi
 compinit
 autoload -U colors
 colors
