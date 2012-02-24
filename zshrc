@@ -17,12 +17,12 @@ if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
 fi
 
 # update SSH_AUTH_SOCK
-if [ "x$TMUX" != "x" ]; then
-    local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
-    if [ "x$sock_path" != "x" ]; then
-        eval "${sock_path}; export SSH_AUTH_SOCK;"
-    fi
-fi
+#if [ "x$TMUX" != "x" ]; then
+#    local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
+#    if [ "x$sock_path" != "x" ]; then
+#        eval "${sock_path}; export SSH_AUTH_SOCK;"
+#    fi
+#fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 #}}}
@@ -124,11 +124,6 @@ alias more='less'
 
 if [ "$TERM" = 'screen' ] || [ "$TERM" = 'xterm' ]; then
     alias mutt='TERM=xterm-256color mutt'
-fi
-
-which npm &> /dev/null
-if [ $? -eq 0 ]; then
-    eval "$(npm completion 2>/dev/null)"
 fi
 
 which colordiff &> /dev/null
