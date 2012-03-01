@@ -5,8 +5,9 @@
 #setxkbmap -layout de
 
 # Map [CapsLock] to [Ctrl]
-#xmodmap -e 'clear Lock'
+xmodmap -e 'clear Lock'
 #xmodmap -e 'keycode 66 = Escape'
+xmodmap -e 'keycode 66 = Control_L'
 xmodmap -e 'remove Lock = Caps_Lock'
 xmodmap -e 'remove Control = Control_L'
 xmodmap -e 'keysym Caps_Lock = Control_L'
@@ -14,28 +15,28 @@ xmodmap -e 'keysym Caps_Lock = Control_L'
 xmodmap -e 'add Control = Control_L'
 
 # Slow the mouse
-xset m 10/10 &
+xset m 16/10
 
 # load X configs
 xrdb $HOME/.Xdefaults &
 
-( sleep 2 && xcompmgr &)
-( sleep 30 && xscreensaver -no-splash &)
-( sleep 15 && ibus-daemon --xim &)
-( sleep 1 && wicd-client --tray &)
-#( sleep 1 && synclient TouchpadOff=1 &)
-( sleep 4 && xbindkeys -f $HOME/.xbindkeysrc & )
-#( sleep 2 && urxvtd -q -o -f &)
+ ( sleep 2  && xcompmgr &)
+ ( sleep 30 && xscreensaver -no-splash &)
+ ( sleep 15 && ibus-daemon --xim &)
+ ( sleep 1  && wicd-client --tray &)
+#( sleep 1  && synclient TouchpadOff=1 &)
+ ( sleep 4  && xbindkeys -f $HOME/.xbindkeysrc & )
+#( sleep 2  && urxvtd -q -o -f &)
 
 # Sync two X clipboard
 #( sleep 2s && autocutsel -fork &)
-( sleep 3 && autocutsel -selection PRIMARY -fork &)
+ ( sleep 3  && autocutsel -selection PRIMARY -fork &)
 
 # VirtualBox guest
-( sleep 5 && VBoxClient-all &)
+ ( sleep 5  && VBoxClient-all &)
 
 # java fix
-( sleep 5 && wmname LG3D &)
+ ( sleep 5  && wmname LG3D &)
 
 # Set wallpaper
 if [ -x ~/.wallpaperrc ]; then
