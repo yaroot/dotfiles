@@ -6,7 +6,7 @@
 
 # Map [CapsLock] to [Ctrl]
 xmodmap -e 'clear Lock'
-#xmodmap -e 'keycode 66 = Escape'
+# xmodmap -e 'keycode 66 = Escape'
 xmodmap -e 'keycode 66 = Control_L'
 xmodmap -e 'remove Lock = Caps_Lock'
 xmodmap -e 'remove Control = Control_L'
