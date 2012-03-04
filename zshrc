@@ -34,7 +34,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 ## export N_PREFIX="$HOME/.local"
 ## export PATH="$N_PREFIX/n/current/bin:$PATH"
 ## 
-## source /home/yaroot/.dotfiles/zshrc
+## source $HOME/.pythons/versions/2.7.2/bin/activate
+## source $HOME/.dotfiles/zshrc
 ## 
 ## eval "$(npm completion 2>/dev/null)"
 ## eval "$(rbenv init -)"
@@ -66,7 +67,6 @@ unsetopt notify
 
 bindkey -v # vim fellow
 zstyle :compinstall filename "$HOME/.zshrc"
-
 
 autoload -U compinit
 if [ -d "$HOME/._zshcomp" ]; then
