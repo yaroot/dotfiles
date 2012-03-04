@@ -25,6 +25,21 @@ fi
 #fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+## XXX begin
+## export PATH="$PATH:/home/yaroot/repos/rbenv/bin:/home/yaroot/repos/ruby-build/bin"
+## export PATH="$PATH:/home/yaroot/repos/n/bin"
+## 
+## export N_PREFIX="$HOME/.local"
+## export PATH="$N_PREFIX/n/current/bin:$PATH"
+## 
+## source /home/yaroot/.dotfiles/zshrc
+## 
+## eval "$(npm completion 2>/dev/null)"
+## eval "$(rbenv init -)"
+## XXX end
+
 #}}}
 
 #{{{ Settings
