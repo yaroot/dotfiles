@@ -1,5 +1,12 @@
 #!/bin/zsh
 
+#{{{ startx after login in tty1
+# if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+#     (startx&); logout
+#     # exec startx
+# fi
+#}}}
+
 #{{{ transparent for xterm
 if [ $TERM = "xterm" ]; then
     [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
