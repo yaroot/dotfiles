@@ -1,10 +1,27 @@
 #!/bin/zsh
 
-#{{{ startx after login in tty1
+#{{{ $HOME/.zshrc
+# startx after login in tty1
 # if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-#     (startx&); logout
+#     rm $HOME/.xlog
+#     (startx > $HOME/.xlog 2>&1 &); logout
 #     # exec startx
 # fi
+#
+# source $HOME/.dotfiles/zshrc
+#
+# export PATH="$PATH:$HOME/repos/rbenv/bin:$HOME/repos/ruby-build/bin"
+# export PATH="$PATH:$HOME/repos/n/bin"
+# 
+# export N_PREFIX="$HOME/.local"
+# export PATH="$N_PREFIX/n/current/bin:$PATH"
+# 
+# source $HOME/.pythons/versions/2.7.2/bin/activate
+# source $HOME/.dotfiles/zshrc
+# 
+# eval "$(npm completion 2>/dev/null)"
+# eval "$(rbenv init -)"
+#
 #}}}
 
 #{{{ transparent for xterm
@@ -33,20 +50,6 @@ fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-## XXX begin
-## export PATH="$PATH:/home/yaroot/repos/rbenv/bin:/home/yaroot/repos/ruby-build/bin"
-## export PATH="$PATH:/home/yaroot/repos/n/bin"
-## 
-## export N_PREFIX="$HOME/.local"
-## export PATH="$N_PREFIX/n/current/bin:$PATH"
-## 
-## source $HOME/.pythons/versions/2.7.2/bin/activate
-## source $HOME/.dotfiles/zshrc
-## 
-## eval "$(npm completion 2>/dev/null)"
-## eval "$(rbenv init -)"
-## XXX end
 
 #}}}
 
@@ -245,7 +248,7 @@ function fin()
     find . -iname "*$1*"
 }
 
-function quite(){
+function quiet(){
     "$@" 2>&1 > /dev/null
 }
 

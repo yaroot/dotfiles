@@ -54,8 +54,6 @@ function launchdwm()
     # background color
     #xsetroot -solid midnightblue
 
-    rm -f $HOME/.dwm.log
-
     # run forever
     while true; do
         $HOME/.dwm > $HOME/.dwm.log 2>&1
