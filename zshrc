@@ -139,10 +139,12 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-if [ `uname -s` = 'Linux' ] || [ `uname -s` = 'Cygwin' ]; then
-    alias ls="ls --color=auto"
-else # BSD
+if [ `uname -s` = 'Darwin' ]; then
     alias ls="ls -G"
+elif [ `uname -s` = 'Linux' ] || [ `uname -o` = 'Cygwin' ]; then
+    alias ls="ls --color=auto"
+else
+    alis ls="ls -G"
 fi
 
 alias more='less'
