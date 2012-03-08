@@ -144,7 +144,7 @@ if [ `uname -s` = 'Darwin' ]; then
 elif [ `uname -s` = 'Linux' ] || [ `uname -o` = 'Cygwin' ]; then
     alias ls="ls --color=auto"
 else
-    alis ls="ls -G"
+    alias ls="ls -G"
 fi
 
 alias more='less'
