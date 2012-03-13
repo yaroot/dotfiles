@@ -187,6 +187,7 @@ alias gd='gvimdiff'
 alias wifi='wicd-curses'
 alias weathersh='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
 alias weatherbj='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZBAA.TXT'
+alias ytdl="youtube-dl -o '%(stitle)s.%(ext)s'"
 alias m="man"
 alias p="pinfo"
 
