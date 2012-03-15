@@ -4,7 +4,7 @@
 
 * trayer-srg/trayer-dwm
 * iptux
-* cower-legacy
+* cower
 * packer
 * wqy-microhei
 * tamsyn-font
