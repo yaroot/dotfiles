@@ -44,7 +44,7 @@ fi
 function launchdwm()
 {
 
-    ( sleep 1 && $HOME/.dwmstatus )&
+    ( sleep 1 && $HOME/.local/bin/dwmstatus )&
 
     xsetroot -cursor_name left_ptr &
 
@@ -56,7 +56,7 @@ function launchdwm()
 
     # run forever
     while true; do
-        $HOME/.dwm > $HOME/.dwm.log 2>&1
+        $HOME/.local/bin/dwm > $HOME/.dwm.log 2>&1
         sleep 1
     done
 }
