@@ -31,10 +31,10 @@ fi
 #}}}
 
 #{{{ Environment variables
-export PAGER=`which less`
-export EDITOR=`which vim`
-which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
-which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
+export PAGER=`\which less`
+export EDITOR=`\which vim`
+\which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
+\which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
 if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
     source "${HOME}/.keychain/${HOST}-sh"
@@ -153,7 +153,7 @@ if [ "$TERM" = 'screen' ] || [ "$TERM" = 'xterm' ]; then
     alias mutt='TERM=xterm-256color mutt'
 fi
 
-which colordiff &> /dev/null
+\which colordiff &> /dev/null
 if [ $? -eq 0  ]; then
     alias diff='colordiff'
 fi
