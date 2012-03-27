@@ -3,9 +3,12 @@
 if [ "xterm" = "$1" ]; then
     shift
 fi
-LAUNCHENV="$1"
+SESSION="dwm"
+if [ ! -z "$1" ]; then
+    SESSION="$1"
+fi
 STANDALONE="yes"
-case "$LAUNCHENV" in
+case "$SESSION" in
     xfce*) STANDALONE="no" ;;
 esac
 
@@ -38,7 +41,7 @@ fi
 if [ -f ~/.startuprc ]; then
     # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
     # xsetroot -solid midnightblue # background color
-    (source ~/.startuprc "$LAUNCHENV" "$STANDALONE")
+    (source ~/.startuprc "$SESSION" "$STANDALONE")
 fi
 
 launchdwm()
@@ -52,9 +55,9 @@ launchdwm()
     done
 }
 
-case $LAUNCHENV in
+case $SESSION in
     xfce*)        exec ck-launch-session startxfce4 ;;
     wmii)         exec wmii ;;
-    *)            launchdwm ;;
+    dwm)            launchdwm ;;
 esac
 
