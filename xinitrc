@@ -14,9 +14,6 @@ xset m 16/10
 xrdb $HOME/.Xdefaults &
 
  ( sleep 2  && xcompmgr &)
- ( sleep 30 && xscreensaver -no-splash &)
- ( sleep 15 && ibus-daemon --xim &)
- ( sleep 1  && wicd-client --tray &)
 #( sleep 1  && synclient TouchpadOff=1 &)
  ( sleep 4  && xbindkeys -f $HOME/.xbindkeysrc & )
 #( sleep 2  && urxvtd -q -o -f &)
@@ -31,28 +28,31 @@ xrdb $HOME/.Xdefaults &
 # java fix
  ( sleep 5  && wmname LG3D &)
 
-# Set wallpaper
-if [ -x ~/.wallpaperrc ]; then
-    (~/.wallpaperrc &)
-    # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
-fi
-
 if [ -f ~/.startuprc ]; then
+    # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
+    # xsetroot -solid midnightblue # background color
     (source ~/.startuprc)
 fi
 
-function launchdwm()
+wmshared()
 {
-
-    ( sleep 1 && $HOME/.local/bin/dwmstatus )&
-
+    ( sleep 30 && xscreensaver -no-splash &)
+    ( sleep 15 && ibus-daemon --xim &)
+    ( sleep 1  && wicd-client --tray &)
     xsetroot -cursor_name left_ptr &
+}
+
+launchwmii()
+{
+    exec wmii
+}
+
+launchdwm()
+{
+    ( sleep 1 && $HOME/.local/bin/dwmstatus )&
 
     # systray
     ( sleep 1 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
-
-    # background color
-    #xsetroot -solid midnightblue
 
     # run forever
     while true; do
@@ -61,9 +61,13 @@ function launchdwm()
     done
 }
 
+if [ "xterm" = "$1" ]; then
+    shift
+fi
+
 case $1 in
-    xfce*)        exec ck-launch-session startxfce4;;
-    wmii)         exec wmii             ;;
-    *)            launchdwm             ;;
+    xfce*)        exec ck-launch-session startxfce4 ;;
+    wmii)         wmshared; launchwmii              ;;
+    *)            wmshared; launchdwm               ;;
 esac
 

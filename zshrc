@@ -3,8 +3,7 @@
 #{{{ $HOME/.zshrc
 # startx after login in tty1
 # if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-#     rm $HOME/.xlog
-#     (startx > $HOME/.xlog 2>&1 &); logout
+#     (startx &); logout
 #     # exec startx
 # fi
 #
