@@ -16,7 +16,9 @@
 # export NODE_PATH="$N_PREFIX/current/lib/node_modules" # npm -g root
 # export PATH="$N_PREFIX/n/current/bin:$PATH"
 # 
+# export VIRTUAL_ENV_DISABLE_PROMPT=1
 # source $HOME/.pythons/versions/2.7.2/bin/activate
+#
 # source $HOME/.dotfiles/zshrc
 # 
 # eval "$(npm completion 2>/dev/null)"
@@ -49,7 +51,6 @@ fi
 #fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
-export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 #}}}
 
