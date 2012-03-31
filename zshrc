@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 #{{{ $HOME/.zshrc
-# startx after login in tty1
+#
 # if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 #     (startx &); logout
 #     # exec startx
@@ -12,7 +12,8 @@
 # export PATH="$PATH:$HOME/repos/rbenv/bin:$HOME/repos/ruby-build/bin"
 # export PATH="$PATH:$HOME/repos/n/bin"
 # 
-# export N_PREFIX="$HOME/.local"
+# export N_PREFIX="$HOME/.local/n"
+# export NODE_PATH="$N_PREFIX/current/lib/node_modules" # npm -g root
 # export PATH="$N_PREFIX/n/current/bin:$PATH"
 # 
 # source $HOME/.pythons/versions/2.7.2/bin/activate
