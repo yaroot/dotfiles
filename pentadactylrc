@@ -1,5 +1,5 @@
 
 map <esc> :stop<cr>
-set defsearch=duckduckgo-ssl
+set defsearch=duckduckgo
 
 " vim: set ft=pentadactyl:
