@@ -36,6 +36,7 @@ if [ "yes" = "$STANDALONE" ]; then
     ( sleep 15 && ibus-daemon --xim &)
     ( sleep 3  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
     ( sleep 1  && wicd-client --tray &)
+    ( sleep 30 && dropboxd &)
     ( xsetroot -cursor_name left_ptr &)
 fi
 
