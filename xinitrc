@@ -34,6 +34,7 @@ xrdb $HOME/.Xdefaults &
 if [ "yes" = "$STANDALONE" ]; then
     ( sleep 30 && xscreensaver -no-splash &)
     ( sleep 15 && ibus-daemon --xim &)
+    ( sleep 3  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
     ( sleep 1  && wicd-client --tray &)
     ( xsetroot -cursor_name left_ptr &)
 fi

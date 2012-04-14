@@ -34,4 +34,6 @@
 [core]
     editor = vim
 	quotepath = false
+[svn]
+    rmdir = true
 
