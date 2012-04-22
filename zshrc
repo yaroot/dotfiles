@@ -211,6 +211,9 @@ zstyle ':completion:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*:processes' command 'ps wx -o pid,tty,time,args'
 zstyle ':completion:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:processes-names' command 'ps -wxho command'
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
 #compdef _pacman {pacman-color,clyde,powerpill,bauerbill}=pacman
 #compdef _pacman parsablepackagesize=pacman
