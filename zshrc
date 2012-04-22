@@ -9,6 +9,7 @@
 #
 # source $HOME/.dotfiles/zshrc
 #
+# export PATH="$HOME/.cabal/bin:$PATH"
 # export PATH="$PATH:$HOME/repos/rbenv/bin:$HOME/repos/ruby-build/bin"
 # export PATH="$PATH:$HOME/repos/n/bin"
 # 
