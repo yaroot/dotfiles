@@ -78,11 +78,14 @@ setopt autocd
 unsetopt notify
 
 bindkey -v # vim fellow
-zstyle :compinstall filename "$HOME/.zshrc"
+#zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -U compinit
 if [ -d "$HOME/._zshcomp" ]; then
     fpath=($fpath $HOME/._zshcomp)
+fi
+if [ -d "$HOME/repos/zsh-completions" ]; then
+    fpath=($fpath $HOME/repos/zsh-completions)
 fi
 compinit
 autoload -U colors
