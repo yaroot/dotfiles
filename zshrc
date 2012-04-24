@@ -10,8 +10,8 @@
 # source $HOME/.dotfiles/zshrc
 #
 # export PATH="$HOME/.cabal/bin:$PATH"
-# export PATH="$PATH:$HOME/repos/rbenv/bin:$HOME/repos/ruby-build/bin"
-# export PATH="$PATH:$HOME/repos/n/bin"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/repos/n/bin:$PATH"
 # 
 # export N_PREFIX="$HOME/.local/n"
 # export NODE_PATH="$N_PREFIX/current/lib/node_modules" # npm -g root
