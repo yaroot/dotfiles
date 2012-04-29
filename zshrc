@@ -18,7 +18,7 @@
 # export PATH="$N_PREFIX/n/current/bin:$PATH"
 # 
 # export VIRTUAL_ENV_DISABLE_PROMPT=1
-# source $HOME/.pythons/versions/2.7.2/bin/activate
+# source $HOME/.pythons/versions/27/bin/activate
 #
 # source $HOME/.dotfiles/zshrc
 # 
