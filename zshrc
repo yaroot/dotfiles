@@ -256,7 +256,9 @@ function x()
 
 function fin()
 {
-    find . -iname "*$1*"
+    local word="$1"
+    shift
+    find . -iname "*${word}*" "$@"
 }
 
 function quiet(){
