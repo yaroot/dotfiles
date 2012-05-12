@@ -290,5 +290,25 @@ function gitio()
     eval "curl -i http://git.io -F \"url=${url}\" $code"
 }
 
+function upload_one_pic_imgur()
+{
+    # API Key provided by Alan@imgur.com
+    local API_KEY="b3625162d3418ac51a9ee805b1840452"
+    local API_URL="http://imgur.com/api/upload.xml"
+
+    local FILE="$1"
+    local RESPONSE=$(curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL)
+
+    echo ">>> $file"
+    echo ">>> $RESPONSE" | grep -E -o '<original_image>(.+)</original_image>' | grep -E -o 'http://i.imgur.com/[^<]*'
+}
+
+function imgur_upload()
+{
+    for img in "$@"; do
+        upload_one_pic_imgur "$img"
+    done
+}
+
 #}}}
 
