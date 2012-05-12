@@ -272,12 +272,22 @@ function git_new_bare()
         exit 1
     fi
 
-    base_dir=`pwd`
-    repo_name="$1"
+    local base_dir=`pwd`
+    local repo_name="$1"
     mkdir -p ${repo_name}
     cd ${repo_name}
     git init --bare
     cd "${base_dir}"
+}
+
+function gitio()
+{
+    local url="$1"
+    local code="$2"
+    if [ "x${code}" != "x" ]; then
+        code="-F \"code=${code}\""
+    fi
+    eval "curl -i http://git.io -F \"url=${url}\" $code"
 }
 
 #}}}
