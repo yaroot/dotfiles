@@ -31,12 +31,24 @@ xrdb $HOME/.Xdefaults &
  ( sleep 5  && wmname LG3D &) # java fix 
 #( sleep 2  && urxvtd -q -o -f &)
 
+
+
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+# install fcitx-{gtk2,gtk3,qt}, otherwise set:
+#export GTK_IM_MODULE=xim
+#export QT_IM_MODULE=xim
+
 if [ "yes" = "$STANDALONE" ]; then
-    ( sleep 30 && xscreensaver -no-splash &)
-    ( sleep 15 && ibus-daemon --xim &)
+    eval `dbus-launch --sh-syntax --exit-with-session`
+
+    #( sleep 15 && ibus-daemon --xim &)
+    ( sleep 15 && fcitx &)
     ( sleep 3  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
     ( sleep 1  && wicd-client --tray &)
     ( sleep 30 && dropboxd &)
+    ( sleep 30 && xscreensaver -no-splash &)
     ( xsetroot -cursor_name left_ptr &)
 fi
 
