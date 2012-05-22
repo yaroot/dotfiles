@@ -43,6 +43,14 @@ if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
     source "${HOME}/.keychain/${HOST}-sh"
 fi
 
+if [ "x${LANGUAGE}" = "x" ]; then
+    export LANGUAGE="$LANG"
+fi
+if [ "x${LC_ALL}" = "x" ]; then
+    export LC_ALL="$LANG"
+fi
+
+
 # update SSH_AUTH_SOCK
 #if [ "x$TMUX" != "x" ]; then
 #    local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')

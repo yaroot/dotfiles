@@ -12,6 +12,13 @@ case "$SESSION" in
     xfce*) STANDALONE="no" ;;
 esac
 
+if [ "x${LANGUAGE}" = "x" ]; then
+    export LANGUAGE="$LANG"
+fi
+if [ "x${LC_ALL}" = "x" ]; then
+    export LC_ALL="$LANG"
+fi
+
 # Set keymap
 # setxkbmap -layout de
 xmodmap -pke | tee $HOME/.xmodmap_backup &>/dev/null
