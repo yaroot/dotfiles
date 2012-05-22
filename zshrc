@@ -28,9 +28,9 @@
 #}}}
 
 #{{{ transparent for xterm
-if [ $TERM = "xterm" ]; then
-    [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
-fi
+#if [ $TERM = "xterm" ]; then
+#    [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
+#fi
 #}}}
 
 #{{{ Environment variables
