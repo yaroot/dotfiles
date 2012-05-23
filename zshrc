@@ -2,10 +2,12 @@
 
 #{{{ $HOME/.zshrc
 #
-#if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-#  (startx &); logout
-#  # exec startx
-#fi
+# if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
+#   if [ -x "$HOME/.local/bin/dwm" ]; then
+#     (startx &); logout
+#     # (startx xfce &); logout
+#   fi
+# fi
 #
 # source $HOME/.dotfiles/zshrc
 #
