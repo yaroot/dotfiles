@@ -2,10 +2,10 @@
 
 #{{{ $HOME/.zshrc
 #
-# if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-#     (startx &); logout
-#     # exec startx
-# fi
+#if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+#  (startx &); logout
+#  # exec startx
+#fi
 #
 # source $HOME/.dotfiles/zshrc
 #
@@ -28,9 +28,9 @@
 #}}}
 
 #{{{ transparent for xterm
-#if [ $TERM = "xterm" ]; then
-#    [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
-#fi
+# if [ $TERM = "xterm" ]; then
+#   [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
+# fi
 #}}}
 
 #{{{ Environment variables
@@ -40,24 +40,26 @@ export EDITOR=`\which vim`
 \which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
 if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
-    source "${HOME}/.keychain/${HOST}-sh"
+  source "${HOME}/.keychain/${HOST}-sh"
 fi
 
-if [ "x${LANGUAGE}" = "x" ]; then
+if [ "x${LANG}" != "x" ]; then
+  if [ "x${LANGUAGE}" = "x" ]; then
     export LANGUAGE="$LANG"
-fi
-if [ "x${LC_ALL}" = "x" ]; then
+  fi
+  if [ "x${LC_ALL}" = "x" ]; then
     export LC_ALL="$LANG"
+  fi
 fi
 
 
 # update SSH_AUTH_SOCK
-#if [ "x$TMUX" != "x" ]; then
-#    local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
-#    if [ "x$sock_path" != "x" ]; then
-#        eval "${sock_path}; export SSH_AUTH_SOCK;"
-#    fi
-#fi
+# if [ "x$TMUX" != "x" ]; then
+#   local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
+#   if [ "x$sock_path" != "x" ]; then
+#     eval "${sock_path}; export SSH_AUTH_SOCK;"
+#   fi
+# fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 
@@ -90,10 +92,10 @@ bindkey -v # vim fellow
 
 autoload -U compinit
 if [ -d "$HOME/._zshcomp" ]; then
-    fpath=($fpath $HOME/._zshcomp)
+  fpath=($fpath $HOME/._zshcomp)
 fi
 if [ -d "$HOME/repos/zsh-completions" ]; then
-    fpath=($fpath $HOME/repos/zsh-completions)
+  fpath=($fpath $HOME/repos/zsh-completions)
 fi
 compinit
 autoload -U colors
@@ -119,31 +121,32 @@ bindkey -M vicmd v edit-command-line
 #prompt walters
 
 if [ $TERM = dumb ]; then
-    PS1="> "
-    PS2="%_ $PS1"
-    PS3="?# $PS1"
-    ZCALCPROMPT='%1v> '
+  PS1="> "
+  PS2="%_ $PS1"
+  PS3="?# $PS1"
+  ZCALCPROMPT='%1v> '
 else
-    # » for user and # for root. green if the previous command returned
-    # 0, red otherwise.
-    # PS1="%(0?.%F{green}.%F{red})%(0#.#.»)%f "
+  # » for user and # for root. green if the previous command returned
+  # 0, red otherwise.
+  # PS1="%(0?.%F{green}.%F{red})%(0#.#.»)%f "
 
-    # make gentoo prefix looks different
-    #if [ $EPREFIX ]; then
-#    case $PATH in
-#        *gentoo* )
-#            RPS1="%F{red}§%m§ %F{green}%~" ;;
-#        * )
-#            RPS1="%F{red}%m %F{green}%~" ;;
-#    esac
+  # make gentoo prefix looks different
+  # if [ $EPREFIX ]; then
+  #   case $PATH in
+  #     *gentoo* )
+  #       RPS1="%F{red}§%m§ %F{green}%~" ;;
+  #     * )
+  #       RPS1="%F{red}%m %F{green}%~" ;;
+  #   esac
+  # fi
 
-    PS1='%(0?.%F{green}.%F{red})%(0#.#.>)%f '
-    RPS1='%F{red}%m %F{green}%~'
-    PS2='%B%F{white}%_%f%(0?.%F{green}.%F{red})%(0#.#.>)%f '
-    RPS2=$RPS1
-    PS3='%B%F{white}?#%f%(0?.%F{green}.%F{red})%(0#.#.>)%f '
-    RPS3=$RPS1
-    ZCALCPROMPT='%F{blue}%1v>%f '
+  PS1='%(0?.%F{green}.%F{red})%(0#.#.>)%f '
+  RPS1='%F{red}%m %F{green}%~'
+  PS2='%B%F{white}%_%f%(0?.%F{green}.%F{red})%(0#.#.>)%f '
+  RPS2=$RPS1
+  PS3='%B%F{white}?#%f%(0?.%F{green}.%F{red})%(0#.#.>)%f '
+  RPS3=$RPS1
+  ZCALCPROMPT='%F{blue}%1v>%f '
 fi
 #}}}
 
@@ -153,22 +156,22 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 if [ `uname -s` = 'Darwin' ]; then
-    alias ls="ls -G"
+  alias ls="ls -G"
 elif [ `uname -s` = 'Linux' ] || [ `uname -o` = 'Cygwin' ]; then
-    alias ls="ls --color=auto"
+  alias ls="ls --color=auto"
 else
-    alias ls="ls -G"
+  alias ls="ls -G"
 fi
 
 alias more='less'
 
 if [ "$TERM" = 'screen' ] || [ "$TERM" = 'xterm' ]; then
-    alias mutt='TERM=xterm-256color mutt'
+  alias mutt='TERM=xterm-256color mutt'
 fi
 
 \which colordiff &> /dev/null
 if [ $? -eq 0  ]; then
-    alias diff='colordiff'
+  alias diff='colordiff'
 fi
 alias -g L='| less'
 alias -g G='| grep --color=auto -n'
@@ -239,83 +242,84 @@ compctl -g '/var/run/daemons/*(:t)' dstop drestart
 
 function x()
 {
-	if [ -f "$1" ] ; then
-		case "$1" in
-			*.tar.bz2)  tar xjf "$1"      ;;
-			*.tar.gz)   tar xzf "$1"      ;;
-			*.tar.bz)   tar xzf "$1"      ;;
-			*.tar.Z)    tar xzf "$1"      ;;
-			*.bz2)      bunzip2 "$1"      ;;
-			*.rar)      unrar x "$1"      ;;
-			*.gz)       gunzip "$1"       ;;
-			*.jar)      unzip "$1"        ;;
-			*.tar)      tar xf "$1"       ;;
-			*.tbz2)     tar xjf "$1"      ;;
-			*.tgz)      tar xzf "$1"      ;;
-			*.zip)      unzip "$1"        ;;
-			*.Z)        uncompress "$1"   ;;
-			*.7z)       7z x "$1"   ;;
-			*)          echo "'$1' cannot be extracted." ;;
-		esac
-	else
-		echo "'$1' is not a valid archive."
-	fi
+  if [ -f "$1" ] ; then
+    case "$1" in
+      *.tar.bz2)  tar xjf "$1"      ;;
+      *.tar.gz)   tar xzf "$1"      ;;
+      *.tar.bz)   tar xzf "$1"      ;;
+      *.tar.Z)    tar xzf "$1"      ;;
+      *.bz2)      bunzip2 "$1"      ;;
+      *.rar)      unrar x "$1"      ;;
+      *.gz)       gunzip "$1"       ;;
+      *.jar)      unzip "$1"        ;;
+      *.tar)      tar xf "$1"       ;;
+      *.tbz2)     tar xjf "$1"      ;;
+      *.tgz)      tar xzf "$1"      ;;
+      *.zip)      unzip "$1"        ;;
+      *.Z)        uncompress "$1"   ;;
+      *.7z)       7z x "$1"   ;;
+      *)          echo "'$1' cannot be extracted." ;;
+    esac
+  else
+    echo "'$1' is not a valid archive."
+  fi
 }
 
 function fin()
 {
-    local word="$1"
-    shift
-    find . -iname "*${word}*" "$@"
+  local word="$1"
+  shift
+  find . -iname "*${word}*" "$@"
 }
 
-function quiet(){
-    "$@" 2>&1 > /dev/null
+function quiet()
+{
+  "$@" 2>&1 > /dev/null
 }
 
 function git_new_bare()
 {
-    if [ -z "$1" ]; then
-        echo >2 'Usage: git_new ${repo_name}'
-        exit 1
-    fi
+  if [ -z "$1" ]; then
+    echo >2 'Usage: git_new ${repo_name}'
+    exit 1
+  fi
 
-    local base_dir=`pwd`
-    local repo_name="$1"
-    mkdir -p ${repo_name}
-    cd ${repo_name}
-    git init --bare
-    cd "${base_dir}"
+  local base_dir=`pwd`
+  local repo_name="$1"
+  mkdir -p ${repo_name}
+  cd ${repo_name}
+  git init --bare
+  cd "${base_dir}"
 }
 
 function gitio()
 {
-    local url="$1"
-    local code="$2"
-    if [ "x${code}" != "x" ]; then
-        code="-F \"code=${code}\""
-    fi
-    eval "curl -i http://git.io -F \"url=${url}\" $code"
+  local url="$1"
+  local code="$2"
+  if [ "x${code}" != "x" ]; then
+    code="-F \"code=${code}\""
+  fi
+  eval "curl -i http://git.io -F \"url=${url}\" $code"
 }
 
 function upload_one_pic_imgur()
 {
-    # API Key provided by Alan@imgur.com
-    local API_KEY="b3625162d3418ac51a9ee805b1840452"
-    local API_URL="http://imgur.com/api/upload.xml"
+  # API Key provided by Alan@imgur.com
+  local API_KEY="b3625162d3418ac51a9ee805b1840452"
+  local API_URL="http://imgur.com/api/upload.xml"
 
-    local FILE="$1"
-    local RESPONSE=$(curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL)
+  local FILE="$1"
+  local RESPONSE=$(curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL)
 
-    echo ">>> $file"
-    echo ">>> $RESPONSE" | grep -E -o '<original_image>(.+)</original_image>' | grep -E -o 'http://i.imgur.com/[^<]*'
+  echo ">>> $file"
+  echo ">>> $RESPONSE" | grep -E -o '<original_image>(.+)</original_image>' | grep -E -o 'http://i.imgur.com/[^<]*'
 }
 
 function imgur_upload()
 {
-    for img in "$@"; do
-        upload_one_pic_imgur "$img"
-    done
+  for img in "$@"; do
+    upload_one_pic_imgur "$img"
+  done
 }
 
 #}}}
