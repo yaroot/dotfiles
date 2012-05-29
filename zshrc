@@ -324,5 +324,16 @@ function imgur_upload()
   done
 }
 
+function currency_convert()
+{
+  local amo=$1
+  local from=$2
+  shift;shift;
+
+  for i in $@; do
+    curl -sL "http://www.google.com/finance/converter?a=$amo&from=$from&to=$i&hl=es" | sed '/res/!d;s/<[^>]*>//g'
+  done
+}
+
 #}}}
 
