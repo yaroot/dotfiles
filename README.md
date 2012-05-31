@@ -4,6 +4,7 @@
 
 * trayer-srg/trayer-dwm
 * iptux
+* pnmixer
 * cower
 * packer
 * wqy-microhei
