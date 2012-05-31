@@ -175,8 +175,10 @@ fi
 if [ $? -eq 0  ]; then
   alias diff='colordiff'
 fi
+
 alias -g L='| less'
 alias -g G='| grep --color=auto -n'
+alias -g H='| head'
 alias grep='grep --color=auto -n'
 alias iftop='iftop -B'
 alias hdtemp='echo `netcat localhost 7634`'
