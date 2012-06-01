@@ -38,14 +38,14 @@ xrdb $HOME/.Xdefaults &
  ( sleep 5  && wmname LG3D &) # java fix 
 #( sleep 2  && urxvtd -q -o -f &)
 
-
-
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
-# install fcitx-{gtk2,gtk3,qt}, otherwise set:
+# fcitx-{gtk2,gtk3,qt}
 #export GTK_IM_MODULE=xim
 #export QT_IM_MODULE=xim
+
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 if [ "yes" = "$STANDALONE" ]; then
   eval `dbus-launch --sh-syntax --exit-with-session`
