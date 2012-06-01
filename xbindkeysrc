@@ -37,11 +37,14 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# "scrot -e 'mv $f ~/ 2>/dev/null'"
-#     Mod4 + Shift + x
-# 
-# "xscreensaver-command -lock"
-#     Mod4 + Shift + l
+"scrot -e 'mv $f ~/ 2>/dev/null'"
+    Mod4 + Shift + x
+
+"xscreensaver-command -lock"
+    Mod4 + Shift + l
+
+"dmenu-launch"
+    Mod4 + Shift + r
 
 
 ##################################
