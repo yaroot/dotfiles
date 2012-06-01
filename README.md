@@ -5,6 +5,7 @@
 * trayer-srg/trayer-dwm
 * iptux
 * pnmixer
+* dmenu-launch
 * cower
 * packer
 * wqy-microhei
