@@ -313,10 +313,16 @@ function upload_one_pic_imgur()
   local API_URL="http://imgur.com/api/upload.xml"
 
   local FILE="$1"
-  local RESPONSE=$(curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL)
+  local IMGUR_RESPONSE
 
-  echo ">>> $file"
-  echo ">>> $RESPONSE" | grep -E -o '<original_image>(.+)</original_image>' | grep -E -o 'http://i.imgur.com/[^<]*'
+  if [ "x${IMGUR_API_KEY}" != "x" ]; then
+    API_KEY="$IMGUR_API_KEY"
+  fi
+
+  IMGUR_RESPONSE=`curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL`
+
+  echo ">>> $FILE"
+  echo ">>>" `echo $IMGUR_RESPONSE | \grep -E -o '<original_image>(.+)</original_image>' | \grep -E -o 'http://i.imgur.com/[^<]*'`
 }
 
 function imgur_upload()
