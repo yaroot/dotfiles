@@ -14,10 +14,10 @@
 # export PATH="$HOME/.cabal/bin:$PATH"
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # export PATH="$HOME/repos/n/bin:$PATH"
-# 
-# export N_PREFIX="$HOME/.local/n"
-# export NODE_PATH="$N_PREFIX/current/lib/node_modules" # npm -g root
+#
+# export N_PREFIX="$HOME/.n"
 # export PATH="$N_PREFIX/n/current/bin:$PATH"
+# export NODE_PATH="$N_PREFIX/n/current/lib/node_modules" # npm -g root
 # 
 # export VIRTUAL_ENV_DISABLE_PROMPT=1
 # source $HOME/.pythons/versions/27/bin/activate
