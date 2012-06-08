@@ -15,7 +15,7 @@
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # export PATH="$HOME/repos/n/bin:$PATH"
 #
-# export N_PREFIX="$HOME/.n"
+# export N_PREFIX="$HOME/.nodes"
 # export PATH="$N_PREFIX/n/current/bin:$PATH"
 # export NODE_PATH="$N_PREFIX/n/current/lib/node_modules" # npm -g root
 # 
