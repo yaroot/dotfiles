@@ -1,17 +1,23 @@
 #!/bin/sh
 
+# dunno what this shit is
+# ignore it
 if [ "xterm" = "$1" ]; then
   shift
 fi
+
 SESSION="dwm"
+STANDALONE="yes"
+
 if [ ! -z "$1" ]; then
   SESSION="$1"
 fi
-STANDALONE="yes"
 case "$SESSION" in
   xfce*) STANDALONE="no" ;;
 esac
 
+
+# fix lang vars
 if [ "x${LANGUAGE}" = "x" ]; then
   export LANGUAGE="$LANG"
 fi
@@ -22,7 +28,9 @@ fi
 # Set keymap
 # setxkbmap -layout de
 xmodmap -pke | tee $HOME/.xmodmap_backup &>/dev/null
-xmodmap $HOME/.xmodmaprc
+if [ -f "$HOME/.xmodmaprc" ]; then
+  xmodmap $HOME/.xmodmaprc
+fi
 
 xset m 16/10 # slow the mouse down
 # synclient TouchpadOff=1 # disable clipboard
@@ -32,11 +40,11 @@ xrdb $HOME/.Xdefaults &
 
  ( sleep 2  && xcompmgr &)
  ( sleep 4  && xbindkeys -f $HOME/.xbindkeysrc & )
-#( sleep 2s && autocutsel -fork &)
+#( sleep 2s && autocutsel -fork &) # kinda annoying
  ( sleep 3  && autocutsel -selection PRIMARY -fork &)
  ( sleep 5  && VBoxClient-all &)
  ( sleep 5  && wmname LG3D &) # java fix 
-#( sleep 2  && urxvtd -q -o -f &)
+#( sleep 2  && urxvtd -q -o -f &) # use tmux/screen
 
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
@@ -72,7 +80,7 @@ launchdwm()
   ( sleep 3 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
 
   while true; do
-    $HOME/.local/bin/dwm > $HOME/.dwm.log 2>&1
+    $HOME/.local/bin/dwm #> $HOME/.dwm.log 2>&1
     sleep 1
   done
 }
