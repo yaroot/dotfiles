@@ -304,6 +304,7 @@ function git_new_bare()
 function git_push_all()
 {
   for remote in `git remote`; do
+    echo ">>>> git push [$remote]"
     git push "$remote" $@
   done
 }
