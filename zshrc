@@ -65,6 +65,11 @@ fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 
+
+ipad_ua='Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
+firefox_ua='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0'
+chrome_ua='Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.42'
+
 #}}}
 
 #{{{ Settings
@@ -295,6 +300,14 @@ function git_new_bare()
   git init --bare
   cd "${base_dir}"
 }
+
+function git_push_all()
+{
+  for remote in `git remote`; do
+    git push "$remote" $@
+  done
+}
+
 
 function gitio()
 {
