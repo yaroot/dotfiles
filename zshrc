@@ -31,7 +31,7 @@
 
 #{{{ transparent for xterm
 # if [ $TERM = "xterm" ]; then
-#   which transset-df && [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
+#   which transset-df 2>&1 /dev/null && [ -n "$WINDOWID" ] && transset-df -i $WINDOWID >/dev/null
 # fi
 #}}}
 
