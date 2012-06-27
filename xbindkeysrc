@@ -46,6 +46,8 @@
 "dmenu-launch"
     Mod4 + Shift + r
 
+"pwhash.sh -m"
+    Mod4 + Shift + p
 
 ##################################
 # End of xbindkeys configuration #
