@@ -301,11 +301,11 @@ function git_new_bare()
   cd "${base_dir}"
 }
 
-function git_push_all()
+function git_remotes_each()
 {
   for remote in `git remote`; do
-    echo ">>>> git push [$remote]"
-    git push "$remote" $@
+    echo ">>>> Running [$1 $remote $2]"
+    git "$1" "$remote" "$2"
   done
 }
 
