@@ -56,7 +56,13 @@ export QT_IM_MODULE=fcitx
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 if [ "yes" = "$STANDALONE" ]; then
-  eval `dbus-launch --sh-syntax --exit-with-session`
+  # source scripts in xinitrc.d
+  if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
+    for f in /etc/X11/xinit/xinitrc.d/*; do
+      [ -x "$f" ] && . "$f"
+    done
+    unset f
+  fi
 
   #( sleep 15 && ibus-daemon --xim &)
   ( sleep 15 && fcitx &)
