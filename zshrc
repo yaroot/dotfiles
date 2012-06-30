@@ -12,9 +12,7 @@ export EDITOR=`\which vim`
 \which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
 \which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
-if [ -f "${HOME}/.keychain/${HOST}-sh" ]; then
-  source "${HOME}/.keychain/${HOST}-sh"
-fi
+which keychain > /dev/null && eval `keychain --eval 2> /dev/null`
 
 if [ "x${LANG}" != "x" ]; then
   if [ "x${LANGUAGE}" = "x" ]; then
