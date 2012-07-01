@@ -39,7 +39,7 @@ xset m 16/10 # slow the mouse down
 xrdb $HOME/.Xdefaults &
 
  ( sleep 2  && xcompmgr &)
- ( sleep 4  && xbindkeys -f $HOME/.xbindkeysrc & )
+ ( sleep 4  && xbindkeys -f $HOME/.xbindkeysrc &)
 #( sleep 2s && autocutsel -fork &) # kinda annoying
  ( sleep 3  && autocutsel -selection PRIMARY -fork &)
  ( sleep 5  && VBoxClient-all &)
