@@ -12,7 +12,15 @@ export EDITOR=`\which vim`
 \which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
 \which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
-which keychain > /dev/null && eval `keychain --eval 2> /dev/null`
+which keychain > /dev/null
+if [ $? = 0 ]; then
+  eval `keychain --eval 2> /dev/null`
+else
+  if [ -f "$HOME/.keychain/${HOST}-sh" ]; then
+    source "$HOME/.keychain/${HOST}-sh"
+  fi
+fi
+
 
 if [ "x${LANG}" != "x" ]; then
   if [ "x${LANGUAGE}" = "x" ]; then
@@ -33,7 +41,6 @@ fi
 # fi
 
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
-
 
 ipad_ua='Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
 firefox_ua='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0'
