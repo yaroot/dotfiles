@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
+  if [ -x "$HOME/.local/bin/dwm" ]; then
+    (startx &); logout
+    # (startx xfce &); logout
+  fi
+fi
+
+source $HOME/.dotfiles/zshrc
+
+export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/repos/n/bin:$PATH"
+
+export N_PREFIX="$HOME/.nodes"
+export PATH="$N_PREFIX/n/current/bin:$PATH"
+export NODE_PATH="$N_PREFIX/n/current/lib/node_modules" # npm -g root
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+source $HOME/.pythons/versions/27/bin/activate
+
+source $HOME/.dotfiles/zshrc
+
+eval "$(npm completion 2>/dev/null)"
+eval "$(rbenv init -)"
