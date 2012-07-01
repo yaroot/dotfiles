@@ -86,7 +86,7 @@ launchdwm()
   ( sleep 3 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
 
   while true; do
-    $HOME/.local/bin/dwm #> $HOME/.dwm.log 2>&1
+    ck-launch-session $HOME/.local/bin/dwm
     sleep 1
   done
 }
