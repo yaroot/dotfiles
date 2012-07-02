@@ -4,7 +4,7 @@
 [alias]
     a   = add
     br  = branch
-    brl = branch -av
+    brl = branch -avv
     c   = commit -m
     ca  = commit -am
     cm  = commit
