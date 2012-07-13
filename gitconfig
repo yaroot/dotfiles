@@ -1,6 +1,6 @@
 [user]
-    name  = 
-    email = 
+#    name  = 
+#    email = 
 [alias]
     a   = add
     br  = branch
@@ -33,7 +33,7 @@
     tool = vimdiff
 [core]
     editor = vim
-	quotepath = false
+    quotepath = false
 [svn]
     rmdir = true
 
