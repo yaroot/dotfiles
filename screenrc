@@ -1,4 +1,5 @@
 
+escape ^qq
 altscreen on
 startup_message off
 crlf off
