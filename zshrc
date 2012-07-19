@@ -280,9 +280,17 @@ function git_new_bare()
 
 function git_each_remotes()
 {
+  local action="$1"
+  shift
+
   for remote in `git remote`; do
-    echo ">>>> Running [git $1 $remote $2]"
-    eval "git $1 $remote $2"
+    local cmd="git $action $remote"
+    if [ -n "$1" ]; then
+      cmd="$cmd $@"
+    fi
+
+    echo ">>>> Running [${cmd}]"
+    eval "$cmd"
   done
 }
 
