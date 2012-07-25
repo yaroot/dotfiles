@@ -215,6 +215,10 @@ zstyle ':completion:*:processes-names' command 'ps -wxho command'
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
+zstyle ':completion:*' substitute 1
+zstyle ':completion:*' verbose true
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' match-original both
 
 #compdef _pacman {pacman-color,clyde,powerpill,bauerbill}=pacman
 #compdef _pacman parsablepackagesize=pacman
