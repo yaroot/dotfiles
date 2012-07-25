@@ -232,27 +232,31 @@ compctl -g '/var/run/daemons/*(:t)' dstop drestart
 
 function x()
 {
-  if [ -f "$1" ] ; then
-    case "$1" in
-      *.tar.bz2)  tar xjf "$1"      ;;
-      *.tar.gz)   tar xzf "$1"      ;;
-      *.tar.bz)   tar xzf "$1"      ;;
-      *.tar.Z)    tar xzf "$1"      ;;
-      *.bz2)      bunzip2 "$1"      ;;
-      *.rar)      unrar x "$1"      ;;
-      *.gz)       gunzip "$1"       ;;
-      *.jar)      unzip "$1"        ;;
-      *.tar)      tar xf "$1"       ;;
-      *.tbz2)     tar xjf "$1"      ;;
-      *.tgz)      tar xzf "$1"      ;;
-      *.zip)      unzip "$1"        ;;
-      *.Z)        uncompress "$1"   ;;
-      *.7z)       7z x "$1"   ;;
-      *)          echo "'$1' cannot be extracted." ;;
-    esac
-  else
-    echo "'$1' is not a valid archive."
-  fi
+  for f in "$@"; do
+    if [ -f "$f" ]; then
+      case "$f" in
+        *.tar.xz)   tar xJf "$f"      ;;
+        *.tar.bz2)  tar xjf "$f"      ;;
+        *.tar.gz)   tar xzf "$f"      ;;
+        *.tar.bz)   tar xzf "$f"      ;;
+        *.tar.Z)    tar xzf "$f"      ;;
+        *.bz2)      bunzip2 "$f"      ;;
+        *.rar)      unrar x "$f"      ;;
+        *.gz)       gunzip "$f"       ;;
+        *.jar)      unzip "$f"        ;;
+        *.tar)      tar xf "$f"       ;;
+        *.tbz2)     tar xjf "$f"      ;;
+        *.tgz)      tar xzf "$f"      ;;
+        *.zip)      unzip "$f"        ;;
+        *.Z)        uncompress "$f"   ;;
+        *.7z)       7z x "$f"         ;;
+        *.pkg)      xar -x -f "$f"    ;;
+        *.xar)      xar -x -f "$f"    ;;
+        *.deb)      ar x "$f"         ;;
+        *)          echo "'$f' cannot be extracted." ;;
+      esac
+    fi
+  done
 }
 
 function fin()
