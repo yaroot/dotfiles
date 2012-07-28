@@ -60,12 +60,11 @@ bindkey -v
 bindkey -v "^R" history-incremental-search-backward
 
 autoload -U compinit
-if [ -d "$HOME/._zshcomp" ]; then
-  fpath=($fpath $HOME/._zshcomp)
-fi
-if [ -d "$HOME/repos/zsh-completions" ]; then
-  fpath=($fpath $HOME/repos/zsh-completions)
-fi
+fpath=(
+  $fpath
+  $HOME/.local/zshcomp
+  $HOME/.local/zsh-completions
+)
 compinit
 autoload -U colors
 colors
@@ -338,7 +337,7 @@ function currency_convert()
 function restart_network()
 {
   if [ -f /etc/debian_version ]; then
-    echo ">>>>> restring networking"
+    echo ">>>>> restarting networking"
     sudo /etc/init.d/networking stop
     sudo /etc/init.d/networking start
   else

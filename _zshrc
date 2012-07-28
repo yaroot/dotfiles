@@ -7,20 +7,21 @@ if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
   fi
 fi
 
-source $HOME/.dotfiles/zshrc
 
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/repos/n/bin:$PATH"
+export PATH="$HOME/.local/n/bin:$PATH"
 
-export N_PREFIX="$HOME/.nodes"
+export N_PREFIX="$HOME/.local/n"
 export PATH="$N_PREFIX/n/current/bin:$PATH"
 export NODE_PATH="$N_PREFIX/n/current/lib/node_modules" # npm -g root
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-source $HOME/.pythons/versions/27/bin/activate
+source $HOME/.local/python/env/27/bin/activate
 
 source $HOME/.dotfiles/zshrc
 
 eval "$(npm completion 2>/dev/null)"
 eval "$(rbenv init -)"
+
+#alias b='brew'
