@@ -9,6 +9,8 @@
 #{{{ Environment variables
 export PAGER=`\which less`
 export EDITOR=`\which vim`
+export VISUAL="$EDITOR"
+export RLWRAP_EDITOR="vim +%L"
 \which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
 \which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
@@ -155,7 +157,7 @@ alias rd='rdesktop -u administrator -g 1024x768 -x m -r clipboard'
 alias rdd='rdesktop -u administrator -g 1600x1000 -r clipboard -5 -x 0x80 -z -b'
 alias xf='xfreerdp -u administrator -g 1024x768 -x m -z'
 alias xff='xfreerdp -u administrator -g 1600x1000 -x l -z'
-alias pss='ps aux | grep '
+alias psg='ps aux | grep '
 alias vacuumsqlite="find . -name '*.sqlite' -exec sqlite3 {} 'VACUUM' \;"
 alias cpl='cpulimit -zl 70 -p '
 alias lock='xscreensaver-command -lock'
