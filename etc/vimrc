@@ -1,0 +1,37 @@
+
+set nocp nobackup nowritebackup
+
+set nobomb
+set encoding=utf-8
+set fileformat=unix
+set fileencoding=utf-8
+
+
+set hls
+set autoindent cindent smartindent
+set tabstop=4       " 4 spaces indentation
+set shiftwidth=4    " same
+set softtabstop=4   " same
+set expandtab smarttab " expand tab with spaces
+set backspace=indent,eol,start  " smart backspacing
+set number
+if v:version>=703
+    set relativenumber
+endif
+
+filetype plugin indent on
+syntax on
+
+
+set wc=<tab>
+set wildmenu
+set wildmode=longest:full
+
+set background=dark
+
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <bs> :noh<CR>
+
