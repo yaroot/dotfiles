@@ -22,24 +22,6 @@ else
 fi
 
 
-if [ "x${LANG}" != "x" ]; then
-  if [ "x${LANGUAGE}" = "x" ]; then
-    export LANGUAGE="$LANG"
-  fi
-  if [ "x${LC_ALL}" = "x" ]; then
-    export LC_ALL="$LANG"
-  fi
-fi
-
-
-# update SSH_AUTH_SOCK
-# if [ "x$TMUX" != "x" ]; then
-#   local sock_path=$(tmux showenv | grep '^SSH_AUTH_SOCK')
-#   if [ "x$sock_path" != "x" ]; then
-#     eval "${sock_path}; export SSH_AUTH_SOCK;"
-#   fi
-# fi
-
 export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
 
 ipad_ua='Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
