@@ -50,11 +50,12 @@ setopt promptsubst
 setopt braceccl
 setopt appendhistory
 setopt autocd
+setopt sharehistory
 #setopt nomatch
 unsetopt notify
 
-bindkey -v # vim fellow
-#zstyle :compinstall filename "$HOME/.zshrc"
+bindkey -v
+bindkey -v "^R" history-incremental-search-backward
 
 autoload -U compinit
 if [ -d "$HOME/._zshcomp" ]; then
