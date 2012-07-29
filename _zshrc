@@ -24,5 +24,3 @@ source $HOME/.dotfiles/zshrc
 eval "$(npm completion 2>/dev/null)"
 eval "$(rbenv init -)"
 
-# alias b='brew'
-# alias nmblookup='smbutil lookup'

@@ -125,6 +125,8 @@ alias ....='cd ../../..'
 
 if [ `uname -s` = 'Darwin' ]; then
   alias ls="ls -G"
+  alias b='brew'
+  alias nmblookup='smbutil lookup'
 elif [ `uname -s` = 'Linux' ] || [ `uname -o` = 'Cygwin' ]; then
   alias ls="ls --color=auto"
 else
