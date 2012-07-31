@@ -52,7 +52,7 @@ setopt promptsubst
 setopt braceccl
 setopt appendhistory
 setopt autocd
-setopt sharehistory
+#setopt sharehistory
 #setopt nomatch
 unsetopt notify
 
