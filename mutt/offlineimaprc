@@ -1,0 +1,22 @@
+[general]
+ui = ttyui
+accounts = gmail
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+maxsyncaccounts = 2
+maxconnections = 3
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/.mail/mymail
+
+[Repository gmail-remote]
+type = Gmail
+remoteuser = user@gmail.com
+remotepass = passwd
+realdelete = no
+# cert_fingerprint =
+
+# vim: ft=cfg tw=0
