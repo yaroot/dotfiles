@@ -25,11 +25,6 @@ if [ "x${LC_ALL}" = "x" ]; then
   export LC_ALL="$LANG"
 fi
 
-# -layout de
-# ctrl:swapcaps
-# more: /usr/share/X11/xkb/rules/base.lst
-setxkbmap -option ctrl:nocaps
-
 xset m 16/10 # slow the mouse down
 # synclient TouchpadOff=1 # disable clipboard
 
