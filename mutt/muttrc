@@ -1,9 +1,4 @@
-
-
-###############
-#   Account   #
-###############
-
+#
 #########################
 
 set header_cache                    = ~/.mutt/cache/headers
