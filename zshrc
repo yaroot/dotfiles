@@ -63,7 +63,7 @@ autoload -U compinit
 fpath=(
   $fpath
   $HOME/.local/zshcomp
-  $HOME/.local/zsh-completions
+  $HOME/.local/zsh-completions/src
 )
 compinit
 autoload -U colors
