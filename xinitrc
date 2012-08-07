@@ -28,6 +28,8 @@ fi
 xset m 16/10 # slow the mouse down
 # synclient TouchpadOff=1 # disable clipboard
 
+setxkbmap -option ctrl:nocaps
+
 # load X configs
 xrdb $HOME/.Xdefaults &
 
