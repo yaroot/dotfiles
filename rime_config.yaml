@@ -40,17 +40,8 @@ schema_list:
   - schema: luna_pinyin_fluency
   - schema: luna_pinyin_simp
 
-switcher:
-  caption: "〔方案選單〕"
-  hotkeys:
-    - "Control+grave"
-#    - "Control+Shift+grave"
-#    - F4
-  save_options:
-    - full_shape
-    - simplification
-    - extended_charset
-
 menu:
   page_size: 6
 
+style:
+  horizontal: true
