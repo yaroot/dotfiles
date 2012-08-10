@@ -7,12 +7,12 @@
 #}}}
 
 #{{{ Environment variables
-export PAGER=`\which less`
-export EDITOR=`\which vim`
+export PAGER=`which less`
+export EDITOR=`which vim`
 export VISUAL="$EDITOR"
 export RLWRAP_EDITOR="vim +%L"
-\which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
-\which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
+which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
+which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
 which keychain > /dev/null
 if [ $? = 0 ]; then
@@ -139,7 +139,7 @@ if [ "$TERM" = 'screen' ] || [ "$TERM" = 'xterm' ]; then
   alias mutt='TERM=xterm-256color mutt'
 fi
 
-\which colordiff &> /dev/null
+which colordiff &> /dev/null
 if [ $? -eq 0  ]; then
   alias diff='colordiff'
 fi
@@ -314,8 +314,9 @@ function upload_one_pic_imgur()
 
   IMGUR_RESPONSE=`curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL`
 
+  local GREP=`which grep`
   echo ">>> $FILE"
-  echo ">>>" `echo $IMGUR_RESPONSE | \grep -E -o '<original_image>(.+)</original_image>' | \grep -E -o 'http://i.imgur.com/[^<]*'`
+  echo ">>>" `echo $IMGUR_RESPONSE | $GREP -E -o '<original_image>(.+)</original_image>' | $GREP -E -o 'http://i.imgur.com/[^<]*'`
 }
 
 function imgur_upload()
