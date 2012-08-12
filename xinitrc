@@ -16,15 +16,6 @@ case "$SESSION" in
   xfce*) STANDALONE="no" ;;
 esac
 
-
-# fix lang vars
-if [ "x${LANGUAGE}" = "x" ]; then
-  export LANGUAGE="$LANG"
-fi
-if [ "x${LC_ALL}" = "x" ]; then
-  export LC_ALL="$LANG"
-fi
-
 xset m 16/10 # slow the mouse down
 # synclient TouchpadOff=1 # disable clipboard
 
