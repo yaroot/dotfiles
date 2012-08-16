@@ -24,7 +24,11 @@ else
 fi
 
 
-export PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
+path=(
+  "$HOME/.bin"
+  "$HOME/.local/bin"
+  $path
+)
 
 ipad_ua='Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
 iphone_ua='Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
@@ -165,7 +169,7 @@ alias lock='xscreensaver-command -lock'
 alias tpoff='synclient TouchpadOff=1'
 alias tpon='synclient TouchpadOff=0'
 #alias emacs='emacs -nw'
-alias ht='htop'
+alias ht='htop -u $USER'
 alias sdo='sudo su ${USER} -c'
 alias s='sudo '
 alias g='git'
