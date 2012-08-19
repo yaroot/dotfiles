@@ -178,6 +178,7 @@ alias weatherbj='curl http://weather.noaa.gov/pub/data/observations/metar/decode
 alias ytdl="youtube-dl -o '%(stitle)s.%(ext)s'"
 alias m="man"
 alias p="pinfo"
+alias nocaps='setxkbmap -option ctrl:nocaps'
 
 # suffix alias
 alias -s git='git clone'
