@@ -349,5 +349,12 @@ function restart_network()
   fi
 }
 
+function mksshafg()
+{
+  local s;
+  s=`ls /tmp/ssh-*/* | head -n1`
+  echo "SSH_AUTH_SOCK=$s; export SSH_AUTH_SOCK;" | tee $HOME/.keychain/${HOST}-sh
+}
+
 #}}}
 
