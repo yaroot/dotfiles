@@ -32,6 +32,12 @@ xrdb $HOME/.Xdefaults &
  ( sleep 5  && wmname LG3D &) # java fix 
 #( sleep 2  && urxvtd -q -o -f &) # use tmux/screen
 
+if [ -f "$HOME/.synergys.conf" ]; then
+  if [ -n "`which synergys 2> /dev/null`" ]; then
+    ( sleep 2 && synergys $HOME/.synergys.conf &)
+  fi
+fi
+
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
