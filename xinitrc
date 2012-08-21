@@ -34,7 +34,7 @@ xrdb $HOME/.Xdefaults &
 
 if [ -f "$HOME/.synergys.conf" ]; then
   if [ -n "`which synergys 2> /dev/null`" ]; then
-    ( sleep 2 && synergys $HOME/.synergys.conf &)
+    ( sleep 2 && synergys -c $HOME/.synergys.conf &)
   fi
 fi
 
