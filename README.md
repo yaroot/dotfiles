@@ -24,7 +24,7 @@
 
 * duff
 * bwm-ng, iftraf, ethstatus
-* csshX, pdsh, ClusterSSH, mussh
+* ClusterSSH (csshX on OSX)
 
 more good stuff [here](http://kmandla.wikispaces.com/)
 
