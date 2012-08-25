@@ -360,5 +360,13 @@ function mksshafg()
   echo "SSH_AUTH_SOCK=$s; export SSH_AUTH_SOCK;" | tee $HOME/.keychain/${HOST}-sh > /dev/null
 }
 
+function allkeychain()
+{
+  for n in `find $HOME/.ssh -name '*.pub'`; do
+    local k=`basename $n`
+    keychain ${k%.pub}
+  done
+}
+
 #}}}
 
