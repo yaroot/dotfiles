@@ -293,17 +293,6 @@ function git_each_remotes()
   done
 }
 
-
-function gitio()
-{
-  local url="$1"
-  local code="$2"
-  if [ "x${code}" != "x" ]; then
-    code="-F \"code=${code}\""
-  fi
-  eval "curl -i http://git.io -F \"url=${url}\" $code"
-}
-
 function upload_one_pic_imgur()
 {
   # API Key provided by Alan@imgur.com
