@@ -26,5 +26,10 @@
 * bwm-ng, iftraf, ethstatus
 * ClusterSSH (csshX on OSX)
 
+# adium
+
+    dock icon: flcl cat
+    messages: lighty
+
 more good stuff [here](http://kmandla.wikispaces.com/)
 
