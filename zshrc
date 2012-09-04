@@ -265,16 +265,15 @@ function quiet()
 function git_new_bare()
 {
   if [ -z "$1" ]; then
-    echo >2 'Usage: git_new ${repo_name}'
-    exit 1
+    echo >2 'Usage: git_new [repo.git]'
+    return
   fi
 
-  local base_dir=`pwd`
-  local repo_name="$1"
-  mkdir -p ${repo_name}
-  cd ${repo_name}
+  local repo="$1"
+  mkdir -p $repo
+  pushd "$repo" > /dev/null
   git init --bare
-  cd "${base_dir}"
+  popd > /dev/null
 }
 
 function git_each_remotes()
