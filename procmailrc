@@ -1,0 +1,5 @@
+MAILDIR=$HOME/.maildir/
+VERBOSE=on
+
+:0
+new/
