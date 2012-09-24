@@ -184,6 +184,8 @@ alias m="man"
 alias p="pinfo"
 alias nocaps='setxkbmap -option ctrl:nocaps'
 
+alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
+
 # suffix alias
 alias -s git='git clone'
 
@@ -350,7 +352,7 @@ function mksshafg()
 
 function allkeychain()
 {
-  for n in `find $HOME/.ssh -name '*.pub'`; do
+  for n in `find $HOME/.ssh/. -name '*.pub'`; do
     local k=`basename $n`
     keychain ${k%.pub}
   done
