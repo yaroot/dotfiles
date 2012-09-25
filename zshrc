@@ -163,6 +163,7 @@ alias rdd='rdesktop -u administrator -g 1600x1000 -r clipboard -5 -x 0x80 -z -b'
 alias xf='xfreerdp -u administrator -g 1024x768 -x m -z'
 alias xff='xfreerdp -u administrator -g 1600x1000 -x l -z'
 alias psg='ps aux | grep '
+alias lsmg='lsmod | grep'
 alias vacuumsqlite="find . -name '*.sqlite' -exec sqlite3 {} 'VACUUM' \;"
 alias cpl='cpulimit -zl 70 -p '
 alias lock='xscreensaver-command -lock'
