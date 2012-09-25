@@ -184,7 +184,7 @@ alias ytdl="youtube-dl -o '%(stitle)s.%(ext)s'"
 alias m="man"
 alias p="pinfo"
 alias nocaps='setxkbmap -option ctrl:nocaps'
-
+alias truecrypt='truecrypt -t'
 alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
 
 # suffix alias
