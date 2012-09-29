@@ -185,7 +185,11 @@ alias m="man"
 alias p="pinfo"
 alias nocaps='setxkbmap -option ctrl:nocaps'
 alias truecrypt='truecrypt -t'
-alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
+
+
+if [ 'hell' = "$HOST" ]; then
+  alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
+fi
 
 # suffix alias
 alias -s git='git clone'
