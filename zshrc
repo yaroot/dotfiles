@@ -151,6 +151,7 @@ fi
 alias -g L='| less'
 alias -g G='| grep --color=auto -n'
 alias -g H='| head'
+alias -g SP="| curl -F 'sprunge=<-' http://sprunge.us"
 alias grep='grep --color=auto -n'
 alias iftop='iftop -B'
 alias hdtemp='echo `netcat localhost 7634`'
