@@ -78,13 +78,13 @@ launchdwm()
   ( sleep 3 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
 
   while true; do
-    ck-launch-session $HOME/.local/bin/dwm || exit
+    $HOME/.local/bin/dwm || exit
     sleep 1
   done
 }
 
 case $SESSION in
-  xfce*)        exec ck-launch-session startxfce4 ;;
+  xfce*)        exec startxfce4 ;;
   wmii)         exec wmii ;;
   dwm)          launchdwm ;;
 esac
