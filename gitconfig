@@ -33,9 +33,9 @@
     tool = vimdiff
 [core]
     editor = vim
-	quotepath = false
+    quotepath = false
 [push]
-	default = upstream
+    default = upstream
 [svn]
     rmdir = true
 
