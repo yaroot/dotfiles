@@ -365,5 +365,21 @@ function allkeychain()
   done
 }
 
+function sd()
+{
+  local action="$1"
+  shift
+
+  for i in $@; do
+    local serv="${i}.service"
+    echo ">>> systemd $action $serv"
+    if [ 0 = $UID ]; then
+      systemd $action $serv
+    else
+      sudo systemd $action $serv
+    fi
+  done
+}
+
 #}}}
 
