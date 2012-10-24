@@ -374,9 +374,9 @@ function sd()
     local serv="${i}.service"
     echo ">>> systemd $action $serv"
     if [ 0 = $UID ]; then
-      systemd $action $serv
+      systemctl $action $serv
     else
-      sudo systemd $action $serv
+      sudo systemctl $action $serv
     fi
   done
 }
