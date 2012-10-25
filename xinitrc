@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# dunno what this shit is
-# ignore it
 if [ "xterm" = "$1" ]; then
   shift
 fi
@@ -16,7 +14,7 @@ case "$SESSION" in
   xfce*) STANDALONE="no" ;;
 esac
 
-xset m 16/10 # slow the mouse down
+xset m 16/10 # slow down the mouse
 # synclient TouchpadOff=1 # disable clipboard
 
 setxkbmap -option ctrl:nocaps
@@ -24,19 +22,15 @@ setxkbmap -option ctrl:nocaps
 # load X configs
 xrdb $HOME/.Xdefaults &
 
- ( sleep 2  && xcompmgr &)
- ( sleep 4  && xbindkeys -f $HOME/.xbindkeysrc &)
-#( sleep 2s && autocutsel -fork &) # kinda annoying
- ( sleep 3  && autocutsel -selection PRIMARY -fork &)
+ ( sleep 10 && xcompmgr &)
+ ( sleep 3  && xbindkeys -f $HOME/.xbindkeysrc &)
+#( sleep 5 && autocutsel -fork &) # kinda annoying
+ ( sleep 5  && autocutsel -selection PRIMARY -fork &)
  ( sleep 5  && VBoxClient-all &)
- ( sleep 5  && wmname LG3D &) # java fix 
-#( sleep 2  && urxvtd -q -o -f &) # use tmux/screen
+ ( sleep 3  && wmname LG3D &) # java fix 
+#( sleep 3  && urxvtd -q -o -f &) # use tmux/screen
 
-if [ -f "$HOME/.synergys.conf" ]; then
-  if [ -n "`which synergys 2> /dev/null`" ]; then
-    ( sleep 2 && synergys -c $HOME/.synergys.conf &)
-  fi
-fi
+( test -f "$HOME/.synergys.conf" && sleep 10 && synergys -c $HOME/.synergys.conf &)
 
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
@@ -56,11 +50,11 @@ if [ "yes" = "$STANDALONE" ]; then
     unset f
   fi
 
-  #( sleep 15 && ibus-daemon --xim &)
+  # ( sleep 15 && ibus-daemon --xim &)
   ( sleep 15 && fcitx &)
   ( sleep 15 && pnmixer &)
   ( sleep 3  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
-  test -f /run/wicd/wicd.pid && ( sleep 1  && wicd-client --tray &)
+  ( test -f /run/wicd/wicd.pid && sleep 3 && wicd-client --tray &)
   ( sleep 30 && dropboxd &)
   ( sleep 30 && xscreensaver -no-splash &)
   ( xsetroot -cursor_name left_ptr &)
@@ -83,9 +77,19 @@ launchdwm()
   done
 }
 
-case $SESSION in
-  xfce*)        exec startxfce4 ;;
-  wmii)         exec wmii ;;
-  dwm)          launchdwm ;;
-esac
+launchbspwm()
+{
+  while true; do
+    bspwm || exit
+    sleep 1
+  done
+}
+
+#case $SESSION in
+#  xfce*)        exec startxfce4 ;;
+#  bspwm)        launchbspwm  ;;
+#  dwm)          launchdwm ;;
+#esac
+
+launchbspwm
 
