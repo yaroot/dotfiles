@@ -7,10 +7,10 @@
     Mod4 + Shift + x
 
 "xscreensaver-command -lock"
-    Mod4 + Shift + l
+    Mod4 + Shift + Alt + l
 
-"dmenu_run"
-    Mod4 + Shift + r
+"dmenu_run `cat $HOME/.dmenurc`"
+    Mod4 + p
 
 "pwhash.sh -m"
     Mod4 + Shift + p
@@ -28,14 +28,8 @@
 "bspc close"
     Mod4 + Shift + c
 
-"bspc kill"
-    Mod4 + Shift + w
-
 "bspc cycle_layout"
     Mod4 + t
-
-"bspc cycle_layout"
-    Mod4 + y
 
 "bspc rotate clockwise"
     Mod4 + r
@@ -51,30 +45,6 @@
 
 "bspc toggle_fullscreen"
     Mod4 + f
-
-"bspc toggle_locked"
-    Mod4 + x
-
-"bspc alternate"
-    Mod4 + Return
-
-"bspc alternate_desktop"
-    Mod4 + Tab
-
-"bspc focus left"
-    Mod4 + h
-
-"bspc focus right"
-    Mod4 + l
-
-"bspc focus right"
-    Mod4 + semicolon
-
-"bspc focus up"
-    Mod4 + k
-
-"bspc focus down"
-    Mod4 + j
 
 "bspc shift left"
     Mod4 + Shift + h
@@ -97,35 +67,11 @@
 "bspc nearest newer"
     Mod4 + i
 
-"bspc cycle next --skip-floating"
-    Mod4 + d
-
-"bspc cycle prev --skip-floating"
-    Mod4 + Shift + d
-
-"bspc cycle next --skip-tiled"
-    Mod4 + a
-
-"bspc cycle prev --skip-tiled"
-    Mod4 + Shift + a
-
-"bspc cycle next --skip-class-equal"
-    Mod4 + grave
-
-"bspc cycle prev --skip-class-equal"
-    Mod4 + Shift + grave
-
-"bspc cycle next --skip-class-differ"
-    Mod4 + e
-
-"bspc cycle prev --skip-class-differ"
-    Mod4 + Shift + e
-
 "bspc cycle next"
-    Mod4 + c
+    Mod4 + j
 
 "bspc cycle prev"
-    Mod4 + Shift + c
+    Mod4 + k
 
 "bspc cycle_desktop next --skip-free"
     Mod4 + bracketright
@@ -172,36 +118,6 @@
 "bspc pull down"
     Mod4 + Alt + Shift + k
 
-"bspc set window_gap 0"
-    Mod4 + Alt + Control + 1
-
-"bspc set window_gap 3"
-    Mod4 + Alt + Control + 2
-
-"bspc set window_gap 6"
-    Mod4 + Alt + Control + 3
-
-"bspc set window_gap 9"
-    Mod4 + Alt + Control + 4
-
-"bspc set window_gap 15"
-    Mod4 + Alt + Control + 5
-
-"bspc set window_gap 24"
-    Mod4 + Alt + Control + 6
-
-"bspc set window_gap 39"
-    Mod4 + Alt + Control + 7
-
-"bspc set window_gap 63"
-    Mod4 + Alt + Control + 8
-
-"bspc set window_gap 102"
-    Mod4 + Alt + Control + 9
-
-"bspc set window_gap 165"
-    Mod4 + Alt + Control + 0
-
 "bspc ratio 0.1"
     Mod4 + Control + 1
 
@@ -229,75 +145,58 @@
 "bspc ratio 0.9"
     Mod4 + Control + 9
 
-"bspc magnetise top_left"
-    Mod4 + Alt + e
-
-"bspc magnetise top_right"
-    Mod4 + Alt + r
-
-"bspc magnetise bottom_left"
-    Mod4 + Alt + d
-
-"bspc magnetise bottom_right"
-    Mod4 + Alt + f
-
-"bspc use One"
+"bspc use 1"
     Mod4 + 1
 
-"bspc use Two"
+"bspc use 2"
     Mod4 + 2
 
-"bspc use Three"
+"bspc use 3"
     Mod4 + 3
 
-"bspc use Four"
+"bspc use 4"
     Mod4 + 4
 
-"bspc use Five"
+"bspc use 5"
     Mod4 + 5
 
-"bspc use Six"
+"bspc use 6"
     Mod4 + 6
 
-"bspc use Seven"
+"bspc use 7"
     Mod4 + 7
 
-"bspc use Eight"
+"bspc use 8"
     Mod4 + 8
 
-"bspc use Nine"
+"bspc use 9"
     Mod4 + 9
 
-"bspc use Ten"
-    Mod4 + 0
-
-"bspc send_to One"
+"bspc send_to 1"
     Mod4 + Shift + 1
 
-"bspc send_to Two"
+"bspc send_to 2"
     Mod4 + Shift + 2
 
-"bspc send_to Three"
+"bspc send_to 3"
     Mod4 + Shift + 3
 
-"bspc send_to Four"
+"bspc send_to 4"
     Mod4 + Shift + 4
 
-"bspc send_to Five"
+"bspc send_to 5"
     Mod4 + Shift + 5
 
-"bspc send_to Six"
+"bspc send_to 6"
     Mod4 + Shift + 6
 
-"bspc send_to Seven"
+"bspc send_to 7"
     Mod4 + Shift + 7
 
-"bspc send_to Eight"
+"bspc send_to 8"
     Mod4 + Shift + 8
 
-"bspc send_to Nine"
+"bspc send_to 9"
     Mod4 + Shift + 9
 
-"bspc send_to Ten"
-    Mod4 + Shift + 0
 
