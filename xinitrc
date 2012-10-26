@@ -53,7 +53,7 @@ if $STANDALONEWM; then
   # ( sleep 15 && ibus-daemon --xim &)
   ( sleep 15 && fcitx &)
   ( sleep 15 && pnmixer &)
-  ( sleep 3  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
+  ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   ( test -f /run/wicd/wicd.pid && sleep 3 && wicd-client --tray &)
   ( sleep 30 && dropboxd &)
   ( sleep 30 && xscreensaver -no-splash &)
@@ -86,12 +86,10 @@ launchbspwm()
   done
 }
 
-# case $WMCHOICE in
-#   xfce*)        exec startxfce4 ;;
-#   bspwm)        launchbspwm  ;;
-#   awesome)      awesome ;;
-#   dwm)          launchdwm ;;
-# esac
-
-awesome || exit
+case $WMCHOICE in
+  xfce*)        exec startxfce4 ;;
+  bspwm)        launchbspwm  ;;
+  awesome)      awesome ;;
+  dwm)          launchdwm ;;
+esac
 
