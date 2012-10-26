@@ -79,6 +79,7 @@ launchdwm()
 
 launchbspwm()
 {
+  export EWMHSTATUS_FIFO=/tmp/ewmhstatus.fifo
   while true; do
     bspwm || exit
     sleep 1
