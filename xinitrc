@@ -68,8 +68,8 @@ fi
 
 launchdwm()
 {
-  ( sleep 3 && $HOME/.local/bin/dwmstatus )&
-  ( sleep 3 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
+  ( sleep 5 && $HOME/.local/bin/dwmstatus )&
+  ( sleep 5 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
 
   while true; do
     $HOME/.local/bin/dwm || exit
