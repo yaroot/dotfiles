@@ -2,7 +2,7 @@
 #Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
 #Server = http://mirrors.163.com/archlinux/$repo/os/$arch
 
-Server = http://localhost:9999/pub/Linux/ArchLinux/$repo/os/$arch
+Server = http://localhost:9999/$repo/os/$arch
 
 Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 Server = http://mirror.bjtu.edu.cn/archlinux/$repo/os/$arch
