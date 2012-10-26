@@ -68,11 +68,17 @@ fi
 
 launchdwm()
 {
-  ( sleep 5 && $HOME/.local/bin/dwmstatus )&
-  ( sleep 5 && trayer --expand true --widthtype request --height 16 --transparent true --alpha 255 --edge top --align right & )
+  ( sleep 5 && $HOME/.local/bin/dwmstatus &)
 
   while true; do
+    # relaunch trayer
+    killall trayer
+    ( trayer `cat ~/.trayerrc` &)
+
+    # `kill dwm` means logout
     $HOME/.local/bin/dwm || exit
+
+    # wait a sec
     sleep 1
   done
 }
