@@ -86,11 +86,9 @@ launchbspwm()
   done
 }
 
-#case $SESSION in
-#  xfce*)        exec startxfce4 ;;
-#  bspwm)        launchbspwm  ;;
-#  dwm)          launchdwm ;;
-#esac
-
-launchbspwm
+case $SESSION in
+  xfce*)        exec startxfce4 ;;
+  bspwm)        launchbspwm  ;;
+  dwm)          launchdwm ;;
+esac
 
