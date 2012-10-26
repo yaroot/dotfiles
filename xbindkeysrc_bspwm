@@ -1,23 +1,4 @@
 
-# A list of keys is in /usr/include/X11/keysym.h and in
-# /usr/include/X11/keysymdef.h
-# The XK_ is not needed.
-
-"scrot -e 'mv $f ~/ 2>/dev/null'"
-    Mod4 + Shift + x
-
-"xscreensaver-command -lock"
-    Mod4 + Shift + Alt + l
-
-"dmenu_run `cat $HOME/.dmenurc`"
-    Mod4 + p
-
-"pwhash.sh -m"
-    Mod4 + Shift + p
-
-"urxvt"
-    Mod4 + slash
-
 #
 # bspwm
 #
