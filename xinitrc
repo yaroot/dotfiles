@@ -4,14 +4,14 @@ if [ "xterm" = "$1" ]; then
   shift
 fi
 
-SESSION="dwm"
-STANDALONE="yes"
+WMCHOICE="dwm"
+STANDALONEWM=true
 
-if [ ! -z "$1" ]; then
-  SESSION="$1"
+if [ -n "$1" ]; then
+  WMCHOICE="$1"
 fi
-case "$SESSION" in
-  xfce*) STANDALONE="no" ;;
+case "$WMCHOICE" in
+  xfce*)  STANDALONEWM=false ;;
 esac
 
 xset m 16/10 # slow down the mouse
@@ -41,7 +41,7 @@ export QT_IM_MODULE=fcitx
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
-if [ "yes" = "$STANDALONE" ]; then
+if $STANDALONEWM; then
   # source scripts in xinitrc.d
   if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
     for f in /etc/X11/xinit/xinitrc.d/*; do
@@ -60,10 +60,10 @@ if [ "yes" = "$STANDALONE" ]; then
   ( xsetroot -cursor_name left_ptr &)
 fi
 
-if [ -f ~/.startuprc ]; then
+if [ -f $HOME/.startuprc ]; then
   # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
   # xsetroot -solid midnightblue # background color
-  (source ~/.startuprc "$SESSION" "$STANDALONE")
+  (source ~/.startuprc "$WMCHOICE" "$STANDALONE")
 fi
 
 launchdwm()
@@ -86,9 +86,12 @@ launchbspwm()
   done
 }
 
-case $SESSION in
-  xfce*)        exec startxfce4 ;;
-  bspwm)        launchbspwm  ;;
-  dwm)          launchdwm ;;
-esac
+# case $WMCHOICE in
+#   xfce*)        exec startxfce4 ;;
+#   bspwm)        launchbspwm  ;;
+#   awesome)      awesome ;;
+#   dwm)          launchdwm ;;
+# esac
+
+awesome || exit
 
