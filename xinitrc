@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 if [ "xterm" = "$1" ]; then
   shift
@@ -50,10 +50,12 @@ if $STANDALONEWM; then
     unset f
   fi
 
+  if [ $WMCHOICE != 'awesome' ]; then
+    ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
+  fi
   # ( sleep 15 && ibus-daemon --xim &)
   ( sleep 15 && fcitx &)
   ( sleep 15 && pnmixer &)
-  ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   ( test -f /run/wicd/wicd.pid && sleep 3 && wicd-client --tray &)
   ( sleep 30 && dropboxd &)
   ( sleep 30 && xscreensaver -no-splash &)
@@ -95,7 +97,7 @@ launchbspwm()
 case $WMCHOICE in
   xfce*)        exec startxfce4 ;;
   bspwm)        launchbspwm  ;;
-  awesome)      awesome ;;
+  awesome)      awesome || exit ;;
   dwm)          launchdwm ;;
 esac
 
