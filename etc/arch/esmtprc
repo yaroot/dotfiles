@@ -1,0 +1,1 @@
+mda = "/usr/bin/procmail -d %T"
