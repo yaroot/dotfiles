@@ -1,0 +1,3 @@
+http://adblock-chinalist.googlecode.com/svn/trunk/adblock.txt
+https://easylist-downloads.adblockplus.org/easyprivacy.txt
+https://easylist-downloads.adblockplus.org/easylist.txt
