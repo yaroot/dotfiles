@@ -5,27 +5,16 @@
     a   = add
     br  = branch
     brl = branch -avv
-    c   = commit -m
+    c   = commit
     ca  = commit -am
-    cm  = commit
-    cam = commit -a
-    cw  = commit --cleanup=whitespace
-    caw = commit -a --cleanup=whitespace
     co  = checkout
-    d   = diff
-    dc  = diff --cached
-    dw  = diff -w
-    dcw = diff --cached -w
     m   = merge
     pl  = pull
     pr  = pull --rebase
     ps  = push
-    rb  = rebase
     r   = remote
     rl  = remote -v
     s   = status
-    sm  = submodule
-    st  = stash
     l   = log --oneline --graph --decorate
 [color]
     ui  = auto
