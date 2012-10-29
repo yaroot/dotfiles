@@ -16,7 +16,7 @@ which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
 which keychain > /dev/null
 if [ $? = 0 ]; then
-  eval `keychain --eval 2> /dev/null`
+  eval `keychain --eval --quick --quiet`
 else
   if [ -f "$HOME/.keychain/${HOST}-sh" ]; then
     source "$HOME/.keychain/${HOST}-sh"
