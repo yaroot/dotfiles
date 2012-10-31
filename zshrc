@@ -30,6 +30,10 @@ path=(
   $path
 )
 
+if [ -f "$HOME/.cabal" ]; then
+  export PATH="$HOME/.cabal/bin:$PATH"
+fi
+
 ipad_ua='Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
 iphone_ua='Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5'
 firefox_ua='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0'
@@ -228,6 +232,32 @@ compctl -g '/var/run/daemons/*(:t)' dstop drestart
 ### }}}
 
 #{{{ Functions
+active_rbenv()
+{
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+}
+
+active_pyenv()
+{
+  export VIRTUAL_ENV_DISABLE_PROMPT=1
+  source $HOME/.local/python/env/27/bin/activate
+}
+
+active_nprefix()
+{
+  export PATH="$HOME/.local/n/bin:$PATH"
+  export N_PREFIX="$HOME/.local/n"
+  export PATH="$N_PREFIX/n/current/bin:$PATH"
+  # npm -g root
+  export NODE_PATH="$N_PREFIX/n/current/lib/node_modules"
+  eval "$(npm completion 2>/dev/null)"
+}
+
+active_cabal()
+{
+}
+
 
 function x()
 {
