@@ -254,11 +254,6 @@ active_nprefix()
   eval "$(npm completion 2>/dev/null)"
 }
 
-active_cabal()
-{
-}
-
-
 function x()
 {
   for f in "$@"; do
