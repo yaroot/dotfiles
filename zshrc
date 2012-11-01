@@ -159,9 +159,7 @@ alias -g SP="| curl -F 'sprunge=<-' http://sprunge.us"
 alias grep='grep --color=auto -n'
 alias iftop='iftop -B'
 alias hdtemp='echo `netcat localhost 7634`'
-alias pc='proxychains'
-alias vbox='VirtualBox &'
-alias tty-clock='tty-clock -c'
+alias sysd='systemctl'
 alias rd='rdesktop -u administrator -g 1024x768 -x m -r clipboard'
 #alias rdd='rdesktop -u administrator -g 1600x1000 -r sound:local -r clipboard -5 -x 0x80 -z -b'
 alias rdd='rdesktop -u administrator -g 1600x1000 -r clipboard -5 -x 0x80 -z -b'
@@ -170,8 +168,6 @@ alias xff='xfreerdp -u administrator -g 1600x1000 -x l -z'
 alias psg='ps aux | grep '
 alias lsmg='lsmod | grep'
 alias vacuumsqlite="find . -name '*.sqlite' -exec sqlite3 {} 'VACUUM' \;"
-alias cpl='cpulimit -zl 70 -p '
-alias lock='xscreensaver-command -lock'
 alias tpoff='synclient TouchpadOff=1'
 alias tpon='synclient TouchpadOff=0'
 #alias emacs='emacs -nw'
@@ -387,22 +383,6 @@ function allkeychain()
   for n in `find $HOME/.ssh/. -name '*.pub'`; do
     local k=`basename $n`
     keychain ${k%.pub}
-  done
-}
-
-function sd()
-{
-  local action="$1"
-  shift
-
-  for i in $@; do
-    local serv="${i}.service"
-    echo ">>> systemd $action $serv"
-    if [ 0 = $UID ]; then
-      systemctl $action $serv
-    else
-      sudo systemctl $action $serv
-    fi
   done
 }
 
