@@ -17,7 +17,7 @@
 # theme
 
 * faenza (aur)
-* elegant-arch (aur)
+* zukitwo-themes (aur)
 * xcursor-flatbed (community)
 
 # Some utils to ease the life
