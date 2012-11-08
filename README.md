@@ -5,14 +5,11 @@
 * trayer-srg/trayer-dwm
 * iptux
 * pnmixer
-* dmenu-launch
 * cower
 * packer
 * wqy-microhei
 * tamsyn-font
 * faenza-icon-theme
-* gtk-murrine-arch-theme
-* gtk-elegant-arch-theme
 
 # theme
 
