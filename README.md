@@ -21,7 +21,6 @@
 
 * duff
 * bwm-ng, iftraf, ethstatus
-* ClusterSSH (csshX on OSX)
 
 # adium
 
