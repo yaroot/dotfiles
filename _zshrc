@@ -19,6 +19,8 @@ active_rbenv()
 # export VIRTUAL_ENV_DISABLE_PROMPT=1
 # #source $HOME/.local/python/env/27/bin/activate
 
+# export NODE_VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
 
