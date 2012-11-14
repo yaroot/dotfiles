@@ -10,6 +10,18 @@ if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
   fi
 fi
 
+active_rbenv()
+{
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+}
+
+# export VIRTUAL_ENV_DISABLE_PROMPT=1
+# #source $HOME/.local/python/env/27/bin/activate
+
+# #export NODE_PATH=`npm -g root`
+# eval "$(npm completion 2>/dev/null)"
+
 export SBT_OPTS='-Xms512m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -XX:ReservedCodeCacheSize=192m'
 
 source $HOME/.dotfiles/zshrc

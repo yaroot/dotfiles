@@ -228,27 +228,6 @@ compctl -g '/var/run/daemons/*(:t)' dstop drestart
 ### }}}
 
 #{{{ Functions
-active_rbenv()
-{
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-}
-
-active_pyenv()
-{
-  export VIRTUAL_ENV_DISABLE_PROMPT=1
-  source $HOME/.local/python/env/27/bin/activate
-}
-
-active_nprefix()
-{
-  export PATH="$HOME/.local/n/bin:$PATH"
-  export N_PREFIX="$HOME/.local/n"
-  export PATH="$N_PREFIX/n/current/bin:$PATH"
-  # npm -g root
-  export NODE_PATH="$N_PREFIX/n/current/lib/node_modules"
-  eval "$(npm completion 2>/dev/null)"
-}
 
 function x()
 {
