@@ -1,0 +1,7 @@
+#!/bin/bash
+
+iptables -N sshguard
+iptables -A INPUT -p tcp --dport 22 -j sshguard
+
+exit 0
+
