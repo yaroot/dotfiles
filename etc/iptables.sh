@@ -36,8 +36,11 @@ iptables -A INPUT -p tcp --dport 113 -s 10.0.0.0/8 -j ACCEPT
 # tcp reset connection to port 113 via tcp
 iptables -A INPUT -p tcp --dport 113 -j REJECT --rejectwith tcp-reset
 
-
 # DROP conn to 11080 except from lo
 iptables -A INPUT --dport 11080 -i lo -j ACCEPT
 iptables -A INPUT --dport 11080 -j DROP
+
+# redirect port
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080 -i eth0 --dst 192.168.1.3
+
 
