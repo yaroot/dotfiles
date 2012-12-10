@@ -180,9 +180,10 @@ alias vd='vimdiff'
 alias gd='gvimdiff'
 alias wifi='wicd-curses'
 alias weathersh='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
-alias weatherbj='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZBAA.TXT'
+alias weatherhz='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSHC.TXT'
 alias nocaps='setxkbmap -option ctrl:nocaps'
 alias truecrypt='truecrypt -t'
+alias gbkssh='luit -encoding zh_CN.GBK ssh'
 
 
 if [ 'hell' = "$HOST" ]; then
