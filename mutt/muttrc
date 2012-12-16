@@ -113,7 +113,7 @@ source ~/.mutt/gpg
 source ~/.mutt/zenburn
 
 source ~/.mutt/lists
-source ~/.mutt/account
+source ~/.ssh/mutt_account
 
 # set from = 'login@gmail.com'
 # set realname = 'name'
