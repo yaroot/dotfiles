@@ -2,12 +2,10 @@
 
 # if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
 if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
-  if [ -x "$HOME/.local/bin/dwm" ]; then
-    startx
-    logout
-    # (startx &); logout
-    # (startx xfce &); logout
-  fi
+  startx
+  logout
+  # (startx &); logout
+  # (startx xfce &); logout
 fi
 
 active_rbenv()
@@ -16,6 +14,8 @@ active_rbenv()
   export RUBY_BUILD_SKIP_MIRROR=1
   export RUBY_BUILD_CACHE_PATH=$HOME/.local/unix
   eval "$(rbenv init -)"
+  rbenv rehash
+  rehash
 }
 
 # export VIRTUAL_ENV_DISABLE_PROMPT=1
