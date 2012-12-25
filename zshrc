@@ -185,6 +185,7 @@ alias nocaps='setxkbmap -option ctrl:nocaps'
 alias truecrypt='truecrypt -t'
 alias gbkssh='luit -encoding zh_CN.GBK ssh'
 alias ytdl='youtube-dl -t -f18'
+alias annex='git-annex'
 
 if [ 'hell' = "$HOST" ]; then
   alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
