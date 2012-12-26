@@ -312,9 +312,10 @@ function upload_one_pic_imgur()
     API_KEY="$IMGUR_API_KEY"
   fi
 
-  IMGUR_RESPONSE=`curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL`
+  IMGUR_RESPONSE="`curl -F "key=$API_KEY" -F "image=@${FILE}" $API_URL`"
+  echo $IMGUR_RESPONSE
 
-  local GREP=`which grep`
+  local GREP='/usr/bin/env grep'
   echo ">>> $FILE"
   echo ">>>" `echo $IMGUR_RESPONSE | $GREP -E -o '<original_image>(.+)</original_image>' | $GREP -E -o 'http://i.imgur.com/[^<]*'`
 }
