@@ -17,10 +17,17 @@
 * zukitwo-themes (aur)
 * xcursor-flatbed (community)
 
-# Some utils to ease the life
+# utils
 
 * duff
 * bwm-ng, iftraf, ethstatus
+
+# general programs
+
+* sxiv _image viewer_
+* pinta _image editor_
+* leafpad
+* claws-mail _email client_
 
 # adium
 
