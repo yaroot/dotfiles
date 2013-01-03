@@ -39,6 +39,6 @@ patch:
     - schema: luna_pinyin_simp
   menu:
     page_size: 6
-  style:
-    horizontal: true
+  'switcher/hotkeys':
+    - Control+grave
 
