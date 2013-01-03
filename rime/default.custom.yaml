@@ -1,7 +1,6 @@
 
-
-punctuator:
-  half_shape:
+patch:
+  punctuator/half_shape:
     "," : { commit: "," }
     "." : { commit: "." }
     "<" : "<"
@@ -34,14 +33,12 @@ punctuator:
     "]" : "]"
     "{" : "{"
     "}" : "}"
+  schema_list:
+    - schema: luna_pinyin
+    - schema: luna_pinyin_fluency
+    - schema: luna_pinyin_simp
+  menu:
+    page_size: 6
+  style:
+    horizontal: true
 
-schema_list:
-  - schema: luna_pinyin
-  - schema: luna_pinyin_fluency
-  - schema: luna_pinyin_simp
-
-menu:
-  page_size: 6
-
-style:
-  horizontal: true
