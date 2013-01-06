@@ -183,7 +183,7 @@ alias weathersh='curl http://weather.noaa.gov/pub/data/observations/metar/decode
 alias weatherhz='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSHC.TXT'
 alias nocaps='setxkbmap -option ctrl:nocaps'
 alias truecrypt='truecrypt -t'
-alias gbkssh='luit -encoding zh_CN.GBK ssh'
+alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -t -f18'
 alias annex='git-annex'
 
