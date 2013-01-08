@@ -29,8 +29,14 @@ active_rbenv()
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
 
-# playframework 2.x
-# export PATH="/home/yaroot/.local/play-2.x.x:$PATH"
+# scala
+# export PATH="$HOME/.local/scala-XXXX/bin:$PATH"
+
+# sbt
+# export PATH="$HOME/.local/sbt:$PATH"
+
+# playframework
+# export PATH="$HOME/.local/play-XXXXXX:$PATH"
 
 # sbt options
 # export SBT_OPTS='-Xms512m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -XX:ReservedCodeCacheSize=192m'
