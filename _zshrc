@@ -16,6 +16,9 @@ active_rbenv()
   eval "$(rbenv init -)"
   rbenv rehash
   rehash
+
+  # option for `./configure` ruby
+  # CONFIGURE_OPTS="--disable-install-rdoc"
 }
 
 # export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -26,7 +29,11 @@ active_rbenv()
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
 
-export SBT_OPTS='-Xms512m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -XX:ReservedCodeCacheSize=192m'
+# playframework 2.x
+# export PATH="/home/yaroot/.local/play-2.x.x:$PATH"
+
+# sbt options
+# export SBT_OPTS='-Xms512m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -XX:ReservedCodeCacheSize=192m'
 
 source $HOME/.dotfiles/zshrc
 
