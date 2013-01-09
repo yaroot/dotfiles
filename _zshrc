@@ -29,14 +29,14 @@ active_rbenv()
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
 
-# scala
-# export PATH="$HOME/.local/scala-XXXX/bin:$PATH"
+path=(
+  # "$HOME/.local/scala-2.10.0/bin"
+  # "$HOME/.local/sbt"
+  # "$HOME/.local/play-2.1-RC1"
+  $path
+)
 
-# sbt
-# export PATH="$HOME/.local/sbt:$PATH"
-
-# playframework
-# export PATH="$HOME/.local/play-XXXXXX:$PATH"
+export PATH
 
 # sbt options
 # export SBT_OPTS='-Xms512m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -XX:ReservedCodeCacheSize=192m'
