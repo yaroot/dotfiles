@@ -21,6 +21,7 @@
 
 * duff
 * bwm-ng, iftraf, ethstatus
+* ddclient (dynamic dns with dns.he.net)
 
 # general programs
 
