@@ -115,16 +115,53 @@ source ~/.mutt/zenburn
 source ~/.mutt/lists
 source ~/.ssh/mutt_account
 
+
+#************************************
+
 # set from = 'login@gmail.com'
 # set realname = 'name'
-# 
+
 # set imap_user = 'login@gmail.com'
-# #set imap_pass = ''
 # set smtp_url = "smtp://login@smtp.gmail.com:587/"
-# #set smtp_pass = ''
-# 
+
 # set folder = "imaps://imap.gmail.com:993"
-# set spoolfile = "+INBOX"
+
 # set postponed ="+[Gmail]/Drafts"
-# #set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
+# # set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
+
+#************************************
+
+#************************************
+
+# set from = 'LOGIN@corp.netease.com'
+# set realname = ''
+
+# set imap_user = 'LOGIN'
+# set smtp_url = "smtp://LOGIN@corp.netease.com:25"
+
+# set folder = "imaps://corp.netease.com:993"
+
+# set record = "=Sent"
+# set postponed = "=Drafts"
+
+#************************************
+
+#************************************
+
+# set from = 'LOGIN@163.com'
+# set realname = ''
+
+# set imap_user = 'LOGIN'
+# set smtp_url = "smtp://LOGIN@stmp.163.com:25"
+
+# set folder = "imap://imap.163.com:143"
+
+# set record = "=Sent"
+# set postponed = "=Drafts"
+
+#************************************
+
+# set imap_pass = ''
+# set smtp_pass = ''
+# set spoolfile = "+INBOX"
 
