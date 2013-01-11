@@ -32,7 +32,7 @@ active_rbenv()
 # path=(
 #   "$HOME/.local/scala-2.10.0/bin"
 #   "$HOME/.local/sbt"
-#   "$HOME/.local/play-2.1-RC1"
+#   "$HOME/.local/play2dist/"
 #   "$HOME/.local/akka-2.1.0/bin"
 #   $path
 # )
