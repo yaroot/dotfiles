@@ -30,10 +30,10 @@ active_rbenv()
 # eval "$(npm completion 2>/dev/null)"
 
 # path=(
-#   "$HOME/.local/scala-2.10.0/bin"
-#   "$HOME/.local/sbt"
-#   "$HOME/.local/play2dist/"
-#   "$HOME/.local/akka-2.1.0/bin"
+#   "$HOME/.local/scala2dist/bin"
+#   "$HOME/.local/sbtdist"
+#   "$HOME/.local/play2dist"
+#   "$HOME/.local/akka2dist/bin"
 #   $path
 # )
 # export PATH
