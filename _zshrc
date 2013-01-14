@@ -21,8 +21,8 @@ active_rbenv()
   # CONFIGURE_OPTS="--disable-install-rdoc"
 }
 
-# export VIRTUAL_ENV_DISABLE_PROMPT=1
-# #source $HOME/.local/python/env/27/bin/activate
+# # export VIRTUAL_ENV_DISABLE_PROMPT=1
+# # source $HOME/.local/opt/pyenv/27/bin/activate
 
 # export NODE_VIRTUAL_ENV_DISABLE_PROMPT=1
 
