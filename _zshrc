@@ -30,16 +30,17 @@ active_rbenv()
 # eval "$(npm completion 2>/dev/null)"
 
 # path=(
-#   "$HOME/.local/scala2dist/bin"
-#   "$HOME/.local/sbtdist"
-#   "$HOME/.local/play2dist"
-#   "$HOME/.local/akka2dist/bin"
+#   "$HOME/.local/opt/scala/bin"
+#   "$HOME/.local/opt/sbt"
+#   "$HOME/.local/opt/play"
+#   "$HOME/.local/opt/akka/bin"
 #   $path
 # )
 # export PATH
 
+
 # sbt options
-# export SBT_OPTS='-Xms512m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384m -XX:ReservedCodeCacheSize=192m'
+# export SBT_OPTS='-Xms128m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256m -XX:ReservedCodeCacheSize=192m'
 
 source $HOME/.dotfiles/zshrc
 
