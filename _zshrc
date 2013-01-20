@@ -29,11 +29,14 @@ active_rbenv()
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
 
+# export GOPATH=$HOME/.local/go
+
 # path=(
 #   "$HOME/.local/opt/scala/bin"
 #   "$HOME/.local/opt/sbt"
 #   "$HOME/.local/opt/play"
 #   "$HOME/.local/opt/akka/bin"
+#   "$HOME/.local/go/bin"
 #   $path
 # )
 # export PATH
