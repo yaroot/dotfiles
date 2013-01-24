@@ -29,20 +29,20 @@ active_rbenv()
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
 
-export GOPATH=$HOME/.local/go
+# export GOPATH=$HOME/.local/go
 
-path=(
-  "$HOME/.local/opt/scala/bin"
-  "$HOME/.local/opt/sbt"
-  "$HOME/.local/opt/play"
-  "$HOME/.local/opt/akka/bin"
-  "$HOME/.local/go/bin"
-  $path
-)
-export PATH
+# path=(
+#   "$HOME/.local/opt/scala/bin"
+#   "$HOME/.local/opt/sbt"
+#   "$HOME/.local/opt/play"
+#   "$HOME/.local/opt/akka/bin"
+#   "$HOME/.local/go/bin"
+#   $path
+# )
+# export PATH
 
-export http_proxy="http://127.0.0.1:8081"
-export https_proxy="$http_proxy"
+# export http_proxy="http://127.0.0.1:8081"
+# export https_proxy="$http_proxy"
 
 # sbt options
 # export SBT_OPTS='-Xms128m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256m -XX:ReservedCodeCacheSize=192m'
