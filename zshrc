@@ -14,6 +14,9 @@ export RLWRAP_EDITOR="vim +%L"
 which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
 which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
 
+# java gui
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on' # on or lcd
+
 which keychain > /dev/null
 if [ $? = 0 ]; then
   eval `keychain --eval --quick --quiet`
