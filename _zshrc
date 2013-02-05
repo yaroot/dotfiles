@@ -47,5 +47,9 @@ active_rbenv()
 # sbt options
 # export SBT_OPTS='-Xms128m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256m -XX:ReservedCodeCacheSize=192m'
 
+# java gui
+# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on' # on or lcd 
+
+
 source $HOME/.dotfiles/zshrc
 
