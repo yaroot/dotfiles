@@ -340,17 +340,6 @@ function currency_convert()
   done
 }
 
-function restart_network()
-{
-  if [ -f /etc/debian_version ]; then
-    echo ">>>>> restarting networking"
-    sudo /etc/init.d/networking stop
-    sudo /etc/init.d/networking start
-  else
-    echo '>>>>> DOING NOTHING'
-  fi
-}
-
 function mksshafg()
 {
   local s;
