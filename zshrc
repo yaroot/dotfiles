@@ -353,7 +353,7 @@ function allkeychain()
 {
   for n in `find $HOME/.ssh/. -name '*.pub'`; do
     local k=`basename $n`
-    keychain ${k%.pub}
+    eval `keychain --eval ${k%.pub}`
   done
 }
 
