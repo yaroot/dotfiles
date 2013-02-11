@@ -9,6 +9,6 @@ TimeoutSec=0
 RemainAfterExit=yes
 SysVStartPriority=99
 
-# dirty hack for archlinux which does not come with rc-local-generator
+# for archlinux which does not come with rc-local-generator
 [Install]
 WantedBy=multi-user.target
