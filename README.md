@@ -4,7 +4,6 @@
 
 * trayer-srg/trayer-dwm
 * iptux
-* pnmixer
 * cower
 * packer
 * wqy-microhei
@@ -29,6 +28,7 @@
 * pinta _image editor_
 * leafpad
 * claws-mail _email client_
+* volumeicon + xfce4-mixer
 
 # adium
 
