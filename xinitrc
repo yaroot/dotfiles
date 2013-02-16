@@ -55,7 +55,7 @@ if $STANDALONEWM; then
   fi
   # ( sleep 15 && ibus-daemon --xim &)
   ( sleep 15 && fcitx &)
-  ( sleep 15 && xfce4-mixer &)
+  ( sleep 15 && volumeicon &)
   ( systemctl is-enabled wicd.service &> /dev/null && sleep 3 && wicd-client --tray &)
   ( test -d $HOME/Dropbox && sleep 30 && dropboxd &)
   ( sleep 30 && xscreensaver -no-splash &)
