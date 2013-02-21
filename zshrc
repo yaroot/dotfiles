@@ -157,7 +157,7 @@ alias -g G='| grep --color=auto -n'
 alias -g H='| head'
 alias -g SP="| curl -F 'sprunge=<-' http://sprunge.us"
 alias grep='grep --color=auto -n'
-alias iftop='iftop -B'
+which iftop &> /dev/null && alias iftop='iftop -B'
 alias hdtemp='echo `netcat localhost 7634`'
 alias sysd='systemctl'
 alias rd='rdesktop -u administrator -g 1024x768 -x m -r clipboard'
@@ -185,7 +185,7 @@ alias nocaps='setxkbmap -option ctrl:nocaps'
 alias truecrypt='truecrypt -t'
 alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -t -f18'
-alias annex='git-annex'
+which git-annex &> /dev/null alias annex='git-annex'
 
 if [ 'hell' = "$HOST" ]; then
   alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
