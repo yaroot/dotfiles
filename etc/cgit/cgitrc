@@ -1,0 +1,9 @@
+css=/cgit-css/cgit.css
+logo=/cgit-css/cgit.png
+
+enable-commit-graph=1
+snapshots=tar tar.gz zip
+
+# must be put under the settings
+# otherwise they won't be applied
+scan-path=/srv/git/
