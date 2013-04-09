@@ -20,6 +20,8 @@
     ui  = auto
 [merge]
     tool = vimdiff
+[diff]
+	algorithm = patience
 [core]
     editor = vim
     quotepath = false
