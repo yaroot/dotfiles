@@ -186,6 +186,7 @@ alias truecrypt='truecrypt -t'
 alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -t -f18'
 which git-annex &> /dev/null alias annex='git-annex'
+alias get_cower='wget http://aur.archlinux.org/packages/co/cower/cower.tar.gz'
 
 if [ 'hell' = "$HOST" ]; then
   alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
