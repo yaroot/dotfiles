@@ -1,0 +1,17 @@
+<settings>
+
+
+    <proxies>
+        <proxy>
+            <active>true</active>
+            <protocol>http</protocol>
+            <host>localhost</host>
+            <port>8081</port>
+            <!-- <username>proxyuser</username> -->
+            <!-- <password>somepassword</password> -->
+            <!-- <nonProxyHosts>*.google.com|ibiblio.org<</nonProxyHosts> -->
+        </proxy>
+    </proxies>
+
+
+</settings>
