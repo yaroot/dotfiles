@@ -179,6 +179,7 @@ alias v='vim'
 alias vd='vimdiff'
 alias gd='gvimdiff'
 alias wifi='wicd-curses'
+alias viscala='rlwrap scala -Xnojline'
 alias weathersh='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
 alias weatherhz='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSHC.TXT'
 alias nocaps='setxkbmap -option ctrl:nocaps'
@@ -187,6 +188,7 @@ alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -t -f18'
 which git-annex &> /dev/null alias annex='git-annex'
 alias get_cower='wget http://aur.archlinux.org/packages/co/cower/cower.tar.gz'
+
 
 if [ 'hell' = "$HOST" ]; then
   alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
