@@ -231,35 +231,6 @@ compctl -g '/var/run/daemons/*(:t)' dstop drestart
 
 #{{{ Functions
 
-function x()
-{
-  for f in "$@"; do
-    if [ -f "$f" ]; then
-      case "$f" in
-        *.tar.xz)   tar xJf "$f"      ;;
-        *.tar.bz2)  tar xjf "$f"      ;;
-        *.tar.gz)   tar xzf "$f"      ;;
-        *.tar.bz)   tar xzf "$f"      ;;
-        *.tar.Z)    tar xzf "$f"      ;;
-        *.bz2)      bunzip2 "$f"      ;;
-        *.rar)      unrar x "$f"      ;;
-        *.gz)       gunzip "$f"       ;;
-        *.jar)      unzip "$f"        ;;
-        *.tar)      tar xf "$f"       ;;
-        *.tbz2)     tar xjf "$f"      ;;
-        *.tgz)      tar xzf "$f"      ;;
-        *.zip)      unzip "$f"        ;;
-        *.Z)        uncompress "$f"   ;;
-        *.7z)       7z x "$f"         ;;
-        *.pkg)      xar -x -f "$f"    ;;
-        *.xar)      xar -x -f "$f"    ;;
-        *.deb)      ar x "$f"         ;;
-        *)          echo "'$f' cannot be extracted." ;;
-      esac
-    fi
-  done
-}
-
 function fin()
 {
   local word="$1"
