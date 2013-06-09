@@ -186,6 +186,7 @@ alias nocaps='setxkbmap -option ctrl:nocaps'
 alias truecrypt='truecrypt -t'
 alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -t -f18'
+alias genpw="cat /dev/urandom| tr -dc '[:graph:]' | fold -w 64 | head -n 10"
 which git-annex &> /dev/null alias annex='git-annex'
 alias get_cower='wget http://aur.archlinux.org/packages/co/cower/cower.tar.gz'
 
