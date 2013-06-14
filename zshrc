@@ -190,6 +190,9 @@ alias genpw="cat /dev/urandom| tr -dc '[:graph:]' | fold -w 64 | head -n 10"
 which git-annex &> /dev/null alias annex='git-annex'
 alias get_cower='wget http://aur.archlinux.org/packages/co/cower/cower.tar.gz'
 
+if [ 'Darwin' = `uname -s` ]; then
+    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+fi
 
 if [ 'hell' = "$HOST" ]; then
   alias mntpriv='sudo truecrypt -t $HOME/.mnt/tcprivate $HOME/.mnt/private'
