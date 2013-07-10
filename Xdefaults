@@ -106,6 +106,7 @@ xterm*background: #000000
 xterm*foreground: #FFFFFF
 xterm*faceName: tamsyn
 xterm*faceSize: 10
+xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono
 
 
 ! Zenburn
