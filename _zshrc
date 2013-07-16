@@ -30,6 +30,7 @@ active_rbenv()
 # eval "$(npm completion 2>/dev/null)"
 
 # export GOPATH=$HOME/.local/go
+# export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 # path=(
 #   "$HOME/.local/opt/scala/bin"
