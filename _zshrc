@@ -46,6 +46,9 @@ create_pyenv()
 
 # export GOPATH=$HOME/.local/go
 # export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+# if [ ! -d $HOME/.pip/cache ]; then
+#   mkdir -p $HOME/.pip/cache
+# fi
 
 # path=(
 #   "$HOME/.local/opt/scala/bin"
