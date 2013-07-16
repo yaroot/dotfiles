@@ -21,6 +21,21 @@ active_rbenv()
   # CONFIGURE_OPTS="--disable-install-rdoc"
 }
 
+active_pyenv()
+{
+  source "$HOME/.local/opt/pyenv/$1/bin/activate"
+}
+
+create_pyenv()
+{
+  local venv=`which virtualenv`
+  if [ -n `which virtualenv2 &> /dev/null` ]; then
+    venv=`which virtualenv2`
+  fi
+
+  $venv --distribute --system-site-packages $@
+}
+
 # # export VIRTUAL_ENV_DISABLE_PROMPT=1
 # # source $HOME/.local/opt/pyenv/27/bin/activate
 
