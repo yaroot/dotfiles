@@ -5,6 +5,7 @@ if [ "xterm" = "$1" ]; then
 fi
 
 WMCHOICE="dwm"
+WMCHOICE="i3"
 STANDALONEWM=true
 
 if [ -n "$1" ]; then
@@ -86,19 +87,15 @@ launchdwm()
   done
 }
 
-launchbspwm()
+launchi3()
 {
-  export EWMHSTATUS_FIFO=/tmp/ewmhstatus.fifo
-  while true; do
-    bspwm || exit
-    sleep 1
-  done
+  touch $HOME/.i3/i3.log
+  exec i3 -V >> $HOME/.i3/i3.log 2>&1
 }
 
 case $WMCHOICE in
   xfce*)        exec startxfce4 ;;
-  bspwm)        launchbspwm  ;;
-  awesome)      awesome || exit ;;
   dwm)          launchdwm ;;
+  i3)           launchi3 ;;
 esac
 
