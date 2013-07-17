@@ -51,9 +51,7 @@ if $STANDALONEWM; then
     unset f
   fi
 
-  if [ $WMCHOICE != 'awesome' ]; then
-    ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
-  fi
+  ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 15 && ibus-daemon --xim &)
   ( sleep 15 && fcitx &)
   ( sleep 15 && volumeicon &)
