@@ -4,7 +4,7 @@ if [ "xterm" = "$1" ]; then
   shift
 fi
 
-WMCHOICE="dwm"
+#WMCHOICE="dwm"
 WMCHOICE="i3"
 STANDALONEWM=true
 
