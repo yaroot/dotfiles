@@ -24,7 +24,7 @@ setxkbmap -option ctrl:nocaps
 xrdb $HOME/.Xdefaults &
 
  ( sleep 10 && xcompmgr &)
- ( sleep 3  && xbindkeys -f $HOME/.xbindkeysrc &)
+#( sleep 3  && xbindkeys -f $HOME/.xbindkeysrc &)
 #( sleep 5 && autocutsel -fork &) # kinda annoying
  ( sleep 5  && autocutsel -selection PRIMARY -fork &)
  ( sleep 5  && VBoxClient-all &)

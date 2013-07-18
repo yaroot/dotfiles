@@ -131,4 +131,5 @@ for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_togg
 for_window [class="VirtualBox"] floating enable
 for_window [class="Smplayer"] floating enable
 
+bindsym $mod+Shift+x exec "scrot -e 'mv $f $HOME/'"
 
