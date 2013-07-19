@@ -338,15 +338,14 @@ function allkeychain()
 
 function active_rbenv()
 {
+  # export RUBY_BUILD_SKIP_MIRROR=1
+  # export RUBY_BUILD_CACHE_PATH=$HOME/.rbenv/cache
+  # option for `./configure` ruby
+  # CONFIGURE_OPTS="--disable-install-rdoc"
   export PATH="$HOME/.rbenv/bin:$PATH"
-  export RUBY_BUILD_SKIP_MIRROR=1
-  export RUBY_BUILD_CACHE_PATH=$HOME/.local/unix
   eval "$(rbenv init -)"
   rbenv rehash
   rehash
-
-  # option for `./configure` ruby
-  # CONFIGURE_OPTS="--disable-install-rdoc"
 }
 
 function active_pyenv()

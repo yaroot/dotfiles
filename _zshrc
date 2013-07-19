@@ -12,9 +12,16 @@ fi
 # eval "$(npm completion 2>/dev/null)"
 
 # export GOPATH=$HOME/.local/go
+
 # export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-# if [ ! -d $HOME/.pip/cache ]; then
-#   mkdir -p $HOME/.pip/cache
+# if [ ! -d $PIP_DOWNLOAD_CACHE ]; then
+#   mkdir -p $PIP_DOWNLOAD_CACHE
+# fi
+
+# export RUBY_BUILD_SKIP_MIRROR=1
+# export RUBY_BUILD_CACHE_PATH=$HOME/.rbenv/cache
+# if [ ! -d $RUBY_BUILD_CACHE_PATH ]; then
+#   mkdir -p $RUBY_BUILD_CACHE_PATH
 # fi
 
 # path=(
