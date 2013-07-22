@@ -8,6 +8,8 @@
     c   = commit
     ca  = commit -am
     co  = checkout
+    f	= fetch
+    l   = log --oneline --graph --decorate
     m   = merge
     pl  = pull
     pr  = pull --rebase
@@ -15,7 +17,6 @@
     r   = remote
     rl  = remote -v
     s   = status
-    l   = log --oneline --graph --decorate
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     assumed = "!git ls-files -v | grep ^h | cut -c 3-"
