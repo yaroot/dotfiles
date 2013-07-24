@@ -40,7 +40,10 @@ iptables -A INPUT -p tcp --dport 113 -j REJECT --rejectwith tcp-reset
 iptables -A INPUT --dport 11080 -i lo -j ACCEPT
 iptables -A INPUT --dport 11080 -j DROP
 
-# redirect port
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080 -i eth0 --dst 192.168.1.3
+# port redirection
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-ports 8080 --dst 192.168.1.3
 
+# port redirection, different ports
+iptables -t nat -A PREROUTING -p tcp --dport 5001 -j DNAT --to-destination 10.10.10.10:25
+iptables -t nat -A POSTROUTING -p tcp --dport 25 -j MASQUERADE
 
