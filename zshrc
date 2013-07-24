@@ -370,6 +370,12 @@ function create_pyenv()
   create_pyenv_real "$HOME/.local/opt/pyenv/$1"
 }
 
+function redirect_port()
+{
+  local tar=$1
+  local port=$2
+  socat TCP-LISTEN:$port,fork TCP:$tar:$port
+}
 
 #}}}
 
