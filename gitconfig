@@ -25,7 +25,7 @@
 [merge]
     tool = vimdiff
 [diff]
-	algorithm = patience
+    algorithm = patience
 [core]
     editor = vim
     quotepath = false
