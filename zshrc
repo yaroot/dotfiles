@@ -374,7 +374,11 @@ function redirect_port()
 {
   local tar=$1
   local port=$2
-  socat TCP-LISTEN:$port,fork TCP:$tar:$port
+  local lport=$3
+  if [ -z "$lport" ]; then
+    lport=$port
+  fi
+  echo socat TCP-LISTEN:$lport,fork TCP:$tar:$port
 }
 
 #}}}
