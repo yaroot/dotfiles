@@ -378,7 +378,7 @@ function redirect_port()
   if [ -z "$lport" ]; then
     lport=$port
   fi
-  echo socat TCP-LISTEN:$lport,fork TCP:$tar:$port
+  socat TCP-LISTEN:$lport,fork TCP:$tar:$port
 }
 
 #}}}
