@@ -2,19 +2,22 @@
 
 # aur
 
-* trayer-srg/trayer-dwm
-* iptux
 * cower
+* duff
+* iptux
 * packer
-* wqy-microhei
-* tamsyn-font
-* faenza-icon-theme
+* proxychains-ng
+* rmlint-git
+* slurm
+* spiped
+* start-stop-daemon
+* zukitwo-themes
 
 # theme
 
-* faenza (aur)
-* zukitwo-themes (aur)
-* xcursor-flatbed (community)
+* faenza
+* zukitwo-themes
+* xcursor-flatbed
 
 # utils
 
