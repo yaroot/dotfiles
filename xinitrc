@@ -21,7 +21,8 @@ xset m 16/10 # slow down the mouse
 setxkbmap -option ctrl:nocaps
 
 # load X configs
-xrdb $HOME/.Xdefaults &
+test -f $HOME/.Xdefaults && xrdb $HOME/.Xdefaults
+test -f $HOME/.Xdefaults.local && xrdb -merge $HOME/.Xdefaults.local
 
  ( sleep 10 && xcompmgr &)
 #( sleep 3  && xbindkeys -f $HOME/.xbindkeysrc &)
