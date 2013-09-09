@@ -182,8 +182,6 @@ alias vd='vimdiff'
 alias gd='gvimdiff'
 alias wifi='wicd-curses'
 alias viscala='rlwrap scala -Xnojline'
-alias weathersh='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSSS.TXT'
-alias weatherhz='curl http://weather.noaa.gov/pub/data/observations/metar/decoded/ZSHC.TXT'
 alias nocaps='setxkbmap -option ctrl:nocaps'
 alias truecrypt='truecrypt -t'
 alias gbkssh='luit -encoding GBK ssh'
@@ -380,6 +378,25 @@ function redirect_port()
     lport=$port
   fi
   socat TCP-LISTEN:$lport,fork TCP:$tar:$port
+}
+
+function weather()
+{
+  local pcode=''
+  local loc="$1"
+
+  if [ -n "$loc" ]; then
+    case $loc in
+      sh)   pcode='ZSSS'
+        ;;
+      hz)   pcode='ZSHC'
+        ;;
+    esac
+
+    if [ -n "$pcode" ]; then
+      curl "http://weather.noaa.gov/pub/data/observations/metar/decoded/${pcode}.TXT"
+    fi
+  fi
 }
 
 #}}}
