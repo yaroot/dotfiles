@@ -360,7 +360,6 @@ function create_pyenv_real()
     venv=`which virtualenv2`
   fi
 
-  # TODO use setuptools after virtualenv 2.0 release
   $venv --distribute --system-site-packages $@
 }
 
