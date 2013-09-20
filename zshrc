@@ -287,7 +287,7 @@ function upload_one_pic_imgur()
 
   local FILE="$1"
   local IMGUR_RESPONSE
-  local GREP='/usr/bin/env grep'
+  local GREP='/usr/bin/grep'
 
   if [ "x${IMGUR_API_KEY}" != "x" ]; then
     API_KEY="$IMGUR_API_KEY"
