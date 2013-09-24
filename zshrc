@@ -360,7 +360,7 @@ function create_pyenv_real()
     venv=`which virtualenv2`
   fi
 
-  $venv --distribute --system-site-packages $@
+  $venv --system-site-packages $@
 }
 
 function create_pyenv()
