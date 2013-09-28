@@ -2,8 +2,10 @@
 
 # if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
 if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
-  startx
-  logout
+  if [ -f "$HOME/.xinitrc" ]; then
+    startx
+    logout
+  if [ -f "$HOME/.xinitrc" ]; then
   # (startx &); logout
   # (startx xfce &); logout
 fi
