@@ -5,7 +5,7 @@ if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
   if [ -f "$HOME/.xinitrc" ]; then
     startx
     logout
-  if [ -f "$HOME/.xinitrc" ]; then
+  fi
   # (startx &); logout
   # (startx xfce &); logout
 fi
