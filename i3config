@@ -134,6 +134,9 @@ for_window [class="VirtualBox"] floating enable
 for_window [class="Smplayer"] floating enable
 for_window [class="Vlc"] floating enable
 for_window [class="Iptux"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="MPlayer"] floating enable
+
 
 bindsym $mod+Shift+x exec "scrot -e 'mv $f $HOME/'"
 
