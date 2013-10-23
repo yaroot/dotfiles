@@ -352,10 +352,7 @@ function active_rbenv()
 function active_nodeenv()
 {
   local ver=$1
-  local active_file="$HOME/.local/opt/nodeenv/$ver/bin/activate"
-  if [ -f "$active_file" ]; then
-    source $active_file
-  fi
+  source "$HOME/.local/opt/nodejs/$ver/bin/activate"
 }
 
 function active_pyenv()
