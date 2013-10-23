@@ -347,6 +347,17 @@ function active_rbenv()
   rehash
 }
 
+# git://github.com/ekalinin/nodeenv.git
+# create env: nodeenv -j4 -n $version $env_path
+function active_nodeenv()
+{
+  local ver=$1
+  local active_file="$HOME/.local/opt/nodeenv/$ver/bin/activate"
+  if [ -f "$active_file" ]; then
+    source $active_file
+  fi
+}
+
 function active_pyenv()
 {
   # export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -378,7 +389,6 @@ function redirect_port()
   fi
   socat TCP-LISTEN:$lport,fork TCP:$tar:$port
 }
-
 function weather()
 {
   local pcode=''
