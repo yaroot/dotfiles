@@ -2,5 +2,5 @@ http://adblock-chinalist.googlecode.com/svn/trunk/adblock.txt
 https://easylist-downloads.adblockplus.org/easyprivacy.txt
 https://easylist-downloads.adblockplus.org/easylist.txt
 https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt
-http://malwaredomains.lanik.us/malwaredomains_full.txt
 https://easylist-downloads.adblockplus.org/fanboy-social.txt
+https://easylist-downloads.adblockplus.org/malwaredomains_full.txt
