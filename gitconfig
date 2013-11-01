@@ -17,6 +17,7 @@
     r   = remote
     rl  = remote -v
     s   = status
+    sm  = submodule
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     assumed = "!git ls-files -v | grep ^h | cut -c 3-"
