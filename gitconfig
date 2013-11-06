@@ -8,7 +8,7 @@
     c   = commit
     ca  = commit -am
     co  = checkout
-    f	= fetch
+    f   = fetch
     l   = log --oneline --graph --decorate
     m   = merge
     pl  = pull
