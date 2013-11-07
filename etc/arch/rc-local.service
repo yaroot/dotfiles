@@ -1,5 +1,6 @@
 [Unit]
 Description=/etc/rc.local Compatibility
+ConditionFileIsExecutable=/etc/rc.local
 #After=network.target
 
 [Service]
