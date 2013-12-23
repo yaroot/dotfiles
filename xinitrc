@@ -52,6 +52,8 @@ if $STANDALONEWM; then
     unset f
   fi
 
+  numlockx on
+
   ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 15 && ibus-daemon --xim &)
   ( sleep 15 && fcitx &)
