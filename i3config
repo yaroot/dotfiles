@@ -142,6 +142,7 @@ for_window [class="Vlc"] floating enable
 for_window [class="Iptux"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="MPlayer"] floating enable
+for_window [class="Chromium"] border 1pixel;
 
 
 bindsym $mod+Shift+x exec "scrot -e 'mv $f $HOME/'"
