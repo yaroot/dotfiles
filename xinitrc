@@ -15,8 +15,6 @@ case "$WMCHOICE" in
   xfce*)  STANDALONEWM=false ;;
 esac
 
-xset m 16/10 # slow down the mouse
-# synclient TouchpadOff=1 # disable clipboard
 
 setxkbmap -option ctrl:nocaps
 
@@ -65,9 +63,11 @@ if $STANDALONEWM; then
   ( xsetroot -cursor_name left_ptr &)
 fi
 
+xset m 16/10 1 # mouse default setting
+# synclient TouchpadOff=1 # disable clipboard
+# feh --no-fehbg --bg-scale ~/.wallpaper.jpg
+# xsetroot -solid midnightblue # background color
 if [ -f $HOME/.startuprc ]; then
-  # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
-  # xsetroot -solid midnightblue # background color
   (source ~/.startuprc "$WMCHOICE" "$STANDALONE")
 fi
 
