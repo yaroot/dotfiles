@@ -90,8 +90,16 @@ launchdwm()
 
 launchi3()
 {
-  touch $HOME/.i3/i3.log
-  exec i3 -V >> $HOME/.i3/i3.log 2>&1
+  mkdir $HOME/.i3
+
+  if [ -f $HOME/.i3/i3.log ]; then
+    mv $HOME/.i3/i3.log{,.1}
+  fi
+
+  rm $HOME/.i3/config
+  cat $HOME/.dotfiles/i3config $HOME/.i3/config.local > $HOME/.i3/config
+
+  exec i3 -V > $HOME/.i3/i3.log 2>&1
 }
 
 case $WMCHOICE in
