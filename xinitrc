@@ -63,7 +63,9 @@ if $STANDALONEWM; then
   ( xsetroot -cursor_name left_ptr &)
 fi
 
-xset m 16/10 1 # mouse default setting
+
+# mouse accel
+xset m 2/4 1
 # synclient TouchpadOff=1 # disable clipboard
 # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
 # xsetroot -solid midnightblue # background color
