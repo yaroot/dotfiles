@@ -1,0 +1,4 @@
+#%PAM-1.0
+
+# append nodelay to pam_unix.so
+auth      required  pam_unix.so     try_first_pass nullok nodelay
