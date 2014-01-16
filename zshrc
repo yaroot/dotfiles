@@ -250,20 +250,6 @@ function quiet()
   "$@" 2>&1 > /dev/null
 }
 
-function git_new_bare()
-{
-  if [ -z "$1" ]; then
-    echo >2 'Usage: git_new [repo.git]'
-    return
-  fi
-
-  local repo="$1"
-  mkdir -p $repo
-  pushd "$repo" > /dev/null
-  git init --bare
-  popd > /dev/null
-}
-
 function git_each_remotes()
 {
   local action="$1"
