@@ -1,5 +1,5 @@
 
 map <esc> :stop<cr>
 set defsearch=duckduckgo
+set guioptions+=T
 
-" vim: set ft=pentadactyl:
