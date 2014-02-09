@@ -1,3 +1,4 @@
+# addons
 Adblock Plus
 DownThemAll!
 Firebug
@@ -8,3 +9,11 @@ Instapaper For firefox
 Pentadactyl
 SSL Button
 UAControl
+
+
+# about:config
+
+show `http://` at address bar
+
+    browser.urlbar.trimURLs
+
