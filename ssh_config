@@ -4,10 +4,9 @@
 
 Host *
     ForwardAgent yes
-# close session if no keep-alive reply
-# was send back from server
     ServerAliveInterval 10
     ServerAliveCountMax 2 
+    TCPKeepAlive no
 
 
 
