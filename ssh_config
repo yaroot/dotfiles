@@ -8,5 +8,8 @@ Host *
     ServerAliveCountMax 2 
     TCPKeepAlive no
 
-
+# proxy/spipe example
+# Host dc-hop.example.com
+#     ProxyCommand nc -w 30 -X 5 -x localhost:3000 %h %p
+#     ProxyCommand spipe -t %h:8022 -k ~/.ssh/sshd.key
 
