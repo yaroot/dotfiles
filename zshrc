@@ -392,5 +392,15 @@ function weather()
   fi
 }
 
+function set_proxy_var() {
+  local port="$1"
+  if [ -n "$port" ]; then
+    export http_proxy="http://127.0.0.1:$port"
+    export https_proxy="http://127.0.0.1:$port"
+  else
+    echo "[usage] set_http_proxy <port>"
+  fi
+}
+
 #}}}
 
