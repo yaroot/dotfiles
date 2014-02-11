@@ -339,13 +339,24 @@ function active_rbenv()
 function active_nodeenv()
 {
   local ver=$1
-  source "$HOME/.local/opt/nodejs/$ver/bin/activate"
+  local script="$HOME/.local/opt/nodejs/$ver/bin/activate"
+  if [ -f "$script" ]; then
+    source "$script"
+  else
+    echo "[error] unable to active env <$env>"
+  fi
 }
 
 function active_pyenv()
 {
   # export VIRTUAL_ENV_DISABLE_PROMPT=1
-  source "$HOME/.local/opt/pyenv/$1/bin/activate"
+  local ver=$1
+  local script="$HOME/.local/opt/pyenv/$ver/bin/activate"
+  if [ -f "$script" ]; then
+    source "$script"
+  else
+    echo "[error] unable to active env <$ver>"
+  fi
 }
 
 function create_pyenv_real()
