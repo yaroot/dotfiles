@@ -27,8 +27,7 @@
 
 # general programs
 
-* sxiv _image viewer_
-* pinta _image editor_
+* sxiv, shotwell, nomacs _image viewer_
 * leafpad
 * claws-mail _email client_
 * volumeicon + xfce4-mixer
