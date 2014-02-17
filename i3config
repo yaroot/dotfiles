@@ -147,5 +147,5 @@ for_window [class="Chromium"] border 1pixel;
 
 
 bindsym $mod+Shift+x exec "scrot -e 'mv $f $HOME/'"
-bindsym $mod+Control+Shift+z exec "i3lock -c 111111"
+bindsym $mod+Control+Shift+z exec "xautolock -locknow" # "i3lock -c 111111"
 
