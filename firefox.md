@@ -1,11 +1,13 @@
 # addons
 Adblock Plus
+ChmFox
 DownThemAll!
 Firebug
 FlashGot
 FoxyProxy Standard
 Greasemonkey
-Instapaper For firefox
+Instapaper
+NoScript
 Pentadactyl
 SSL Button
 UAControl
