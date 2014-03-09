@@ -2,6 +2,7 @@
 Adblock Plus
 ChmFox
 DownThemAll!
+EPUBReader
 Firebug
 FlashGot
 FoxyProxy Standard
@@ -9,7 +10,6 @@ Greasemonkey
 Instapaper
 NoScript
 Pentadactyl
-SSL Button
 UAControl
 
 
