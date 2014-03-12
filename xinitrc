@@ -16,8 +16,6 @@ case "$WMCHOICE" in
 esac
 
 
-setxkbmap -option ctrl:nocaps
-
 # load X configs
 test -f $HOME/.Xdefaults && xrdb $HOME/.Xdefaults
 test -f $HOME/.Xdefaults.local && xrdb -merge $HOME/.Xdefaults.local
@@ -69,6 +67,8 @@ xset m 2/4 1
 # synclient TouchpadOff=1 # disable clipboard
 # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
 # xsetroot -solid midnightblue # background color
+# setxkbmap -option ctrl:nocaps
+
 if [ -f $HOME/.startuprc ]; then
   (source ~/.startuprc "$WMCHOICE" "$STANDALONE")
 fi
