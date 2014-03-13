@@ -384,6 +384,7 @@ function redirect_port()
   fi
   socat TCP-LISTEN:$lport,fork,reuseaddr TCP:$tar:$port
 }
+
 function weather()
 {
   local pcode=''
@@ -403,7 +404,8 @@ function weather()
   fi
 }
 
-function set_proxy_var() {
+function set_proxy_var()
+{
   local port="$1"
   if [ -n "$port" ]; then
     export http_proxy="http://127.0.0.1:$port"
@@ -411,6 +413,15 @@ function set_proxy_var() {
   else
     echo "[usage] set_http_proxy <port>"
   fi
+}
+
+function rpas()
+{
+  local n="$1"
+  if [ -z "$n" ]; then
+    n=16
+  fi
+  tr -cd '[:alnum:]' < /dev/urandom | fold -w$n | head -n1
 }
 
 #}}}
