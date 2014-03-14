@@ -12,4 +12,5 @@ Host *
 # Host dc-hop.example.com
 #     ProxyCommand nc -w 30 -X 5 -x localhost:3000 %h %p
 #     ProxyCommand spipe -t %h:8022 -k ~/.ssh/ssh_spiped_%h.key
+#     ProxyCommand ssh -q -W %h:%p hopserver
 
