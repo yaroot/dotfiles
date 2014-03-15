@@ -424,5 +424,10 @@ function rpas()
   tr -cd '[:alnum:]' < /dev/urandom | fold -w$n | head -n1
 }
 
+function chromium_proxy()
+{
+  chromium --proxy-server="http://127.0.0.1:$1"
+}
+
 #}}}
 
