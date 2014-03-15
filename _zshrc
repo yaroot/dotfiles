@@ -36,7 +36,10 @@ fi
 # )
 # export PATH
 
-# export http_proxy="http://127.0.0.1:8081"
+# export GIT_PROXY_HOST='127.0.0.1'
+# export GIT_PROXY_PORT='7071'
+
+# export http_proxy="http://127.0.0.1:7051"
 # export https_proxy="$http_proxy"
 
 # sbt options
