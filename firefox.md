@@ -11,7 +11,7 @@ Instapaper
 NoScript
 Pentadactyl
 UAControl
-
+Xmarks
 
 # about:config
 
