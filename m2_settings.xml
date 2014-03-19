@@ -1,17 +1,14 @@
 <settings>
-
-
     <proxies>
         <proxy>
+            <id>httpproxy</id>
             <active>true</active>
             <protocol>http</protocol>
-            <host>localhost</host>
+            <host>127.0.0.1</host>
             <port>8081</port>
             <!-- <username>proxyuser</username> -->
             <!-- <password>somepassword</password> -->
-            <!-- <nonProxyHosts>*.google.com|ibiblio.org<</nonProxyHosts> -->
+            <!-- <nonProxyHosts>www.google.com|*.somewhere.com</nonProxyHosts> -->
         </proxy>
     </proxies>
-
-
 </settings>
