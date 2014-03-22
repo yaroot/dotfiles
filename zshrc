@@ -359,6 +359,11 @@ function active_pyenv()
   fi
 }
 
+function active_opam()
+{
+  source $HOME/.opam_zshrc
+}
+
 function create_pyenv_real()
 {
   local venv=`which virtualenv`
