@@ -27,7 +27,7 @@
 
 # general programs
 
-* sxiv, shotwell, nomacs _image viewer_
+* sxiv, nomacs _image viewer_
 * leafpad
 * claws-mail _email client_
 * volumeicon + xfce4-mixer
