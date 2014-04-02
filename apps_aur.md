@@ -25,12 +25,16 @@
 * bwm-ng, iftraf, ethstatus
 * ddclient (dynamic dns with dns.he.net)
 
+
 # general programs
 
 * sxiv, nomacs _image viewer_
 * leafpad
 * claws-mail _email client_
 * volumeicon + xfce4-mixer
+* zathura, epdfview
+* xfce4-screenshot
+* xrce4-screenshooter
 
 # adium
 
