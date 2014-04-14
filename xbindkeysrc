@@ -3,18 +3,17 @@
 # /usr/include/X11/keysymdef.h
 # The XK_ is not needed.
 
-"scrot -e 'mv $f ~/ 2>/dev/null'"
-    Mod4 + Shift + x
-
-"xscreensaver-command -lock"
-    Mod4 + Shift + Alt + l
-
-"pwhash.sh -m"
-    Mod4 + Shift + p
-
-# "urxvt"
-#     Mod4 + slash
+# "scrot -e 'mv $f ~/ 2>/dev/null'"
+#     Mod4 + Shift + x
 
 # "dmenu_run `cat $HOME/.dmenurc`"
 #     Mod4 + p
 
+"xfce4-screenshooter"
+    Mod4 + x
+
+"xfce4-screenshooter --save $HOME --region"
+    Mod4 + Shift + x
+
+# "xautolock -locknow"
+#     Mod4 + Mod1 + Shift + z
