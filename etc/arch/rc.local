@@ -6,7 +6,5 @@ ip6tables -N sshguard
 ip6tables -A INPUT -p tcp --dport 22 -j sshguard
 
 
-sysctl fs.inotify.max_user_watches=500000
-
 exit 0
 
