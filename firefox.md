@@ -7,7 +7,7 @@ Firebug
 FlashGot
 FoxyProxy Standard
 Greasemonkey
-Instapaper
+Instasaver
 NoScript
 Pentadactyl
 UAControl
@@ -18,4 +18,9 @@ Xmarks
 show `http://` at address bar
 
     browser.urlbar.trimURLs
+
+zoom
+
+    browser.zoom.full           # full page instead of text-only
+    browser.zoom.siteSpecific   # zoom per site
 
