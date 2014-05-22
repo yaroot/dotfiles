@@ -437,5 +437,11 @@ function man()
     man "$@"
 }
 
+function testnose()
+{
+  export NOSE_REDNOSE=1
+  export NOSE_NOCAPTURE=1
+}
+
 #}}}
 
