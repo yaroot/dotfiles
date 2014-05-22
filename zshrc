@@ -223,8 +223,8 @@ zstyle ':completion:*' match-original both
 #compdef _pacman parsablepackagesize=pacman
 #compdef _cp cpf=cp
 #compdef _mkdir mkf=mkdir
-compctl -g '/etc/rc.d/*(:t)' dstart
-compctl -g '/var/run/daemons/*(:t)' dstop drestart
+#compctl -g '/etc/rc.d/*(:t)' dstart
+#compctl -g '/var/run/daemons/*(:t)' dstop drestart
 ### }}}
 
 #{{{ Functions
