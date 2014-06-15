@@ -2,7 +2,7 @@ css=/cgit-css/cgit.css
 logo=/cgit-css/cgit.png
 
 enable-commit-graph=1
-snapshots=tar.bz2 tar.gz zip
+snapshots=tar.xz tar.gz zip
 
 # must be the last thing in this file
 scan-path=/srv/git/
