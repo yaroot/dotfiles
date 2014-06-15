@@ -1,8 +1,15 @@
+# vim: set ft=config:
+
+
 css=/cgit-css/cgit.css
 logo=/cgit-css/cgit.png
 
 enable-commit-graph=1
 snapshots=tar.xz tar.gz zip
+
+# more stuff per page
+max-repo-count=200
+max-commit-count=200
 
 # must be the last thing in this file
 scan-path=/srv/git/
