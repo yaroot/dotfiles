@@ -1,0 +1,10 @@
+// jstatd -J-Djava.security.policy=tools.policy
+
+// start jvm with
+// -Dcom.sun.management.jmxremote.port=<fixed port>
+// -Dcom.sun.management.jmxremote.ssl=false
+// -Dcom.sun.management.jmxremote.authenticate=false
+
+grant codebase "file:${java.home}/../lib/tools.jar" {
+    permission java.security.AllPermission;
+};
