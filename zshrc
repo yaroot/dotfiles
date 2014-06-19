@@ -444,5 +444,21 @@ function testnose()
   export NOSE_NOCAPTURE=1
 }
 
+function jcp()
+{
+
+  local dir=$1
+  test -z $dir && return -1
+  test -d $dir || return -1
+
+  local classpath=''
+
+  for jar in `find $1 -name '*.jar' -type f`; do
+    classpath="$classpath:$jar"
+  done
+
+  echo ${classpath:1}
+}
+
 #}}}
 
