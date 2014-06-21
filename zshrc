@@ -11,10 +11,10 @@ export PAGER=`which less`
 export EDITOR=`which vim`
 export VISUAL="$EDITOR"
 export RLWRAP_EDITOR="vim +%L"
-which lesspipe.sh > /dev/null && export LESSOPEN="|lesspipe.sh %s"
-which lesspipe > /dev/null && export LESSOPEN="|lesspipe %s"
+which lesspipe.sh &> /dev/null && export LESSOPEN="|lesspipe.sh %s"
+which lesspipe &> /dev/null && export LESSOPEN="|lesspipe %s"
 
-which keychain > /dev/null
+which keychain &> /dev/null
 if [ $? = 0 ]; then
   eval `keychain --eval --quick --quiet`
 else
