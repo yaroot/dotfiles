@@ -48,3 +48,13 @@ iptables -t nat -A PREROUTING -p tcp -d 10.0.0.5 --dport 80 -j DNAT --to-destina
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.0.0.6:8080
 iptables -t nat -A POSTROUTING -p tcp --dport 8080 -j MASQUERADE
 
+# NAT MASQUERADE
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+
+# NAT SNAT
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j SNAT --to-source 1.2.3.4
+
+# FORWARD routing
+iptables -A FORWARD -i tun0 -s 10.8.1.0/24 -d 10.66.4.0/24 -j ACCEPT
+iptables -A FORWARD -i eth1 -o eth2 -j ACCEPT
+
