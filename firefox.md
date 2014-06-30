@@ -9,6 +9,7 @@ FoxyProxy Standard
 Greasemonkey
 Instasaver
 NoScript
+NoSquint
 Pentadactyl
 UAControl
 Xmarks
