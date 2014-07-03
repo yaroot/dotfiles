@@ -10,7 +10,7 @@
     co  = checkout
     f   = fetch
     l   = log --oneline --graph --decorate
-    m   = merge
+    m   = merge -s recursive -X patience
     pl  = pull
     pr  = pull --rebase
     ps  = push
