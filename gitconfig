@@ -11,6 +11,7 @@
     f   = fetch
     l   = log --oneline --graph --decorate
     m   = merge -s recursive -X patience
+    rb  = rebase -s recursive -X patience
     pl  = pull
     pr  = pull --rebase
     ps  = push
