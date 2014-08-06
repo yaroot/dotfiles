@@ -42,11 +42,13 @@ iptables -A INPUT --dport 11080 -j DROP
 
 # port redirection
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+iptables -t nat -A OUTPUT -d localhost -p tcp --dport 80 -j REDIRECT --to-ports 8080
 
 iptables -t nat -A PREROUTING -p tcp -d 10.0.0.5 --dport 80 -j DNAT --to-destination 10.0.0.6:80
 
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.0.0.6:8080
 iptables -t nat -A POSTROUTING -p tcp --dport 8080 -j MASQUERADE
+
 
 # NAT MASQUERADE
 iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
