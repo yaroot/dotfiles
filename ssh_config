@@ -7,6 +7,7 @@ Host *
     ServerAliveInterval 10
     ServerAliveCountMax 2 
     TCPKeepAlive no
+    VisualHostKey yes
 
 # proxy/spipe example
 # Host dc-hop.example.com
