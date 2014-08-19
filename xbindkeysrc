@@ -15,5 +15,8 @@
 "xfce4-screenshooter --save $HOME --region"
     Mod4 + Shift + x
 
+"xfce4-terminal"
+    Mod4 + Control + slash
+
 # "xautolock -locknow"
 #     Mod4 + Mod1 + Shift + z
