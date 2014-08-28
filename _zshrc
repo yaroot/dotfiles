@@ -42,6 +42,9 @@ fi
 # export http_proxy="http://127.0.0.1:7051"
 # export https_proxy="$http_proxy"
 
+# export GOPATH=$HOME/.local/go
+# export GOROOT=/usr/lib/go
+
 # sbt options
 # export SBT_OPTS='-Xms128m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256m -XX:ReservedCodeCacheSize=192m'
 
