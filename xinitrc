@@ -67,7 +67,7 @@ xset m 2/4 1
 # synclient TouchpadOff=1 # disable clipboard
 # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
 # xsetroot -solid midnightblue # background color
-# setxkbmap -option ctrl:nocaps
+# setxkbmap -option ctrl:nocaps,altwin:swap_alt_win
 
 if [ -f $HOME/.startuprc ]; then
   (source ~/.startuprc "$WMCHOICE" "$STANDALONE")
