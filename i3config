@@ -36,7 +36,7 @@ bindsym $mod+l focus right
 bindsym $mod+semicolon focus right
 
 bindsym $mod+Tab focus right
-bindsym $mod+Shift+Tab focus right
+bindsym $mod+Shift+Tab focus left
 
 # move focused window
 bindsym $mod+Shift+h move left
