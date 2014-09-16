@@ -148,6 +148,7 @@ for_window [class="Iptux"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="MPlayer"] floating enable
+for_window [class="smplayer"] floating enable
 for_window [class="Chromium"] border 1pixel;
 for_window [class="qemu-system-i386"] border 1pixel;
 
