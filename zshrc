@@ -423,7 +423,11 @@ function rpas()
 
 function chromium_proxy()
 {
-  chromium --proxy-server="http://127.0.0.1:$1"
+  local mth="http"
+  test "$2" = 's' && mth='socks5'
+  local proxy_addr="$mth://127.0.0.1:$1"
+  echo "=== Starting chromium with proxy [$proxy_addr]"
+  chromium --proxy-server="$proxy_addr"
 }
 
 function man()
