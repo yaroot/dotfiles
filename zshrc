@@ -258,6 +258,12 @@ function git_each_remotes()
   done
 }
 
+function git_cb()
+{
+  local b=`git symbolic-ref HEAD`
+  echo ${b#refs/heads/}
+}
+
 function upload_one_pic_imgur()
 {
   # API Key provided by Alan@imgur.com
