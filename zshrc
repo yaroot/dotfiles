@@ -264,6 +264,11 @@ function git_cb()
   echo ${b#refs/heads/}
 }
 
+function git_update_bare()
+{
+  git fetch origin '+refs/heads/*:refs/heads/*' --prune
+}
+
 function upload_one_pic_imgur()
 {
   # API Key provided by Alan@imgur.com
