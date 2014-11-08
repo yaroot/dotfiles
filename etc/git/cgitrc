@@ -11,5 +11,27 @@ snapshots=tar.xz tar.gz zip
 max-repo-count=200
 max-commit-count=200
 
+email-filter=/usr/lib/cgit/filters/email-gravatar.py
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
+mimetype-file=/etc/mime.types
+
+
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
+readme=:README.md
+readme=:readme.md
+readme=:README.mkd
+readme=:readme.mkd
+readme=:README.rst
+readme=:readme.rst
+readme=:README.html
+readme=:readme.html
+readme=:README.htm
+readme=:readme.htm
+readme=:README.txt
+readme=:readme.txt
+readme=:README
+readme=:readme
+
+
 # must be the last thing in this file
 scan-path=/srv/git/
