@@ -8,11 +8,12 @@
 
 
 $(function() {
-  var body = $('body')[0]
-  var bgColor = '#068'
+  var body = window.document.body
+  var colour = '#057'
   setInterval(function() {
-    if (body.style.backgroundColor != bgColor) {
-      body.style.backgroundColor = bgColor
+    if(body.style.backgroundColor !== colour) {
+      body.style.backgroundColor = colour
     }
+    // console.log("setting text")
   }, 2000)
 })
