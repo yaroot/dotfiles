@@ -423,6 +423,13 @@ function set_proxy_var()
   fi
 }
 
+function run_jvm_proxy_props()
+{
+  local port="$1"
+  shift
+  _JAVA_OPTIONS="-Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=$port" $@
+}
+
 function rpas()
 {
   local n="$1"
