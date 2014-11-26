@@ -379,7 +379,9 @@ function create_pyenv_real()
 
 function create_pyenv()
 {
-  create_pyenv_real "$HOME/.local/opt/pyenv/$1"
+  local p=$1
+  shift
+  create_pyenv_real "$HOME/.local/opt/pyenv/$p" $@
 }
 
 function redirect_port()
@@ -441,11 +443,41 @@ function rpas()
 
 function chromium_proxy()
 {
+  # OPTIONS
+  # -p <port>       REQUIRED
+  # -h <host>
+  # -s              socks5 (default http)
+  # -c              google-chrome-beta
+  # -C <prog>       run <prog>
   local mth="http"
-  test "$2" = 's' && mth='socks5'
-  local proxy_addr="$mth://127.0.0.1:$1"
-  echo "=== Starting chromium with proxy [$proxy_addr]"
-  chromium --proxy-server="$proxy_addr"
+  # test "$2" = 's' && mth='socks5'
+  local chromium='chromium'
+  local port=''
+  local addr='127.0.0.1'
+
+  while getopts "h:p:cC:s" opt; do
+    case $opt in
+      h)
+        addr=$OPTARG;;
+      p)
+        port=$OPTARG;;
+      c)
+        prog='google-chrome-beta';;
+      C)
+        prog=$OPTARG;;
+      s)
+        mth='socks5'
+    esac
+  done
+
+  if [ -z "$port" ]; then
+    echo '[ERR] port required: -p <port>'
+    return
+  fi
+
+  local proxy_addr="$mth://$addr:$port"
+  echo "=== Starting $prog with proxy [$proxy_addr]"
+  echo $prog --proxy-server="$proxy_addr"
 }
 
 function man()
