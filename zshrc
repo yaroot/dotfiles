@@ -477,7 +477,7 @@ function chromium_proxy()
 
   local proxy_addr="$mth://$addr:$port"
   echo "=== Starting $prog with proxy [$proxy_addr]"
-  echo $prog --proxy-server="$proxy_addr"
+  $prog --proxy-server="$proxy_addr"
 }
 
 function man()
