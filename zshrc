@@ -456,7 +456,7 @@ function chromium_proxy()
   # -C <prog>       run <prog>
   local mth="http"
   # test "$2" = 's' && mth='socks5'
-  local chromium='chromium'
+  local prog='chromium'
   local port=''
   local addr='127.0.0.1'
 
