@@ -307,6 +307,7 @@ function currency_convert()
   local from=$2
   shift;shift;
 
+  # or use yahoo's http://finance.yahoo.com/currency-converter/
   for i in $@; do
     curl -sL "http://www.google.com/finance/converter?a=$amo&from=$from&to=$i&hl=es" | /usr/bin/env grep 'result' | sed 's/<[^>]*>//g'
   done
