@@ -150,6 +150,7 @@ for_window [class="bomi"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="MPlayer"] floating enable
 for_window [class="smplayer"] floating enable
+for_window [class="Dia"] floating enable
 for_window [class="Chromium"] border 1pixel;
 for_window [class="qemu-system-i386"] border 1pixel;
 
