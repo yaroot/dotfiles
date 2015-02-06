@@ -18,5 +18,8 @@
 "xfce4-terminal"
     Mod4 + Control + slash
 
+"mousepad"
+    Mod4 + Shift + slash
+
 # "xautolock -locknow"
 #     Mod4 + Mod1 + Shift + z
