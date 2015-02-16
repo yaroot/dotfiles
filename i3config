@@ -26,7 +26,7 @@ bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+p exec dmenu_run
-bindsym $mod+Shift+p exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+Shift+p exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
