@@ -9,6 +9,9 @@
 # "dmenu_run `cat $HOME/.dmenurc`"
 #     Mod4 + p
 
+"i3-dmenu-desktop"
+    Mod4 + Shift + p
+
 "xfce4-screenshooter"
     Mod4 + x
 
