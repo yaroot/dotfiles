@@ -69,6 +69,7 @@ setopt appendhistory
 setopt autocd
 #setopt sharehistory
 #setopt nomatch
+setopt histignorespace
 unsetopt notify
 
 bindkey -v
