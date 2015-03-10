@@ -32,6 +32,7 @@
 * volumeicon + xfce4-mixer
 * zathura, qpdfview
 * xrce4-screenshooter
+* qscreenshot
 
 # adium
 
