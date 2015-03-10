@@ -139,20 +139,22 @@ bar {
         position top
 }
 
-for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
-for_window [class="VirtualBox"] floating enable
+for_window [class="Dia"] floating enable
+for_window [class="Iptux"] floating enable
+for_window [class="MPlayer"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="Smplayer"] floating enable
-for_window [class="Vlc"] floating enable
-for_window [class="Iptux"] floating enable
-for_window [class="mpv"] floating enable
-for_window [class="bomi"] floating enable
 for_window [class="Steam"] floating enable
-for_window [class="MPlayer"] floating enable
+for_window [class="VirtualBox"] floating enable
+for_window [class="Vlc"] floating enable
+for_window [class="bomi"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="qScreenshot"] floating enable
 for_window [class="smplayer"] floating enable
-for_window [class="Dia"] floating enable
-for_window [class="Chromium"] border 1pixel;
+
 for_window [class="qemu-system-i386"] border 1pixel;
+for_window [class="Chromium"] border 1pixel;
+for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 
 bindsym $mod+Mod1+Shift+z exec "xautolock -locknow"
 
