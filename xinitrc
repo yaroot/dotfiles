@@ -55,7 +55,7 @@ if $STANDALONEWM; then
   ( sleep 15 && fcitx &)
   ( sleep 15 && volumeicon &)
   ( systemctl is-enabled wicd.service &> /dev/null && sleep 3 && wicd-client --tray &)
-  ( test -d $HOME/Dropbox && sleep 30 && dropboxd &)
+  ( test -d $HOME/Dropbox && sleep 30 && dropbox &)
   ( sleep 15 && xautolock -time 10 -locker 'i3lock -c 111111' &)
   # ( sleep 30 && xscreensaver -no-splash &)
   ( xsetroot -cursor_name left_ptr &)
