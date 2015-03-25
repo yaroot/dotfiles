@@ -47,7 +47,19 @@ fi
 
 # sbt options
 # export SBT_OPTS='-Xms128m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256m -XX:ReservedCodeCacheSize=192m'
-
+#######  for maven2/ivy2 proxies
+##  ~/.sbt/repositories
+##    [repositories]
+##      local
+##      my-ivy-proxy-releases: http://repo.company.com/artifactory/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
+##      my-maven-proxy-releases: http://repo.company.com/artifactory/maven-releases/
+##  sbt options for dropping all configured repos `sbt -Dsbt.override.build.repos=true`
+##  repos:
+##      jcenter         https://jcenter.bintray.com
+##      central         https://repo.maven.apache.org/maven2
+##      typesafe        http://repo.typesafe.com/typesafe/ivy-releases/
+##      sbt-plugin      http://dl.bintray.com/sbt/sbt-plugin-releases/
+##    (check `Suppress POM Consistency Checks` in artifactory for maven repos)
 
 source $HOME/.dotfiles/zshrc
 
