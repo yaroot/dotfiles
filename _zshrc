@@ -55,10 +55,11 @@ fi
 ##      my-maven-proxy-releases: http://repo.company.com/artifactory/maven-releases/
 ##  sbt options for dropping all configured repos `sbt -Dsbt.override.build.repos=true`
 ##  repos:
-##      jcenter         https://jcenter.bintray.com
-##      central         https://repo.maven.apache.org/maven2
+##      jcenter         https://jcenter.bintray.com/
+##      central         https://repo.maven.apache.org/maven2/
 ##      typesafe        http://repo.typesafe.com/typesafe/ivy-releases/
 ##      sbt-plugin      http://dl.bintray.com/sbt/sbt-plugin-releases/
+##      scalaz          http://dl.bintray.com/scalaz/releases/
 ##    (check `Suppress POM Consistency Checks` in artifactory for maven repos)
 
 source $HOME/.dotfiles/zshrc
