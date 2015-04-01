@@ -62,5 +62,15 @@ fi
 ##      scalaz          http://dl.bintray.com/scalaz/releases/
 ##    (check `Suppress POM Consistency Checks` in artifactory for maven repos)
 
+##  ~/.gradle/init.gradle
+##      allprojects {
+##          repositories {
+##              maven {
+##                  url "http://repo.company.com/artifactory/maven-releases/"
+##              }
+##          }
+##      }
+
+
 source $HOME/.dotfiles/zshrc
 
