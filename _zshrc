@@ -57,6 +57,7 @@ fi
 ##  repos:
 ##      jcenter         https://jcenter.bintray.com/
 ##      central         https://repo.maven.apache.org/maven2/
+##      clojars         https://clojars.org/repo/
 ##      typesafe        http://repo.typesafe.com/typesafe/ivy-releases/
 ##      sbt-plugin      http://dl.bintray.com/sbt/sbt-plugin-releases/
 ##      scalaz          http://dl.bintray.com/scalaz/releases/
