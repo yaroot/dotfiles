@@ -21,11 +21,10 @@
 "xfce4-terminal"
     Mod4 + Control + slash
 
+## pluma / leafpad
 "mousepad"
     Mod4 + Shift + slash
 
-"leafpad"
-    Mod4 + Alt + slash
 
 # "xautolock -locknow"
 #     Mod4 + Mod1 + Shift + z
