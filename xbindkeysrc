@@ -21,8 +21,8 @@
 "xfce4-terminal"
     Mod4 + Control + slash
 
-## pluma / leafpad
-"mousepad"
+## pluma / mousepad
+"leafpad"
     Mod4 + Shift + slash
 
 
