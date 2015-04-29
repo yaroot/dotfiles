@@ -58,9 +58,9 @@ fi
 ##      jcenter         https://jcenter.bintray.com/
 ##      central         https://repo.maven.apache.org/maven2/
 ##      clojars         https://clojars.org/repo/
-##      typesafe        http://repo.typesafe.com/typesafe/ivy-releases/
-##      sbt-plugin      http://dl.bintray.com/sbt/sbt-plugin-releases/
-##      scalaz          http://dl.bintray.com/scalaz/releases/
+##      typesafe        https://dl.bintray.com/typesafe/ivy-releases/
+##      sbt-plugin      https://dl.bintray.com/sbt/sbt-plugin-releases/
+##      scalaz          https://dl.bintray.com/scalaz/releases/
 ##    (check `Suppress POM Consistency Checks` in artifactory for maven repos)
 
 ##  ~/.gradle/init.gradle
