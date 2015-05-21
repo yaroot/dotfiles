@@ -69,6 +69,7 @@ xset m 2/4 1
 # xsetroot -solid midnightblue # background color
 # setxkbmap -option ctrl:nocaps,altwin:swap_alt_win
 # synclient MinSpeed=2.5 MaxSpeed=2.5 AccelFactor=0
+# xbacklight -set 80  # screen brightness
 
 if [ -f $HOME/.startuprc ]; then
   (source ~/.startuprc "$WMCHOICE" "$STANDALONE")
