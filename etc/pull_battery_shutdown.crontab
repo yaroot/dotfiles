@@ -1,1 +1,1 @@
-* * * * *       acpi -b | grep '[^0-9][1][%]' && shutdown
+* * * * *      root acpi -b | grep '[^0-9][1][\%]' && shutdown && echo "Shutting down: `acpi -b`"
