@@ -1,0 +1,1 @@
+* * * * *       acpi -b | grep '[^0-9][1][%]' && shutdown
