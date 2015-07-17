@@ -24,6 +24,7 @@
 * duff
 * bwm-ng, iftraf, ethstatus
 * ddclient (dynamic dns with dns.he.net)
+* file-roller2-nn
 
 
 # general programs
