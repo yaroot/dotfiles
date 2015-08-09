@@ -382,7 +382,7 @@ function create_pyenv_real()
     venv=`which virtualenv2`
   fi
 
-  $venv --system-site-packages $@
+  $venv $@
 }
 
 function create_pyenv()
