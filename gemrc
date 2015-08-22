@@ -1,1 +1,8 @@
-gem: --no-rdoc --no-ri --verbose
+---
+:backtrace: false
+:bulk_threshold: 1000
+:sources:
+- http://xxxxxxx
+:update_sources: true
+:verbose: true
+gem: "--no-rdoc --no-ri --verbose"
