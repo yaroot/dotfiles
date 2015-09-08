@@ -78,7 +78,7 @@ URxvt.cursorColor: green
 xterm*background: #000000
 xterm*foreground: #FFFFFF
 xterm*faceName: tamsyn
-xterm*faceSize: 10
+xterm*faceSize: 14
 xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono
 
 
