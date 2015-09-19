@@ -191,6 +191,8 @@ alias ytdl='youtube-dl -t -f18'
 alias genpw="cat /dev/urandom| tr -dc '[:graph:]' | fold -w 64 | head -n 10"
 alias get_cower='wget http://aur.archlinux.org/packages/co/cower/cower.tar.gz'
 alias verl='rlwrap erl -oldshell'
+alias urldecode='python2 -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
+alias urlencode='python2 -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
