@@ -64,7 +64,8 @@ fi
 
 
 # mouse accel
-xset m 2/4 1
+# xset m 2/4 1
+# xset m 0 0
 # synclient TouchpadOff=1 # disable clipboard
 # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
 # xsetroot -solid midnightblue # background color
