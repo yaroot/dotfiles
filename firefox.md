@@ -1,5 +1,5 @@
 # addons
-Adblock Plus
+uBlock origin
 ChmFox
 DownThemAll!
 EPUBReader
@@ -10,7 +10,7 @@ Greasemonkey
 Instasaver
 NoScript
 NoSquint
-Pentadactyl
+Vimperator
 UAControl
 Xmarks
 
