@@ -4,4 +4,4 @@ map <c-d> :emenu View.Zoom.Zoom Text Only<cr>
 
 set defsearch=duckduckgo
 
-set guioptions+=T
+set toolbars=addons,nobookmarks,nomenu,navigation,tabs
