@@ -25,7 +25,8 @@
 * bwm-ng, iftraf, ethstatus
 * ddclient (dynamic dns with dns.he.net)
 * file-roller2-nn
-
+* corebird
+* scudcloud
 
 # general programs
 
