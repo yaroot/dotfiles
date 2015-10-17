@@ -32,3 +32,6 @@ caching in ram
     browser.cache.memory.enable = true
     browser.cache.memory.capacity = 102400
 
+privacy stuff
+
+    privacy.trackingprotection.enabled
