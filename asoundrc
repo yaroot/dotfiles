@@ -1,0 +1,4 @@
+# aplay -l
+# aplay -L
+defaults.pcm.device 0
+defaults.pcm.card 1
