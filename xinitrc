@@ -52,12 +52,12 @@ if $STANDALONEWM; then
 
   ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 15 && ibus-daemon --xim &)
-  ( sleep 15 && fcitx &)
-  ( sleep 15 && volumeicon &)
-  ( systemctl is-enabled wicd.service &> /dev/null && sleep 3 && wicd-client --tray &)
-  ( test -d $HOME/Dropbox && sleep 30 && dropbox &)
-  ( test -d $HOME/ownCloud && sleep 30 && owncloud &)
-  ( sleep 15 && xautolock -time 10 -locker 'i3lock -c 111111' &)
+  ( sleep 5 && fcitx &)
+  ( sleep 5 && volumeicon &)
+  ( systemctl is-enabled wicd.service &> /dev/null && sleep 5 && wicd-client --tray &)
+  ( test -d $HOME/Dropbox && sleep 10 && dropbox &)
+  ( test -d $HOME/ownCloud && sleep 10 && owncloud &)
+  ( sleep 5 && xautolock -time 10 -locker 'i3lock -c 111111' &)
   # ( sleep 30 && xscreensaver -no-splash &)
   ( xsetroot -cursor_name left_ptr &)
 fi
