@@ -151,6 +151,8 @@ for_window [class="bomi"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="qScreenshot"] floating enable
 for_window [class="smplayer"] floating enable
+for_window [class="qt4-ssh-askpass"] floating enable
+for_window [class="lxqt-openssh-askpass"] floating enable
 
 for_window [class="qemu-system-i386"] border 1pixel;
 for_window [class="Chromium"] border 1pixel;
