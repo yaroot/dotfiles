@@ -35,3 +35,7 @@ caching in ram
 privacy stuff
 
     privacy.trackingprotection.enabled
+
+addon signing stuff
+
+    xpinstall.signatures.required
