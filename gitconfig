@@ -19,6 +19,7 @@
     rl  = remote -v
     s   = status
     sm  = submodule
+    resetsm = "!git sm foreach 'git co -- .'"
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     assumed = "!git ls-files -v | grep ^h | cut -c 3-"
