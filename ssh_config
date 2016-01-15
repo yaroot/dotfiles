@@ -8,6 +8,7 @@ Host *
     ServerAliveCountMax 2 
     TCPKeepAlive no
     VisualHostKey yes
+    UseRoaming no
 #    ForwardX11 yes
 #    StrictHostKeyChecking no
 #    UserKnownHostsFile=/dev/null
