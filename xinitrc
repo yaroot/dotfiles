@@ -68,6 +68,7 @@ fi
 # xset m 0 0
 # synclient TouchpadOff=1 # disable clipboard
 # feh --no-fehbg --bg-scale ~/.wallpaper.jpg
+# feh --no-fehbg --bg-center ~/.wallpaper.jpg
 # xsetroot -solid midnightblue # background color
 # setxkbmap -option ctrl:nocaps,altwin:swap_alt_win
 # synclient MinSpeed=2.5 MaxSpeed=2.5 AccelFactor=0
