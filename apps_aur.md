@@ -11,12 +11,12 @@
 * slurm
 * spiped
 * start-stop-daemon
-* zukitwo-themes
+* zuki-themes-git
 
 # theme
 
 * faenza
-* zukitwo-themes
+* zuki-themes-git
 * xcursor-flatbed
 
 # utils
