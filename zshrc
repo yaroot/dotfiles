@@ -188,6 +188,7 @@ alias wifi='wicd-curses'
 alias nocaps='setxkbmap -option ctrl:nocaps'
 alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -t -f18'
+alias infoq='infoqscraper presentation download --type h264_overlay'
 alias genpw="cat /dev/urandom| tr -dc '[:graph:]' | fold -w 64 | head -n 10"
 alias get_cower='wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz'
 alias verl='rlwrap erl -oldshell'
