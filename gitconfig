@@ -38,6 +38,7 @@
     quotepath = false
 [push]
     default = upstream
+    followTags = true
 [svn]
     rmdir = true
 
