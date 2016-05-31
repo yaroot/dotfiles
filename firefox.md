@@ -39,3 +39,7 @@ privacy stuff
 addon signing stuff
 
     xpinstall.signatures.required
+
+deplay for confirming download
+
+    security.dialog_enable_delay
