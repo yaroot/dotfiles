@@ -20,15 +20,15 @@ esac
 test -f $HOME/.Xdefaults && xrdb $HOME/.Xdefaults
 test -f $HOME/.Xdefaults.local && xrdb -merge $HOME/.Xdefaults.local
 
- ( sleep 10 && xcompmgr &)
- ( sleep 3  && xbindkeys -f $HOME/.xbindkeysrc &)
-#( sleep 5 && autocutsel -fork &) # kinda annoying
- ( sleep 5  && autocutsel -selection PRIMARY -fork &)
- ( sleep 5  && VBoxClient-all &)
- ( sleep 3  && wmname LG3D &) # java fix 
+ ( sleep 3  && xcompmgr &)
+ ( sleep 1  && xbindkeys -f $HOME/.xbindkeysrc &)
+#( sleep 1 && autocutsel -fork &) # kinda annoying
+ ( sleep 1  && autocutsel -selection PRIMARY -fork &)
+ ( sleep 1  && VBoxClient-all &)
+ ( sleep 1  && wmname LG3D &) # java fix
 #( sleep 3  && urxvtd -q -o -f &) # use tmux/screen
 
-( test -f "$HOME/.synergys.conf" && sleep 10 && synergys --debug INFO -c $HOME/.synergys.conf &)
+( test -f "$HOME/.synergys.conf" && sleep 1 && synergys --debug INFO -c $HOME/.synergys.conf &)
 
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
@@ -50,14 +50,14 @@ if $STANDALONEWM; then
 
   numlockx on
 
-  ( sleep 5  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
-  # ( sleep 15 && ibus-daemon --xim &)
-  ( sleep 5 && fcitx &)
-  ( sleep 5 && volumeicon &)
-  ( systemctl is-enabled wicd.service &> /dev/null && sleep 5 && wicd-client --tray &)
-  ( test -d $HOME/Dropbox && sleep 10 && dropbox &)
-  ( test -d $HOME/ownCloud && sleep 10 && owncloud &)
-  ( sleep 5 && xautolock -time 10 -locker 'i3lock -c 111111' &)
+  ( sleep 1  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
+  # ( sleep 1 && ibus-daemon --xim &)
+  ( sleep 1 && fcitx &)
+  ( sleep 1 && volumeicon &)
+  ( systemctl is-enabled wicd.service &> /dev/null && sleep 1 && wicd-client --tray &)
+  ( test -d $HOME/Dropbox && sleep 5 && dropbox &)
+  ( test -d $HOME/ownCloud && sleep 5 && owncloud &)
+  ( sleep 1 && xautolock -time 10 -locker 'i3lock -c 111111' &)
   # ( sleep 30 && xscreensaver -no-splash &)
   ( xsetroot -cursor_name left_ptr &)
 fi
@@ -80,7 +80,7 @@ fi
 
 launchdwm()
 {
-  ( sleep 5 && $HOME/.local/bin/dwmstatus &)
+  ( sleep 1 && $HOME/.local/bin/dwmstatus &)
 
   while true; do
     # relaunch trayer
