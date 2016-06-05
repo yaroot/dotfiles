@@ -28,7 +28,7 @@ test -f $HOME/.Xdefaults.local && xrdb -merge $HOME/.Xdefaults.local
  ( sleep 3  && wmname LG3D &) # java fix 
 #( sleep 3  && urxvtd -q -o -f &) # use tmux/screen
 
-( test -f "$HOME/.synergys.conf" && sleep 10 && synergys -c $HOME/.synergys.conf &)
+( test -f "$HOME/.synergys.conf" && sleep 10 && synergys --debug INFO -c $HOME/.synergys.conf &)
 
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
