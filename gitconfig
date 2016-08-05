@@ -28,11 +28,10 @@
 [merge]
     tool = vimdiff
 [diff]
+    algorithm = patience
     tool = bc3
 #    $ git config --global diff.tool bc3
 #    $ git config --global difftool.bc3 trustExitCode true
-[diff]
-    algorithm = patience
 [core]
     editor = vim
     quotepath = false
