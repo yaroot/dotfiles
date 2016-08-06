@@ -146,6 +146,7 @@ for_window [class="Pidgin"] floating enable
 for_window [class="Smplayer"] floating enable
 for_window [class="Steam"] floating enable
 for_window [class="VirtualBox"] floating enable
+for_window [class="virtualbox"] floating enable
 for_window [class="Vlc"] floating enable
 for_window [class="bomi"] floating enable
 for_window [class="mpv"] floating enable
