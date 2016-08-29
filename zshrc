@@ -378,21 +378,18 @@ function active_opam()
   source $HOME/.opam_zshrc
 }
 
-function create_pyenv_real()
-{
-  local venv=`which virtualenv`
-  if [ -n `which virtualenv2 &> /dev/null` ]; then
-    venv=`which virtualenv2`
-  fi
-
-  $venv $@
-}
-
 function create_pyenv()
 {
   local p=$1
   shift
-  create_pyenv_real "$HOME/.local/opt/pyenv/$p" $@
+  virtualenv3 "$HOME/.local/opt/pyenv/$p" $@
+}
+
+function create_pyenv2()
+{
+  local p=$1
+  shift
+  virtualenv "$HOME/.local/opt/pyenv/$p" $@
 }
 
 function redirect_port()
