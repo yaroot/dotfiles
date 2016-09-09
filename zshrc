@@ -389,7 +389,7 @@ function create_pyenv2()
 {
   local p=$1
   shift
-  virtualenv "$HOME/.local/opt/pyenv/$p" $@
+  virtualenv2 "$HOME/.local/opt/pyenv/$p" $@
 }
 
 function redirect_port()
