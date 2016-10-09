@@ -478,7 +478,7 @@ function chromium_proxy()
       s)
         mth='socks5';;
       u)
-        userdataargs="--user-data-dir=~/.local/google-chrome-$OPTARG";;
+        userdataargs="--user-data-dir=$HOME/.local/google-chrome-$OPTARG";;
     esac
   done
 
