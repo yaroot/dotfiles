@@ -61,9 +61,9 @@
    ;; is `emacs' then the `holy-mode' is enabled at startup.
    dotspacemacs-editing-style 'vim
    ;; If non nil output loading progress in `*Messages*' buffer.
-   dotspacemacs-verbose-loading t
+   dotspacemacs-verbose-loading nil
    ;; Disable startup version check
-   dotspacemacs-version-check-enable t
+   dotspacemacs-version-check-enable nil
    ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
    ;; banner, `random' chooses a random text banner in `core/banners'
