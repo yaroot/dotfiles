@@ -456,14 +456,16 @@ function chromium_proxy()
   # -h <host>
   # -s              socks5 (default http)
   # -c              google-chrome-beta
+  # -u              user-data-dir (~/.local/google-chrome-<alt>)
   # -C <prog>       run <prog>
   local mth="http"
   # test "$2" = 's' && mth='socks5'
   local prog='chromium'
   local port=''
   local addr='127.0.0.1'
+  local userdataargs=''
 
-  while getopts "h:p:cC:s" opt; do
+  while getopts "h:p:cC:su:" opt; do
     case $opt in
       h)
         addr=$OPTARG;;
@@ -474,18 +476,19 @@ function chromium_proxy()
       C)
         prog=$OPTARG;;
       s)
-        mth='socks5'
+        mth='socks5';;
+      u)
+        userdataargs="--user-data-dir=~/.local/google-chrome-$OPTARG";;
     esac
   done
 
-  if [ -z "$port" ]; then
-    echo '[ERR] port required: -p <port>'
-    return
-  fi
 
-  local proxy_addr="$mth://$addr:$port"
-  echo "=== Starting $prog with proxy [$proxy_addr]"
-  $prog --proxy-server="$proxy_addr"
+  local proxy_args=''
+  if [ -n "$port" ]; then
+    proxy_args="--proxy-server=$mth://$addr:$port"
+  fi
+  echo "=== Starting $prog with args [$proxy_args $userdataargs]"
+  $prog "$proxy_args" "$userdataargs"
 }
 
 function man()
