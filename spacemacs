@@ -188,18 +188,3 @@
   )
 
 ;; END
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (uuidgen request org-projectile org-plus-contrib org-download link-hint eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff f column-enforce-mode base16-tomorrow-dark-theme yaml-mode ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package ujelly-theme toc-org sublime-themes spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters railscasts-theme quelpa popwin persp-mode pcre2el paradox page-break-lines org-repo-todo org-present org-pomodoro org-bullets open-junk-file noflet neotree move-text mmm-mode markdown-toc macrostep lorem-ipsum linum-relative leuven-theme ir-black-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio gnuplot git-gutter-fringe git-gutter-fringe+ gh-md flx-ido firebelly-theme fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu ensime elisp-slime-nav diff-hl define-word clean-aindent-mode buffer-move bracketed-paste base16-theme auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:background nil)))))
