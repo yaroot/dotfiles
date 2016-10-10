@@ -465,12 +465,16 @@ function chromium_proxy()
   local addr='127.0.0.1'
   local userdataargs=''
 
-  while getopts "h:p:cC:su:" opt; do
+  while getopts "h:p:abcC:su:" opt; do
     case $opt in
       h)
         addr=$OPTARG;;
       p)
         port=$OPTARG;;
+      a)
+        prog='google-chrome-unstable';;
+      b)
+        prog='google-chrome';;
       c)
         prog='google-chrome-beta';;
       C)
