@@ -474,7 +474,7 @@ function chromium_proxy()
       a)
         prog='google-chrome-unstable';;
       b)
-        prog='google-chrome';;
+        prog='google-chrome-stable';;
       c)
         prog='google-chrome-beta';;
       C)
