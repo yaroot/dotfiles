@@ -40,4 +40,5 @@
     followTags = true
 [svn]
     rmdir = true
-
+[gc]
+    autoDetach = false
