@@ -18,7 +18,7 @@
 "xfce4-screenshooter --save $HOME --region"
     Mod4 + Shift + x
 
-"xfce4-screenshooter --save $HOME --fuulscreen"
+"xfce4-screenshooter --save $HOME --fullscreen"
     Mod4 + Control + x
 
 "xfce4-terminal"
