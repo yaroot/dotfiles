@@ -1,5 +1,5 @@
 # addons
-uBlock origin
+
 ChmFox
 DownThemAll!
 EPUBReader
@@ -8,11 +8,12 @@ FlashGot
 FoxyProxy Standard
 Greasemonkey
 Instasaver
-NoScript
 NoSquint
-Vimperator
 UAControl
+Vimperator
 Xmarks
+uBlock origin
+uMatrix
 
 # about:config
 
