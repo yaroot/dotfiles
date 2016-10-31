@@ -3,4 +3,4 @@
 [Boxz Price History Image](http://userscripts.org/scripts/show/119362)
 
 [Slack Tomorrow Dark (base16) - Monospaced](http://userstyles.org/styles/125488)
-[ylluminarious's Dark Gitter](http://userstyles.org/styles/121640)
+[Gitter Dark by viluon](http://userstyles.org/styles/131747)
