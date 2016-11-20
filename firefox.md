@@ -10,7 +10,7 @@ Greasemonkey
 Instasaver
 NoSquint
 UAControl
-Vimperator
+VimFx
 Xmarks
 uBlock origin
 uMatrix
