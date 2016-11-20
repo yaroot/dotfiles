@@ -27,10 +27,6 @@ fi
 # fi
 
 # path=(
-#   "$HOME/.local/opt/scala/bin"
-#   "$HOME/.local/opt/sbt"
-#   "$HOME/.local/opt/play"
-#   "$HOME/.local/opt/akka/bin"
 #   "$HOME/.local/go/bin"
 #   $path
 # )
@@ -45,32 +41,8 @@ fi
 # export GOPATH=$HOME/.local/go
 # export GOROOT=/usr/lib/go
 
-# sbt options
-# export SBT_OPTS='-Xms128m -Xmx512m -Xss1m -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256m -XX:ReservedCodeCacheSize=192m'
-#######  for maven2/ivy2 proxies
-##  ~/.sbt/repositories
-##    [repositories]
-##      local
-##      my-ivy-proxy-releases: http://repo.company.com/artifactory/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
-##      my-maven-proxy-releases: http://repo.company.com/artifactory/maven-releases/
-##  sbt options for dropping all configured repos `sbt -Dsbt.override.build.repos=true`
-##  some basic repos:
-##      jcenter         https://jcenter.bintray.com/
-##      central         https://repo.maven.apache.org/maven2/
-##      clojars         https://clojars.org/repo/
-##      typesafe        https://dl.bintray.com/typesafe/ivy-releases/
-##      sbt-plugin      https://dl.bintray.com/sbt/sbt-plugin-releases/
-##      scalaz          https://dl.bintray.com/scalaz/releases/
-##    (check `Suppress POM Consistency Checks` in artifactory for maven repos)
-
-##  ~/.gradle/init.gradle
-##      allprojects {
-##          repositories {
-##              maven {
-##                  url "http://repo.company.com/artifactory/maven-releases/"
-##              }
-##          }
-##      }
+# export HOMEBREW_AUTO_UPDATE_SECS=999999999
+# export HOMEBREW_NO_GITHUB_API=1
 
 
 source $HOME/.dotfiles/zshrc
