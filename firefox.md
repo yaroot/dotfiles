@@ -14,6 +14,7 @@ VimFx
 Xmarks
 uBlock origin
 uMatrix
+keepa
 
 # about:config
 
