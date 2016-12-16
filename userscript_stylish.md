@@ -2,5 +2,6 @@
 [YoukuAntiADs](http://userscripts.org/scripts/show/119622)
 [Boxz Price History Image](http://userscripts.org/scripts/show/119362)
 
-[Slack Tomorrow Dark (base16) - Monospaced](http://userstyles.org/styles/125488)
-[Gitter Dark by viluon](http://userstyles.org/styles/131747)
+[Slack Night Mode (Black)](http://userstyles.org/styles/117475)
+[ylluminarious's Dark Gitter](http://userstyles.org/styles/121640)
+
