@@ -1,0 +1,13 @@
+[Unit]
+Description=socat
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/socat/%i.conf
+ExecStart=/usr/bin/socat $ARGS
+
+[Install]
+WantedBy=multi-user.target
+
+# /etc/socat/test.conf: ARGS='TCP-LISTEN:7070,fork,reuseaddr TCP:127.0.0.1:7071'
