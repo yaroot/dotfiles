@@ -56,8 +56,8 @@ URxvt.secondaryScroll: true # enable Shift-PageUp/Down in screen
 URxvt.saveLines:2000
 
 !URxvt.font:xft:DejaVu sans Mono:size=9,xft:WenQuanYi Micro Hei:size=10
-URxvt.font:xft:tamsyn-14,xft:WenQuanYi Micro Hei:size=14
-URxvt.boldFont:xft:tamsyn-14:bold,xft:WenQuanYi Micro Hei:size=14,bold
+URxvt.font:xft:Monaco-12,xft:WenQuanYi Micro Hei:size=14
+URxvt.boldFont:xft:Monaco-12:bold,xft:WenQuanYi Micro Hei:size=14,bold
 
 URxvt.preeditType:Root
 URxvt.imLocale:zh_CN.UTF-8
