@@ -3,6 +3,8 @@ Description=dropbox
 After=local-fs.target network.target
 
 [Service]
+#Environment=
+#EnvironmentFile=
 Type=simple
 ExecStart=/usr/bin/env "/home/%i/.dropbox-dist/dropboxd"
 Restart=always
