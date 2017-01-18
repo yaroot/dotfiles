@@ -1,0 +1,13 @@
+[Unit]
+Description=dropbox
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env "/home/%i/.dropbox-dist/dropboxd"
+Restart=always
+RestartSec=1
+User=%i
+
+[Install]
+WantedBy=multi-user.target
