@@ -12,6 +12,7 @@
 * spiped
 * start-stop-daemon
 * zuki-themes-git
+* apulse
 
 # theme
 
