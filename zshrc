@@ -194,6 +194,7 @@ alias get_cower='wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.
 alias verl='rlwrap erl -oldshell'
 alias urldecode='python2 -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
 alias urlencode='python2 -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+alias jad='java -cp /home/yaroot/.local/opt/idea-IC/plugins/java-decompiler/lib/java-decompiler.jar org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -506,12 +507,6 @@ function man()
     LESS_TERMCAP_ue=$'\E[0m' \
     LESS_TERMCAP_us=$'\E[04;38;5;146m' \
     man "$@"
-}
-
-function testnose()
-{
-  export NOSE_REDNOSE=1
-  export NOSE_NOCAPTURE=1
 }
 
 function slow_down()
