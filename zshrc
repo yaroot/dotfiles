@@ -195,6 +195,8 @@ alias verl='rlwrap erl -oldshell'
 alias urldecode='python2 -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
 alias urlencode='python2 -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
 alias jad='java -cp /home/yaroot/.local/opt/idea-IC/plugins/java-decompiler/lib/java-decompiler.jar org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
+alias idea='$HOME/.local/opt/idea-IC/bin/idea.sh'
+alias ideau='$HOME/.local/opt/idea-IU/bin/idea.sh'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
