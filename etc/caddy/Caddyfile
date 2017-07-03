@@ -1,0 +1,6 @@
+:82 {
+    filemanager / {
+        show    /media
+        webdav  dav/
+    }
+}

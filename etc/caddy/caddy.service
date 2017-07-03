@@ -1,0 +1,30 @@
+# https://caddyserver.com/download/linux/amd64?plugins=http.filemanager
+[Unit]
+Description=caddy
+After=network-online.target
+
+[Service]
+Restart=on-failure
+
+#User=nobody
+#Group=nobody
+
+Environment=CADDYPATH=/etc/ssl/caddy
+
+ExecStart=/usr/local/bin/caddy -log stdout -agree=true -conf=/etc/caddy/Caddyfile -root=/tmp
+
+LimitNOFILE=8192
+LimitNPROC=100
+
+PrivateTmp=true
+#PrivateDevices=true
+# Hide /home, /root, and /run/user. Nobody will steal your SSH-keys.
+ProtectHome=true 
+; Make /usr, /boot, /etc and possibly some more folders read-only.
+ProtectSystem=full
+; … except /etc/ssl/caddy, because we want Letsencrypt-certificates there.
+;   This merely retains r/w access rights, it does not add any new. Must still be writable on the host!
+#ReadWriteDirectories=/etc/ssl/caddy
+
+[Install]
+WantedBy=multi-user.target
