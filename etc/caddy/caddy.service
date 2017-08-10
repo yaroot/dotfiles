@@ -4,8 +4,10 @@ Description=caddy
 After=network-online.target
 
 [Service]
-#Restart=on-failure
-Restart=no
+Restart=on-failure
+#Restart=no
+#Restart=always
+RestartSec=30
 
 #User=nobody
 #Group=nobody
