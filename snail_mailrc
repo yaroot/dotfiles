@@ -1,0 +1,10 @@
+
+account name_your_account {
+    set from="user <user@example.com>"
+    set mta=smtps://smtp.example.com:465
+    set smtp-auth=login
+    set smtp-auth-user=user@example.com
+    set smtp-auth-password=super_complex_passwd
+    #set smtp-use-starttls
+    #set ssl-verify=strict
+}
