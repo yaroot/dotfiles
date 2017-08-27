@@ -1,4 +1,18 @@
 # aplay -l
 # aplay -L
+
+# ~/.asoundrc
 defaults.pcm.device 0
 defaults.pcm.card 1
+
+
+# /etc/asound.conf
+pcm.!default {
+    type hw
+    card HD
+}
+
+ctl.!default {
+    type hw           
+    card HD
+}
