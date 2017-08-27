@@ -199,6 +199,7 @@ alias idea='$HOME/.local/opt/idea-IC/bin/idea.sh'
 alias ideau='$HOME/.local/opt/idea-IU/bin/idea.sh'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias alsafox='apulse firefox'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
