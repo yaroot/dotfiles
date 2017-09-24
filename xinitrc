@@ -53,6 +53,7 @@ if $STANDALONEWM; then
   # ( sleep 1 && ibus-daemon --xim &)
   ( sleep 1 && fcitx &)
   ( sleep 1 && volumeicon &)
+  ( sleep 1 && blueman-applet &)
   # ( test -d $HOME/Dropbox && sleep 5 && dropbox &)
   # ( test -d $HOME/ownCloud && sleep 5 && owncloud &)
   ( sleep 1 && xautolock -time 10 -locker 'i3lock -c 111111' &)
