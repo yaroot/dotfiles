@@ -1,6 +1,5 @@
 :82 {
-    filemanager / {
-        show    /media
-        webdav  dav/
+    webdav / {
+        scope /srv/dav
     }
 }
