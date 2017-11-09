@@ -1,4 +1,7 @@
-Chrome-Audio-EQ
-uBlock Origin
+Audio EQ
 uMatrix
+Video Speed Controller
+Violentmonkey
+Instapaper
+Just Read
 Stylish
