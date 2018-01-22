@@ -15,10 +15,12 @@
 "xfce4-screenshooter"
     Mod4 + x
 
-"xfce4-screenshooter --save $HOME --region"
+#"xfce4-screenshooter --save $HOME --region"
+"maim -s $HOME/Screenshot_`date -Iseconds`.png"
     Mod4 + Shift + x
 
-"xfce4-screenshooter --save $HOME --fullscreen"
+#"xfce4-screenshooter --save $HOME --fullscreen"
+"maim $HOME/Screenshot_`date -Iseconds`.png"
     Mod4 + Control + x
 
 "xfce4-terminal"
