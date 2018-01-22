@@ -20,27 +20,16 @@
 * zuki-themes-git
 * xcursor-flatbed
 
-# utils
-
-* duff
-* bwm-ng, iftraf, ethstatus
-* ddclient (dynamic dns with dns.he.net)
-* file-roller2-nn
-* corebird
-* scudcloud
-
 # general programs
 
+* duff
 * pluma
 * volumeicon + xfce4-mixer
 * zathura, qpdfview, kchmviewer, sigil
 * xrce4-screenshooter
 * simplescreenrecorder
-
-# adium
-
-    dock icon: flcl cat
-    messages: lighty
+* maim
+* rofi
 
 more good stuff [here](http://kmandla.wikispaces.com/)
 
