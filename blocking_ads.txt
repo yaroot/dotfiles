@@ -1,0 +1,4 @@
+
+https://github.com/AdAway/AdAway/wiki/HostsSources
+https://adaway.org/hosts.txt
+
