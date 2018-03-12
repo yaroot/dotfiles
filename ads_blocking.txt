@@ -2,3 +2,4 @@
 https://github.com/AdAway/AdAway/wiki/HostsSources
 https://adaway.org/hosts.txt
 
+https://raw.githubusercontent.com/vokins/yhosts/master/hosts.txt
