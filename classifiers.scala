@@ -1,0 +1,1 @@
+transitiveClassifiers := Seq(Artifact.SourceClassifier)
