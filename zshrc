@@ -387,6 +387,11 @@ function active_opam()
   source $HOME/.opam_zshrc
 }
 
+function active_conda()
+{
+  export PATH="$HOME/.local/opt/miniconda3/bin:$PATH"
+}
+
 function create_pyenv()
 {
   local p=$1
