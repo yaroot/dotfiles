@@ -390,6 +390,7 @@ function active_opam()
 function active_conda()
 {
   export PATH="$HOME/.local/opt/miniconda3/bin:$PATH"
+  export PS1="(conda) $PS1"
 }
 
 function create_pyenv()
