@@ -3,6 +3,10 @@
 # ControlPath /tmp/ssh_mux_%h_%p_%r
 
 Host *
+    # osx specific
+    # AddKeysToAgent yes
+    # UseKeychain yes
+    # IdentityFile ~/.ssh/xxx
     ForwardAgent yes
     ServerAliveInterval 10
     ServerAliveCountMax 2 
