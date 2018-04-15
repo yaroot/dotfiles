@@ -164,8 +164,6 @@ alias -g L='| less'
 alias -g G='| grep --color=auto -n'
 alias -g H='| head'
 alias -g SP="| curl -F 'sprunge=<-' http://sprunge.us"
-alias turxvt='tabbed -d urxvt -embed; exit'
-alias tuxterm='tabbed -d xterm -into; exit'
 alias grep='grep --color=auto -n'
 which iftop &> /dev/null && alias iftop='iftop -B'
 alias hdtemp='echo `netcat localhost 7634`'
