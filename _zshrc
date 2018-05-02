@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# export GOPATH=/home/yaroot/.local/opt/go_data
+# export KEYBASE_SYSTEMD=0
 # if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
 if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
   if [ -f "$HOME/.xinitrc" ]; then
@@ -41,9 +43,12 @@ fi
 # export GOPATH=$HOME/.local/go
 # export GOROOT=/usr/lib/go
 
+# export PYTHONDOCS=/usr/share/doc/python3.6/html/
+
 # export HOMEBREW_AUTO_UPDATE_SECS=999999999
 # export HOMEBREW_NO_GITHUB_API=1
 # export HOMEBREW_NO_ANALYTICS=1
 
 source $HOME/.dotfiles/zshrc
+source ~/.local/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
