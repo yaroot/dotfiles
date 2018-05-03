@@ -138,6 +138,8 @@ fi
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
 
 if [ `uname -s` = 'Darwin' ]; then
   alias ls="ls -G"
@@ -199,7 +201,9 @@ alias idea='$HOME/.local/opt/idea-IC/bin/idea.sh'
 alias ideau='$HOME/.local/opt/idea-IU/bin/idea.sh'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
-alias alsafox='apulse firefox'
+#alias alsafox='apulse firefox'
+alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
+alias ipython2='ipython2 --TerminalInteractiveShell.editing_mode=vi'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
