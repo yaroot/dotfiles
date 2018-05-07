@@ -199,6 +199,7 @@ alias htmlunescape='python3 -c "for l in __import__(\"sys\").stdin.readlines(): 
 alias jad='java -cp $HOME/.local/opt/idea-IC/plugins/java-decompiler/lib/java-decompiler.jar org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
 alias idea='$HOME/.local/opt/idea-IC/bin/idea.sh'
 alias ideau='$HOME/.local/opt/idea-IU/bin/idea.sh'
+alias clion='$HOMT/.local/opt/clion/bin/clion.sh'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 #alias alsafox='apulse firefox'
