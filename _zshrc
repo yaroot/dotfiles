@@ -12,6 +12,10 @@ if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
   # (startx xfce &); logout
 fi
 
+if [ `uname` = Darwin -a ! -f /tmp/userconf_inited_boot ]; then
+  echo "please enable pf && run ssh-add"
+fi
+
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
 
