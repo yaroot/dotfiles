@@ -16,8 +16,8 @@
 
 # theme
 
-* faenza
-* zuki-themes-git
+* Theme: Zukitre
+* Icons: Faenza
 * xcursor-flatbed
 
 # general programs
