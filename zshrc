@@ -199,6 +199,7 @@ alias jad='java -cp $HOME/.local/opt/idea-IC/plugins/java-decompiler/lib/java-de
 alias idea='$HOME/.local/opt/idea-IC/bin/idea.sh'
 alias ideau='$HOME/.local/opt/idea-IU/bin/idea.sh'
 alias clion='$HOME/.local/opt/clion/bin/clion.sh'
+alias androidstudio='$HOME/.local/opt/android-studio/bin/studio.sh'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 #alias alsafox='apulse firefox'
