@@ -16,6 +16,7 @@
     Mod4 + x
 
 #"xfce4-screenshooter --save $HOME --region"
+#"maim | feh - -x | maim -s $HOME/Screenshot_`date -Iseconds`.png"
 "maim -s $HOME/Screenshot_`date -Iseconds`.png"
     Mod4 + Shift + x
 
