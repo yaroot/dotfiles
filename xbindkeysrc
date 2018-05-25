@@ -26,6 +26,9 @@
 "sleep 5s && maim $HOME/Screenshot_`date -Iseconds`.png"
     Mod4 + Alt + x
 
+"maim -s | xclip -selection clipboard -t image/png"
+    Mod4 + Shift + Alt + x
+
 "xfce4-terminal"
     Mod4 + Control + slash
 
