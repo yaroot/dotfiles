@@ -56,6 +56,7 @@ if $STANDALONEWM; then
   # ( test -d $HOME/Dropbox && sleep 5 && dropbox &)
   # ( test -d $HOME/ownCloud && sleep 5 && owncloud &)
   ( sleep 5 && xautolock -time 10 -locker 'i3lock -c 111111' &)
+  ( sleep 5 && xss-lock -- i3lock -c 111111 &)
   # ( sleep 30 && xscreensaver -no-splash &)
   ( sleep 5 && systemctl is-enabled connman && cmst --minimized &)
   ( xsetroot -cursor_name left_ptr &)
