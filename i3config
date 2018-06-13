@@ -25,8 +25,9 @@ bindsym $mod+slash exec urxvt
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run
-# bindsym $mod+Shift+p exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Control+p  exec dmenu_run
+bindsym $mod+Shift+p    exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+p          exec rofi -combi-modi run#drun#window -theme Arc -font "Monospaced 16" -show combi
 
 # change focus
 bindsym $mod+h focus left
