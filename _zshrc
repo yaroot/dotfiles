@@ -3,13 +3,17 @@
 # export GOPATH=/home/yaroot/.local/opt/go_data
 # export KEYBASE_SYSTEMD=0
 # if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
-if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
-  if [ -f "$HOME/.xinitrc" ]; then
-    startx
-    logout
-  fi
-  # (startx &); logout
-  # (startx xfce &); logout
+#if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
+#  if [ -f "$HOME/.xinitrc" ]; then
+#    startx
+#    logout
+#  fi
+#  # (startx &); logout
+#  # (startx xfce &); logout
+#fi
+
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
 fi
 
 if [ `uname` = Darwin -a ! -f /tmp/userconf_inited_boot ]; then
@@ -54,5 +58,5 @@ fi
 # export HOMEBREW_NO_ANALYTICS=1
 
 source $HOME/.dotfiles/zshrc
-source ~/.local/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
