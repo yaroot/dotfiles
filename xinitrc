@@ -51,6 +51,7 @@ if $STANDALONEWM; then
   # ( sleep 1 && ibus-daemon --xim &)
   ( sleep 3 && fcitx &)
   ( sleep 3 && volumeicon &)
+  ( sleep 3 && pasystray &)
   ( sleep 10 && blueman-applet &)
   ( sleep 10 && solaar &)
   # ( test -d $HOME/Dropbox && sleep 5 && dropbox &)
