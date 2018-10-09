@@ -25,7 +25,7 @@
 * duff
 * pluma
 * volumeicon + xfce4-mixer
-* zathura, qpdfview, kchmviewer, sigil
+* zathura, xreader, kchmviewer, sigil
 * xrce4-screenshooter
 * simplescreenrecorder
 * maim
