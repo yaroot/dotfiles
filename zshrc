@@ -206,6 +206,7 @@ alias pbpaste='xclip -selection clipboard -o'
 #alias alsafox='apulse firefox'
 alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 alias ipython2='ipython2 --TerminalInteractiveShell.editing_mode=vi'
+alias weather='curl wttr.in'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -426,25 +427,6 @@ function redirect_port()
     lport=$port
   fi
   socat TCP-LISTEN:$lport,fork,reuseaddr TCP:$tar:$port
-}
-
-function weather()
-{
-  local pcode=''
-  local loc="$1"
-
-  if [ -n "$loc" ]; then
-    case $loc in
-      sh)   pcode='ZSSS'
-        ;;
-      hz)   pcode='ZSHC'
-        ;;
-    esac
-
-    if [ -n "$pcode" ]; then
-      curl "http://weather.noaa.gov/pub/data/observations/metar/decoded/${pcode}.TXT"
-    fi
-  fi
 }
 
 function set_proxy_var()
