@@ -16,9 +16,9 @@
 
 # theme
 
-* Theme: Zukitre
-* Icons: Faenza
-* xcursor-flatbed
+* Theme: arc
+* Icons: paper
+* Cursor: paper
 
 # general programs
 
