@@ -16,9 +16,9 @@
 
 # theme
 
-* Theme: arc
-* Icons: paper
-* Cursor: paper
+* Theme: arc-gtk
+* Icons: paper-icon
+* Cursor: paper-icon
 
 # general programs
 
