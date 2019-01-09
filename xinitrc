@@ -72,6 +72,7 @@ fi
 # feh --no-fehbg --bg-center ~/.wallpaper.jpg
 # xsetroot -solid midnightblue # background color
 # setxkbmap -option ctrl:nocaps,altwin:swap_alt_win
+# setxkbmap -option caps:none,altwin:swap_alt_win
 # synclient MinSpeed=2.5 MaxSpeed=2.5 AccelFactor=0
 # xbacklight -set 80  # screen brightness
 # export GDK_DPI_SCALE=1.5

@@ -184,7 +184,6 @@ alias v='vim'
 alias vd='vimdiff'
 alias gd='gvimdiff'
 alias wifi='wicd-curses'
-alias nocaps='setxkbmap -option ctrl:nocaps'
 alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -f18'
 alias infoq='infoqscraper presentation download --type h264_overlay'
@@ -206,7 +205,6 @@ alias pbpaste='xclip -selection clipboard -o'
 #alias alsafox='apulse firefox'
 alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 alias ipython2='ipython2 --TerminalInteractiveShell.editing_mode=vi'
-alias weather='curl wttr.in'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -517,6 +515,11 @@ function man()
 function slow_down()
 {
   while read x; do echo "$x"; sleep 0.5; done
+}
+
+
+function weather() {
+  curl https://wttr.in/$@
 }
 
 #}}}
