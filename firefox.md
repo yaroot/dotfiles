@@ -1,20 +1,20 @@
 # addons
 
-ChmFox
-DownThemAll!
-EPUBReader
-Firebug
-FlashGot
-FoxyProxy Standard
-Greasemonkey
-Instasaver
-NoSquint
-UAControl
-VimFx
-Xmarks
-uBlock origin
-uMatrix
-keepa
+* ChmFox
+* DownThemAll!
+* EPUBReader
+* Firebug
+* FlashGot
+* FoxyProxy Standard
+* Greasemonkey
+* Instasaver
+* NoSquint
+* UAControl
+* VimFx
+* Xmarks
+* uBlock origin
+* uMatrix
+* keepa
 
 # about:config
 
