@@ -59,7 +59,7 @@ if $STANDALONEWM; then
   ( sleep 5 && xautolock -time 10 -locker 'xsecurelock' &) # i3lock -c 111111
   ( sleep 5 && xss-lock -- xautolock -locknow &)
   # ( sleep 30 && xscreensaver -no-splash &)
-  ( sleep 5 && systemctl is-enabled connman && cmst --minimized &)
+  #( sleep 5 && systemctl is-enabled connman && cmst --minimized &)
   ( xsetroot -cursor_name left_ptr &)
 fi
 
