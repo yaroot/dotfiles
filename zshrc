@@ -360,19 +360,6 @@ function active_rbenv()
   rehash
 }
 
-# git://github.com/ekalinin/nodeenv.git
-# create env: nodeenv -j4 -n $version $env_path
-function active_nodeenv()
-{
-  local ver=$1
-  local script="$HOME/.local/opt/nodejs/$ver/bin/activate"
-  if [ -f "$script" ]; then
-    source "$script"
-  else
-    echo "[error] unable to active env <$env>"
-  fi
-}
-
 function active_pyenv()
 {
   # export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -383,31 +370,6 @@ function active_pyenv()
   else
     echo "[error] unable to active env <$ver>"
   fi
-}
-
-function active_opam()
-{
-  source $HOME/.opam_zshrc
-}
-
-function active_conda()
-{
-  export PATH="$HOME/.local/opt/miniconda3/bin:$PATH"
-  export PS1="(conda) $PS1"
-}
-
-function create_pyenv()
-{
-  local p=$1
-  shift
-  virtualenv3 "$HOME/.local/opt/pyenv/$p" $@
-}
-
-function create_pyenv2()
-{
-  local p=$1
-  shift
-  virtualenv2 "$HOME/.local/opt/pyenv/$p" $@
 }
 
 function active_asdf()
