@@ -485,5 +485,15 @@ function weather() {
   curl https://wttr.in/$@
 }
 
+function git-fetch-pr() {
+  local pr_id=$1
+  local pr_branch=$2
+  if [ -n $pr_id ] && [ -n $pr_branch ]; then
+    git fetch origin pull/$pr_id/head:$pr_branch
+  else
+    echo 'Usage git-fetch-pr [12345] [branch-name]'
+  fi
+}
+
 #}}}
 
