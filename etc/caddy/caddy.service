@@ -1,4 +1,4 @@
-# https://caddyserver.com/download/linux/amd64?plugins=http.forwardproxy,http.ipfilter,http.upload,http.webdav,tls.dns.cloudflare&license=personal&telemetry=off
+# https://caddyserver.com/download/linux/amd64?plugins=http.forwardproxy,http.ipfilter,http.webdav,tls.dns.cloudflare&license=personal&telemetry=off
 [Unit]
 Description=caddy
 After=network-online.target
