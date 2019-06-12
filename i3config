@@ -14,6 +14,9 @@ set $mod Mod4
 # font pango:DejaVu Sans Mono 10
 font pango:Monospace 12
 
+# workspace_layout default|stacking|tabbed
+workspace_layout tabbed
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -141,21 +144,11 @@ bar {
         position top
 }
 
-for_window [class="Dia"] floating enable
-for_window [class="Iptux"] floating enable
-for_window [class="MPlayer"] floating enable
-for_window [class="Pidgin"] floating enable
-for_window [class="Smplayer"] floating enable
-for_window [class="Steam"] floating enable
 #for_window [class="VirtualBox"] floating disable
 #for_window [class="virtualbox"] floating disable
 for_window [class="Vlc"] floating enable
-for_window [class="bomi"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="qScreenshot"] floating enable
-for_window [class="smplayer"] floating enable
-for_window [class="qt4-ssh-askpass"] floating enable
-for_window [class="lxqt-openssh-askpass"] floating enable
 
 for_window [class="qemu-system-i386"] border 1pixel;
 for_window [class="Chromium"] border 1pixel;
