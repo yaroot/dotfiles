@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# export GOPATH=/home/yaroot/.local/opt/go_data
+# export GOPATH=$HOME/.local/opt/go_data
 # export KEYBASE_SYSTEMD=0
 
 # if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
