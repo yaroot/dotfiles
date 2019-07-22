@@ -51,3 +51,14 @@ fi
 source $HOME/.dotfiles/zshrc
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+active_asdf() {
+  source $HOME/.asdf/asdf.sh
+  source $HOME/.asdf/completions/asdf.bash
+}
+
+pgcli() { $HOME/.local/opt/pyenv/pgcli/bin/pgcli $@ }
+mycli() { $HOME/.local/opt/pyenv/pgcli/bin/mycli $@ }
+litecli() { $HOME/.local/opt/pyenv/pgcli/bin/litecli $@ }
+
+
+export ANDROID_HOME=~/.local/android/sdk
