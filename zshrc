@@ -345,7 +345,11 @@ function allkeychain()
   #for n in `find $HOME/.ssh/. -name '*.pub'`; do
   for n in `ls $HOME/.ssh/*.pub`; do
     local k=`basename $n`
-    eval `keychain --eval ${k%.pub}`
+    if [ `uname -s` = 'Darwin' ]; then
+      ssh-add ${k%.pub}
+    else
+      eval `keychain --eval ${k%.pub}`
+    fi
   done
 }
 
