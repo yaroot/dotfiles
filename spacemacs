@@ -46,6 +46,7 @@ values."
      markdown
      org
      haskell
+     scala
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
