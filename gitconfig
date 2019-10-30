@@ -19,6 +19,7 @@
     rl  = remote -v
     s   = status
     sm  = submodule
+    cp  = cherry-pick
     resetsm = "!git sm foreach 'git co -- .'"
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged

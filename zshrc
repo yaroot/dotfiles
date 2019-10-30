@@ -500,5 +500,23 @@ function git-fetch-pr() {
   fi
 }
 
+function ff_tmp() {
+  local pp=/tmp/firefox_throwaway
+  rm -rf $pp
+  mkdir -p $pp
+  firefox -profile $pp
+  rm -rf $pp
+}
+
+function ff_prof() {
+  if [ -z "$1" ]; then
+    local pp=$HOME/.mozilla/firefox/profile_$1
+    mkdir -p $pp
+    firefox -profile $pp
+  else
+    echo 'Usage: ff_prof <profile_name>'
+  fi
+}
+
 #}}}
 
