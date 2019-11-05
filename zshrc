@@ -510,11 +510,11 @@ function ff_tmp() {
 
 function ff_prof() {
   if [ -z "$1" ]; then
+    echo 'Usage: ff_prof <profile_name>'
+  else
     local pp=$HOME/.mozilla/firefox/profile_$1
     mkdir -p $pp
     firefox -profile $pp
-  else
-    echo 'Usage: ff_prof <profile_name>'
   fi
 }
 
