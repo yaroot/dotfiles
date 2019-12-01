@@ -6,6 +6,7 @@ pick from
 
 white lists
 
+    c.kakaku.com
     s3.amazonaws.com
     clients2.google.com
     clients3.google.com
@@ -20,8 +21,8 @@ white lists
     msftncsi.com
     www.msftncsi.com
     ea.com
-    cdn.optimizely.com (Used by Origin for content delivery)
-    res.cloudinary.com (Used by Facebook for image uploads)
+    cdn.optimizely.com
+    res.cloudinary.com
     gravatar.com
     rover.ebay.com
     imgs.xkcd.com
