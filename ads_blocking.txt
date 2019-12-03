@@ -3,6 +3,12 @@ pick from
 
     https://firebog.net/
 
+japan
+
+    https://warui.intaa.net/adhosts/hosts.txt
+    https://sites.google.com/site/hosts2ch/ja
+    https://logroid.github.io/blogger/file/hosts.txt 
+    https://280blocker.net/files/280blocker_domain.txt
 
 white lists
 
