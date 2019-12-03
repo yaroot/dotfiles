@@ -13,6 +13,7 @@ japan
 white lists
 
     c.kakaku.com
+
     s3.amazonaws.com
     clients2.google.com
     clients3.google.com
