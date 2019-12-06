@@ -12,6 +12,7 @@ japan
 
 white lists
 
+    s.yimg.jp
     c.kakaku.com
 
     s3.amazonaws.com
