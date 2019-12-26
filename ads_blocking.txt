@@ -14,6 +14,8 @@ white lists
 
     s.yimg.jp
     c.kakaku.com
+    lh3.googleusercontent.com
+    yt3.ggpht.com
 
     s3.amazonaws.com
     clients2.google.com
