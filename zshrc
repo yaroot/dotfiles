@@ -524,6 +524,7 @@ function bunpack() {
     local tmp="`mktemp -d ./$archive.XXXXX`"
     echo "Extracting to $tmp"
     bsdtar xvf "$archive" -C "$tmp"
+    echo "Complete [$tmp]"
   else
     echo 'Usage: bunpack <filename>'
   fi
