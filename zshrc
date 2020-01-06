@@ -522,7 +522,7 @@ function bunpack() {
   local archive="$1"
   if [ -f "$archive" ]; then
     local tmp="`mktemp -d ./$archive.XXXXX`"
-    echo "Extracting to $archive"
+    echo "Extracting to $tmp"
     bsdtar xvf "$archive" -C "$tmp"
   else
     echo 'Usage: bunpack <filename>'
