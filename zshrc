@@ -518,5 +518,16 @@ function ff_prof() {
   fi
 }
 
+function bunpack() {
+  local archive="$1"
+  if [ -f "$archive" ]; then
+    local tmp="`mktemp -d ./$archive.XXXXX`"
+    echo "Extracting to $archive"
+    bsdtar xvf "$archive" -C "$tmp"
+  else
+    echo 'Usage: bunpack <filename>'
+  fi
+}
+
 #}}}
 
