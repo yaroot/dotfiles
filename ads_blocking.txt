@@ -12,6 +12,7 @@ japan
 
 white lists
 
+    a248.e.akamai.net
     s.yimg.jp
     c.kakaku.com
     lh3.googleusercontent.com
