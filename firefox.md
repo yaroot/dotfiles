@@ -15,6 +15,7 @@
 * uBlock origin
 * uMatrix
 * keepa
+* https://github.com/magnolia1234/bypass-paywalls-firefox-clean
 
 # about:config
 
