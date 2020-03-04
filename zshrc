@@ -195,6 +195,7 @@ alias urlencode='python2 -c "for l in __import__(\"sys\").stdin.readlines(): pri
 alias htmlescape='python3 -c "for l in __import__(\"sys\").stdin.readlines(): print(__import__(\"html\").escape(l).strip())"'
 alias htmlunescape='python3 -c "for l in __import__(\"sys\").stdin.readlines(): print(__import__(\"html\").unescape(l).strip())"'
 alias jad='java -cp $HOME/.local/opt/idea-IC/plugins/java-decompiler/lib/java-decompiler.jar org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
+alias milkman='$HOME/.local/opt/milkman/milkman.sh'
 alias idea='$HOME/.local/opt/idea-IC/bin/idea.sh'
 alias ideau='$HOME/.local/opt/idea-IU/bin/idea.sh'
 alias clion='$HOME/.local/opt/clion/bin/clion.sh'
