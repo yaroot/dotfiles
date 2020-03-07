@@ -56,9 +56,15 @@ active_asdf() {
   source $HOME/.asdf/completions/asdf.bash
 }
 
+active_ghcup() {
+  export PATH=$HOME/.ghcu/bin:$PATH
+}
+
 pgcli() { $HOME/.local/opt/pyenv/pgcli/bin/pgcli $@ }
 mycli() { $HOME/.local/opt/pyenv/pgcli/bin/mycli $@ }
 litecli() { $HOME/.local/opt/pyenv/pgcli/bin/litecli $@ }
 
+#alias mc=mcli
 
+export _JAVA_OPTIONS=" -XX:ActiveProcessorCount=4 $_JAVA_OPTIONS"
 export ANDROID_HOME=~/.local/android/sdk
