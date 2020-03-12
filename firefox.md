@@ -1,6 +1,7 @@
 # addons
 
 * ChmFox
+* Cookie AutoDelete
 * EPUBReader
 * Reader
 * Temporary Containers
