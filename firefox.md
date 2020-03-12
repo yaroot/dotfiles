@@ -1,19 +1,12 @@
 # addons
 
 * ChmFox
-* DownThemAll!
 * EPUBReader
-* Firebug
-* FlashGot
-* FoxyProxy Standard
-* Greasemonkey
-* Instasaver
-* NoSquint
+* Reader
 * Temporary Containers
 * UAControl
-* VimFx
-* Xmarks
-* keepa
+* User-Agent Switcher
+* Video Speed Controller
 * uBlock origin
 * uMatrix
 * https://github.com/magnolia1234/bypass-paywalls-firefox-clean
