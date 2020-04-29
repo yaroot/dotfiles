@@ -29,6 +29,9 @@ set wildmode=longest:full
 
 set background=dark
 
+nnoremap <C-C> :tabnew<CR>
+nnoremap <C-N> :tabnext<CR>
+nnoremap <C-P> :tabprevious<CR>
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
