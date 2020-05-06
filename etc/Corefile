@@ -1,0 +1,26 @@
+dns://.:1054 {
+    # log
+    # whoami
+
+    prometheus
+
+    hosts /etc/coredns/block.hosts {
+        ttl 10
+        no_reverse
+        reload 0s
+        fallthrough
+    }
+
+    # or 8.8.8.8/8.8.4.4 (servername: dns.google)
+    forward . tls://1.1.1.1 tls://1.0.0.1 {
+        tls_servername cloudflare-dns.com
+        health_check 5s
+    }
+
+    # https://coredns.io/plugins/cache/
+    cache {
+        success  5000 300 10
+        denial   5000 30  10
+        prefetch 5 30s 20%
+    }
+}
