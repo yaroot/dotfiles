@@ -1,8 +1,10 @@
-dns://.:1054 {
+dns://. tls://. {
     # log
     # whoami
 
     prometheus
+
+    tls <crt> <key>
 
     hosts /etc/coredns/block.hosts {
         ttl 10
