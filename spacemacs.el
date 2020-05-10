@@ -1,4 +1,4 @@
-;; -*- mode: emacs-lisp -*-
+;; -*- mode: emac s-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
@@ -46,8 +46,7 @@ values."
      markdown
      org
      haskell
-     scala
-     lsp
+     (scala :variables scala-backend 'scala-metals)
      dhall
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -140,8 +139,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(base16-tomorrow-night
-                         jellybeans-plus
+   dotspacemacs-themes '(jellybeans-plus
+                         base16-tomorrow-night
                          ujelly
                          spacemacs-dark
                          spacemacs-light)
@@ -306,7 +305,6 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq-default
-   ensime-sem-high-enabled-p nil
    mouse-wheel-scroll-amount '(3 ((shift) . 3))
    mouse-wheel-progressive-speed nil
    scroll-step 1
@@ -333,7 +331,7 @@ you should place your code here."
    ["#080808" "#d70000" "#67b11d" "#875f00" "#268bd2" "#af00df" "#00ffff" "#b2b2b2"])
  '(package-selected-packages
    (quote
-    (sbt-mode scala-mode intero hlint-refactor hindent helm-hoogle haskell-snippets yasnippet company-ghci company-ghc ghc haskell-mode cmm-mode lv reformatter transient psci purescript-mode psc-ide flycheck company dash-functional eglot flymake jsonrpc dash dhall-mode jellybeans-plus-theme git-commit with-editor async powerline spinner alert log4e gntp markdown-mode hydra parent-mode flx smartparens iedit anzu highlight diminish bind-map bind-key packed evil goto-chg helm helm-core popup avy s projectile pkg-info epl winum uuidgen org-projectile org-category-capture org-mime org-download link-hint git-link eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff dumb-jump f column-enforce-mode orgit magit-gitflow helm-gitignore evil-magit ghub treepy graphql smeargle request gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger magit base16-tomorrow-night-theme yaml-mode ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package ujelly-theme toc-org sublime-themes spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters railscasts-theme quelpa popwin persp-mode pcre2el paradox page-break-lines org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file noflet neotree move-text mmm-mode markdown-toc magit-popup macrostep lorem-ipsum linum-relative leuven-theme ir-black-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio gnuplot git-gutter-fringe git-gutter-fringe+ gh-md flx-ido firebelly-theme fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu ensime elisp-slime-nav diff-hl define-word clean-aindent-mode buffer-move bracketed-paste base16-theme auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (sbt-mode scala-mode intero hlint-refactor hindent helm-hoogle haskell-snippets yasnippet company-ghci company-ghc ghc haskell-mode cmm-mode lv reformatter transient psci purescript-mode psc-ide flycheck company dash-functional eglot flymake jsonrpc dash dhall-mode jellybeans-plus-theme git-commit with-editor async powerline spinner alert log4e gntp markdown-mode hydra parent-mode flx smartparens iedit anzu highlight diminish bind-map bind-key packed evil goto-chg helm helm-core popup avy s projectile pkg-info epl winum uuidgen org-projectile org-category-capture org-mime org-download link-hint git-link eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff dumb-jump f column-enforce-mode orgit magit-gitflow helm-gitignore evil-magit ghub treepy graphql smeargle request gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger magit base16-tomorrow-night-theme yaml-mode ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package ujelly-theme toc-org sublime-themes spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters railscasts-theme quelpa popwin persp-mode pcre2el paradox page-break-lines org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file noflet neotree move-text mmm-mode markdown-toc magit-popup macrostep lorem-ipsum linum-relative leuven-theme ir-black-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio gnuplot git-gutter-fringe git-gutter-fringe+ gh-md flx-ido firebelly-theme fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav diff-hl define-word clean-aindent-mode buffer-move bracketed-paste base16-theme auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
