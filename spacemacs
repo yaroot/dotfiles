@@ -47,6 +47,8 @@ values."
      org
      haskell
      scala
+     lsp
+     dhall
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -65,8 +67,6 @@ values."
            (jellybeans-plus-theme :location (recipe
                                              :fetcher github
                                              :repo "jsmestad/jellybeans-plus-theme"))
-           dhall-mode
-           eglot
            )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -319,8 +319,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (global-linum-mode nil)
-  (linum-relative-toggle)
+  ; (global-linum-mode nil)
+  ; (linum-relative-toggle)
   )
 
 (custom-set-variables
