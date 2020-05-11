@@ -60,6 +60,10 @@ active_ghcup() {
   export PATH=$HOME/.ghcu/bin:$PATH
 }
 
+active_nix() {
+  source $HOMe/.nix-profile/etc/profile.d/nix.sh
+}
+
 pgcli() { $HOME/.local/opt/pyenv/pgcli/bin/pgcli $@ }
 mycli() { $HOME/.local/opt/pyenv/pgcli/bin/mycli $@ }
 litecli() { $HOME/.local/opt/pyenv/pgcli/bin/litecli $@ }
