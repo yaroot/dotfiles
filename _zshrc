@@ -61,7 +61,7 @@ active_ghcup() {
 }
 
 active_nix() {
-  source $HOMe/.nix-profile/etc/profile.d/nix.sh
+  source $HOME/.nix-profile/etc/profile.d/nix.sh
 }
 
 pgcli() { $HOME/.local/opt/pyenv/pgcli/bin/pgcli $@ }
