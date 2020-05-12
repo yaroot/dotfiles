@@ -8,38 +8,12 @@
 #   echo "please enable pf && run ssh-add"
 # fi
 
-# #export NODE_PATH=`npm -g root`
-# eval "$(npm completion 2>/dev/null)"
-
-# export GOPATH=$HOME/.local/go
-
-# export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-# if [ ! -d $PIP_DOWNLOAD_CACHE ]; then
-#   mkdir -p $PIP_DOWNLOAD_CACHE
-# fi
-
-# export RUBY_BUILD_SKIP_MIRROR=1
-# export RUBY_BUILD_CACHE_PATH=$HOME/.rbenv/cache
-# if [ ! -d $RUBY_BUILD_CACHE_PATH ]; then
-#   mkdir -p $RUBY_BUILD_CACHE_PATH
-# fi
 
 # path=(
 #   "$HOME/.local/go/bin"
 #   $path
 # )
 # export PATH
-
-# export GIT_PROXY_HOST='127.0.0.1'
-# export GIT_PROXY_PORT='7071'
-
-# export http_proxy="http://127.0.0.1:7051"
-# export https_proxy="$http_proxy"
-
-# export GOPATH=$HOME/.local/go
-# export GOROOT=/usr/lib/go
-
-# export PYTHONDOCS=/usr/share/doc/python3.6/html/
 
 # export HOMEBREW_AUTO_UPDATE_SECS=999999999
 # export HOMEBREW_NO_GITHUB_API=1
