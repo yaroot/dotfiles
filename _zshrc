@@ -1,15 +1,12 @@
 #!/bin/zsh
 
-# export GOPATH=$HOME/.local/opt/go_data
-# export KEYBASE_SYSTEMD=0
-
 # if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 #   exec startx
 # fi
 
-if [ `uname` = Darwin -a ! -f /tmp/userconf_inited_boot ]; then
-  echo "please enable pf && run ssh-add"
-fi
+# if [ `uname` = Darwin -a ! -f /tmp/userconf_inited_boot ]; then
+#   echo "please enable pf && run ssh-add"
+# fi
 
 # #export NODE_PATH=`npm -g root`
 # eval "$(npm completion 2>/dev/null)"
