@@ -122,7 +122,7 @@
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        go
        ;;(go +lsp)         ; the hipster dialect
-       haskell
+       (haskell +lsp)
        ;;(haskell +dante)  ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
