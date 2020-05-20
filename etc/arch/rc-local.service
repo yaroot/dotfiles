@@ -1,14 +1,12 @@
 [Unit]
 Description=/etc/rc.local Compatibility
+Documentation=man:systemd-rc-local-generator(8)
 ConditionFileIsExecutable=/etc/rc.local
-#After=network.target
+After=network.target
 
 [Service]
-Type=oneshot
-ExecStart=/etc/rc.local
+Type=forking
+ExecStart=/etc/rc.local start
 TimeoutSec=0
 RemainAfterExit=yes
-SysVStartPriority=99
-
-[Install]
-WantedBy=multi-user.target
+GuessMainPID=no
