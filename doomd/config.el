@@ -37,6 +37,9 @@
 
 (setq confirm-kill-emacs nil)
 
+; (setq lsp-auto-guess-root nil)
+(setq projectile-project-root "")
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
