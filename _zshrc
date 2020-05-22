@@ -39,6 +39,8 @@ pgcli() { $HOME/.local/opt/pyenv/pgcli/bin/pgcli $@ }
 mycli() { $HOME/.local/opt/pyenv/pgcli/bin/mycli $@ }
 litecli() { $HOME/.local/opt/pyenv/pgcli/bin/litecli $@ }
 
+export LS_COLORS="$(vivid generate jellybeans)"
+
 #alias mc=mcli
 
 export _JAVA_OPTIONS=" -XX:ActiveProcessorCount=4 $_JAVA_OPTIONS"
