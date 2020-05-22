@@ -37,6 +37,8 @@
 
 (setq confirm-kill-emacs nil)
 
+(setq company-idle-timeout 0.1)
+
 ; (setq lsp-auto-guess-root nil)
 (setq projectile-project-root "")
 
