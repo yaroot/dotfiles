@@ -40,6 +40,8 @@
 ; (setq lsp-auto-guess-root nil)
 (setq projectile-project-root "")
 
+(load (expand-file-name "$HOME/.doom.d/local.el") t)
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
