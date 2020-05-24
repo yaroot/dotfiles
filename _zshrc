@@ -39,7 +39,7 @@ pgcli() { $HOME/.local/opt/pyenv/pgcli/bin/pgcli $@ }
 mycli() { $HOME/.local/opt/pyenv/pgcli/bin/mycli $@ }
 litecli() { $HOME/.local/opt/pyenv/pgcli/bin/litecli $@ }
 
-export LS_COLORS="$(vivid generate jellybeans)"
+export LS_COLORS="$(vivid -m 8-bit generate jellybeans)"
 
 #alias mc=mcli
 

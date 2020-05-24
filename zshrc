@@ -206,8 +206,8 @@ alias pbpaste='xclip -selection clipboard -o'
 alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 alias ipython2='ipython2 --TerminalInteractiveShell.editing_mode=vi'
 alias httpp='http --pretty=all'
-which exa && alias ls='exa '
-which bat && alias cat='bat'
+which exa &> /dev/null && alias ls='exa '
+which bat &> /dev/null && alias cat='bat'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
