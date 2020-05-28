@@ -1,7 +1,13 @@
+# frontpage
+
+`https://tabliss.io/`
+
 # addons
 
-    cat extensions.json | jq -r '.addons[].defaultLocale.name'
-    cat addons.json | jq -r '.addons[].name'
+```
+cat extensions.json | jq -r '.addons[].defaultLocale.name'
+cat addons.json | jq -r '.addons[].name'
+```
 
 
 - uBlock Origin
