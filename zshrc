@@ -379,12 +379,6 @@ function active_pyenv()
   fi
 }
 
-function active_asdf()
-{
-  source $HOME/.asdf/asdf.sh
-  source $HOME/.asdf/completions/asdf.bash
-}
-
 function redirect_port()
 {
   local tar=$1
