@@ -13,11 +13,7 @@ dns://. tls://. {
         fallthrough
     }
 
-    # or 8.8.8.8/8.8.4.4 (servername: dns.google)
-    forward . tls://1.1.1.1 tls://1.0.0.1 {
-        tls_servername cloudflare-dns.com
-        health_check 5s
-    }
+    forward . 127.0.0.1:5301 127.0.0.1:5302
 
     # https://coredns.io/plugins/cache/
     cache {
@@ -26,3 +22,18 @@ dns://. tls://. {
         prefetch 5 30s 20%
     }
 }
+
+.:5301 {
+    forward . tls://1.1.1.1 tls://1.0.0.1 {
+        tls_servername cloudflare-dns.com
+        health_check 5s
+    }
+}
+
+.:5302 {
+    forward . tls://8.8.8.8 tls://8.8.4.4 {
+        tls_servername dns.google
+        health_check 5s
+    }
+}
+
