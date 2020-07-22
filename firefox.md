@@ -37,6 +37,7 @@ pref("browser.urlbar.trimURLs", false);
 pref("browser.zoom.full", true);
 pref("browser.zoom.siteSpecific", true);
 pref("browser.zoom.updateBackgroundTabs", false);
+pref("network.IDN_show_punycode", true);
 pref("privacy.donottrackheader.enabled", true);
 pref("privacy.firstparty.isolate", true);
 pref("privacy.trackingprotection.enabled", true);
