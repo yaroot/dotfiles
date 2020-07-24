@@ -39,6 +39,9 @@ pgcli() { $HOME/.local/opt/pyenv/pgcli/bin/pgcli $@ }
 mycli() { $HOME/.local/opt/pyenv/pgcli/bin/mycli $@ }
 litecli() { $HOME/.local/opt/pyenv/pgcli/bin/litecli $@ }
 
+alias vim=nvim
+alias gvim=nvim-qt
+
 export LS_COLORS="$(vivid -m 8-bit generate jellybeans)"
 
 #alias mc=mcli
