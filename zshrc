@@ -200,6 +200,7 @@ alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 alias ipython2='ipython2 --TerminalInteractiveShell.editing_mode=vi'
 alias httpp='http --pretty=all'
 alias ytdl="youtube-dl -f 'bestvideo[height<=?720][fps<=?30][vcodec!=?vp9]+bestaudio/best'"
+alias mpnv='mpv --no-vid'
 which exa &> /dev/null && alias ls='exa '
 which bat &> /dev/null && alias cat='bat --paging=never '
 
