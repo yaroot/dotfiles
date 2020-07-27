@@ -1,0 +1,53 @@
+    a248.e.akamai.net
+    s.yimg.jp
+    c.kakaku.com
+    lh3.googleusercontent.com
+    yt3.ggpht.com
+    lh3.ggpht.com
+    s.gravatar.com
+
+    s3.amazonaws.com
+    clients2.google.com
+    clients3.google.com
+    clients4.google.com
+    clients5.google.com
+    www.bit.ly
+    bit.ly
+    ow.ly
+    j.mp
+    goo.gl
+    tinyurl.com
+    msftncsi.com
+    www.msftncsi.com
+    ea.com
+    cdn.optimizely.com
+    res.cloudinary.com
+    gravatar.com
+    rover.ebay.com
+    imgs.xkcd.com
+    netflix.com
+    alluremedia.com.au
+    tomshardware.com
+    ocsp.apple.com
+    s.shopify.com
+    keystone.mwbsys.com
+    dl.dropbox.com
+    api.ipify.org
+
+
+
+    https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+    https://mirror1.malwaredomains.com/files/justdomains
+    http://sysctl.org/cameleon/hosts
+    https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+    https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+
+    # japan
+    https://warui.intaa.net/adhosts/hosts.txt
+    https://sites.google.com/site/hosts2ch/ja
+    https://logroid.github.io/adaway-hosts/hosts_no_white.txt
+    https://280blocker.net/files/280blocker_domain.txt
+
+    # china
+    https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+
