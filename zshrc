@@ -8,9 +8,10 @@
 
 #{{{ Environment variables
 export PAGER=`which less`
-export EDITOR=`which vim`
+which vim > /dev/null && export EDITOR=`which vim`
+which nvim > /dev/null && export EDITOR=`which nvim`
 export VISUAL="$EDITOR"
-export RLWRAP_EDITOR="vim +%L"
+export RLWRAP_EDITOR="$EDITOR +%L"
 which lesspipe.sh &> /dev/null && export LESSOPEN="|lesspipe.sh %s"
 which lesspipe &> /dev/null && export LESSOPEN="|lesspipe %s"
 
@@ -179,9 +180,6 @@ alias ht='htop -u $USER'
 alias sdo='sudo su ${USER} -c'
 alias s='sudo '
 alias g='git'
-alias v='vim'
-alias vd='vimdiff'
-alias gd='gvimdiff'
 alias wifi='wicd-curses'
 alias gbkssh='luit -encoding GBK ssh'
 alias ytdl='youtube-dl -f18'
@@ -203,7 +201,7 @@ alias ytdl="youtube-dl -f 'bestvideo[height<=?720][fps<=?30][vcodec!=?vp9]+besta
 alias mpnv='mpv --no-vid'
 which exa &> /dev/null && alias ls='exa '
 which bat &> /dev/null && alias cat='bat --paging=never '
-
+alias gox0='gox -osarch="darwin/amd64 linux/386 linux/amd64 linux/arm windows/amd64" -parallel=5'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
