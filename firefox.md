@@ -40,6 +40,7 @@ pref("browser.zoom.updateBackgroundTabs", false);
 pref("network.IDN_show_punycode", true);
 pref("privacy.donottrackheader.enabled", true);
 pref("privacy.firstparty.isolate", true);
+pref("privacy.resistFingerprinting", true);
 pref("privacy.trackingprotection.enabled", true);
 pref("security.dialog_enable_delay", 0);
 pref("services.sync.prefs.sync.browser.ctrlTab.recentlyUsedOrder", false);
