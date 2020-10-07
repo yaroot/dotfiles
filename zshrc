@@ -203,6 +203,7 @@ which exa &> /dev/null && alias ls='exa '
 which bat &> /dev/null && alias cat='bat --paging=never '
 alias gox0='gox -osarch="darwin/amd64 linux/386 linux/amd64 linux/arm windows/amd64" -parallel=5'
 # alias dstat='dstat -tpcdrmngy'
+alias gostatic='go build -ldflags "-linkmode external -extldflags -static"'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
