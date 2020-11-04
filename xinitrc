@@ -47,7 +47,7 @@ if $STANDALONEWM; then
 
   numlockx on
 
-  # ( sleep 1  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
+  ( sleep 1  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 1 && ibus-daemon --xim &)
   ( sleep 3 && fcitx &)
   ( sleep 3 && volumeicon &)
