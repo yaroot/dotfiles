@@ -27,9 +27,10 @@ test -f $HOME/.Xdefaults.local && xrdb -merge $HOME/.Xdefaults.local
 
 ( test -f "$HOME/.synergys.conf" && sleep 1 && synergys --debug WARNING -c $HOME/.synergys.conf &)
 
-export XMODIFIERS="@im=fcitx"
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx5"
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export INPUT_METHOD=fcitx5
 # fcitx-{gtk2,gtk3,qt}
 #export GTK_IM_MODULE=xim
 #export QT_IM_MODULE=xim
