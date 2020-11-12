@@ -50,7 +50,7 @@ if $STANDALONEWM; then
 
   ( sleep 1  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 1 && ibus-daemon --xim &)
-  ( sleep 3 && fcitx &)
+  ( sleep 3 && fcitx5 &)
   ( sleep 3 && volumeicon &)
   ( sleep 3 && pasystray &)
   ( sleep 10 && blueman-applet &)
