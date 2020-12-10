@@ -32,6 +32,7 @@ pref("beacon.enabled", false);
 pref("browser.cache.disk.enable", false);
 pref("browser.cache.memory.capacity", 102400);
 pref("browser.cache.memory.enable", true);
+pref("browser.ctrlTab.previews", false);
 pref("browser.ctrlTab.recentlyUsedOrder", false);
 pref("browser.urlbar.trimURLs", false);
 pref("browser.zoom.full", true);
