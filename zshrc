@@ -81,6 +81,7 @@ fpath=(
   $fpath
   $HOME/.local/zshcomp
 )
+test -d $HOME/.local/zsh-nix-completions && fpath=($HOME/.local/zsh-nix-completions $fpath)
 compinit
 autoload -U colors
 colors
