@@ -5,6 +5,7 @@
     yt3.ggpht.com
     lh3.ggpht.com
     s.gravatar.com
+    files.slack.com
 
     s3.amazonaws.com
     clients2.google.com
@@ -33,6 +34,7 @@
     keystone.mwbsys.com
     dl.dropbox.com
     api.ipify.org
+    chtbl.com
 
 
 
