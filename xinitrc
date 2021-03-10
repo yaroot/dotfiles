@@ -51,10 +51,11 @@ if $STANDALONEWM; then
   ( sleep 1  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 1 && ibus-daemon --xim &)
   ( sleep 3 && fcitx5 &)
-  ( sleep 3 && volumeicon &)
+  # ( sleep 3 && volumeicon &)
+  ( sleep 1 && qjackctl &)
   ( sleep 3 && pasystray &)
   ( sleep 10 && blueman-applet &)
-  ( sleep 10 && solaar &)
+  # ( sleep 10 && solaar &)
   # ( test -d $HOME/Dropbox && sleep 5 && dropbox &)
   # ( test -d $HOME/ownCloud && sleep 5 && owncloud &)
   ( sleep 5 && xautolock -time 10 -locker 'xsecurelock' &) # i3lock -c 111111
