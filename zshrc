@@ -496,7 +496,7 @@ function ff_tmp() {
   local pp=/tmp/firefox_throwaway
   rm -rf $pp
   mkdir -p $pp
-  cp ~/.dotfiles/firefox.user.js > $pp/user.js
+  cp ~/.dotfiles/firefox.user.js $pp/user.js
   firefox -profile $pp
   rm -rf $pp
 }
