@@ -16,3 +16,5 @@ user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("security.dialog_enable_delay", 0);
 user_pref("services.sync.prefs.sync.browser.ctrlTab.recentlyUsedOrder", false);
+
+# TODO https://github.com/pyllyukko/user.js/blob/master/user.js
