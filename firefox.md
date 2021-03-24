@@ -34,6 +34,7 @@ pref("browser.cache.memory.capacity", 102400);
 pref("browser.cache.memory.enable", true);
 pref("browser.ctrlTab.previews", false);
 pref("browser.ctrlTab.recentlyUsedOrder", false);
+pref("browser.toolbars.bookmarks.visibility", "never");
 pref("browser.urlbar.trimURLs", false);
 pref("browser.zoom.full", true);
 pref("browser.zoom.siteSpecific", true);
@@ -46,4 +47,3 @@ pref("privacy.trackingprotection.enabled", true);
 pref("security.dialog_enable_delay", 0);
 pref("services.sync.prefs.sync.browser.ctrlTab.recentlyUsedOrder", false);
 ```
-
