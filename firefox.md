@@ -10,15 +10,16 @@ cat addons.json | jq -r '.addons[].name'
 ```
 
 
-- uBlock Origin
-- Firefox Multi-Account Containers
-- Cookie AutoDelete
 - Bitwarden - Free Password Manager
+- Bypass Paywalls Clean
+- Container Tabs Sidebar
+- Cookie AutoDelete
+- Firefox Multi-Account Containers
+- Just Read
+- Reader
 - Tampermonkey
-- uMatrix
 - User-Agent Switcher
 - Video Speed Controller
-- Reader
-- Container Tabs Sidebar
-- Bypass Paywalls Clean
+- uBlock Origin
+- uMatrix
 
