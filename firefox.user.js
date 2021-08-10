@@ -17,4 +17,7 @@ user_pref("privacy.trackingprotection.enabled", true);
 user_pref("security.dialog_enable_delay", 0);
 user_pref("services.sync.prefs.sync.browser.ctrlTab.recentlyUsedOrder", false);
 
-# TODO https://github.com/pyllyukko/user.js/blob/master/user.js
+user_pref("layers.acceleration.disabled", true);
+// user_pref("dom.ipc.processCount", 4);
+
+// TODO https://github.com/pyllyukko/user.js/blob/master/user.js
