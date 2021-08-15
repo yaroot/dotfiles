@@ -2,28 +2,28 @@
 #    name  = 
 #    email = 
 [alias]
-    a        = add
-    br       = branch
-    brl      = branch -avv
-    c        = commit
-    ca       = commit -am
-    co       = checkout
-    f        = fetch
-    l        = log --oneline --graph --decorate
-    m        = merge -s recursive -X patience
-    rb       = rebase -s recursive -X patience
-    pl       = pull
-    pr       = pull --rebase
-    ps       = push
-    r        = remote
-    rl       = remote -v
-    s        = status
-    sm       = submodule
-    cp       = cherry-pick
-    resetsm  = !git sm foreach 'git co -- .'
-    assume   = update-index --assume-unchanged
+    a = add
+    br = branch
+    brl = branch -avv
+    c = commit
+    ca = commit -am
+    co = checkout
+    f = fetch
+    l = log --oneline --graph --decorate
+    m = merge -s recursive -X patience
+    rb = rebase -s recursive -X patience
+    pl = pull
+    pr = pull --rebase
+    ps = push
+    r = remote
+    rl = remote -v
+    s = status
+    sm = submodule
+    cp = cherry-pick
+    resetsm = !git sm foreach 'git co -- .'
+    assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
-    assumed  = !git ls-files -v | grep ^h | cut -c 3-
+    assumed = !git ls-files -v | grep ^h | cut -c 3-
 [color]
     ui = auto
 [merge]
@@ -43,6 +43,8 @@
     ff = only
 [svn]
     rmdir = true
+[credential]
+	helper = cache
 [gc]
     autoDetach = false
 [includeIf "gitdir:~/work/**"]
