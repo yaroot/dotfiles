@@ -15,19 +15,19 @@ export RLWRAP_EDITOR="$EDITOR +%L"
 which lesspipe.sh &> /dev/null && export LESSOPEN="|lesspipe.sh %s"
 which lesspipe &> /dev/null && export LESSOPEN="|lesspipe %s"
 
-which keychain &> /dev/null
-if [ $? = 0 ]; then
-  # skip gpg unless explicitly required to load
-  if [ -f "$HOME/.gnupg/_keychain" ]; then
-    eval `keychain --eval --quick --quiet`
-  else
-    eval `keychain --eval --quick --quiet --agents ssh`
-  fi
-else
-  if [ -f "$HOME/.keychain/${HOST}-sh" ]; then
-    source "$HOME/.keychain/${HOST}-sh"
-  fi
-fi
+#which keychain &> /dev/null
+#if [ $? = 0 ]; then
+#  # skip gpg unless explicitly required to load
+#  if [ -f "$HOME/.gnupg/_keychain" ]; then
+#    eval `keychain --eval --quick --quiet`
+#  else
+#    eval `keychain --eval --quick --quiet --agents ssh`
+#  fi
+#else
+#  if [ -f "$HOME/.keychain/${HOST}-sh" ]; then
+#    source "$HOME/.keychain/${HOST}-sh"
+#  fi
+#fi
 
 
 path=(
