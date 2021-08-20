@@ -47,6 +47,7 @@ if $STANDALONEWM; then
   fi
 
   numlockx on
+  which gnome-keyring-daemon &>/dev/null && eval `gnome-keyring-daemon --start`
 
   ( sleep 1  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 1 && ibus-daemon --xim &)
