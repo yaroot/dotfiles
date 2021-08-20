@@ -48,6 +48,7 @@ if $STANDALONEWM; then
 
   numlockx on
   which gnome-keyring-daemon &>/dev/null && eval `gnome-keyring-daemon --start`
+  export SSH_AUTH_SOCK
 
   ( sleep 1  && /usr/lib/xfce4/notifyd/xfce4-notifyd &)
   # ( sleep 1 && ibus-daemon --xim &)
