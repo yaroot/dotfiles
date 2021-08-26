@@ -28,6 +28,7 @@ set wildmenu
 set wildmode=longest:full
 
 set background=dark
+colorscheme darkblue
 
 nnoremap <C-C> :tabnew<CR>
 nnoremap <C-N> :tabnext<CR>
