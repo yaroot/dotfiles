@@ -58,6 +58,9 @@
     https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
 
     delete from adlist where address = '';
-    insert into adlist (address, comment, date_updated) values ('', '', 0);
+    insert or ignore into adlist (address, comment, date_updated) values ('', '', 0);
 
-    Environment=PIHOLE_DNS_=1.1.1.1;1.0.0.1;2606:4700:4700::1111;2606:4700:4700::1001
+    PIHOLE_DNS_1=1.1.1.1
+    PIHOLE_DNS_2=1.0.0.1
+    PIHOLE_DNS_3=2606:4700:4700::1111
+    PIHOLE_DNS_4=2606:4700:4700::1001
