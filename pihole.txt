@@ -59,3 +59,5 @@
 
     delete from adlist where address = '';
     insert into adlist (address, comment, date_updated) values ('', '', 0);
+
+    Environment=PIHOLE_DNS_=1.1.1.1;1.0.0.1;2606:4700:4700::1111;2606:4700:4700::1001
