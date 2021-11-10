@@ -191,8 +191,6 @@ alias urlencode='python3 -c "for l in __import__(\"sys\").stdin.readlines(): pri
 alias htmlescape='python3 -c "for l in __import__(\"sys\").stdin.readlines(): print(__import__(\"html\").escape(l).strip())"'
 alias htmlunescape='python3 -c "for l in __import__(\"sys\").stdin.readlines(): print(__import__(\"html\").unescape(l).strip())"'
 alias jad='java -cp /opt/intellij-idea-ce/plugins/java-decompiler/lib/java-decompiler.jar org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
 #alias alsafox='apulse firefox'
 alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 alias httpp='http --pretty=all'
@@ -204,6 +202,9 @@ alias gostatic='go build -ldflags "-linkmode external -extldflags -static"'
 
 if [ 'Darwin' = `uname -s` ]; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+else
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
 fi
 
 if [ 'hell' = "$HOST" ]; then
