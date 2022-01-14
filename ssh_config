@@ -9,12 +9,12 @@ Host *
     # IdentityFile ~/.ssh/xxx
     ForwardAgent yes
     ServerAliveInterval 10
-    ServerAliveCountMax 2 
+    ServerAliveCountMax 2
     TCPKeepAlive no
     VisualHostKey yes
     UseRoaming no
+    StrictHostKeyChecking accept-new
 #    ForwardX11 yes
-#    StrictHostKeyChecking no
 #    UserKnownHostsFile=/dev/null
 
 # proxy/spipe example

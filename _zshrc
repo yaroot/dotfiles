@@ -19,10 +19,14 @@ fi
 # fi
 
 
+# if [[ -z $TMUX ]]; then
 # path=(
 #   "$HOME/.local/go/bin"
 #   $path
 # )
+# export PATH
+# fi
+# typeset -aU path
 # export PATH
 
 # export HOMEBREW_AUTO_UPDATE_SECS=999999999
