@@ -22,7 +22,6 @@ test -f $HOME/.Xdefaults.local && xrdb -merge $HOME/.Xdefaults.local
  ( sleep 1  && xbindkeys -f $HOME/.xbindkeysrc &)
 #( sleep 1 && autocutsel -fork &) # kinda annoying
  ( sleep 1  && autocutsel -selection PRIMARY -fork &)
- ( sleep 1  && VBoxClient-all &)
  ( sleep 1  && wmname LG3D &) # java fix
 
 ( test -f "$HOME/.synergys.conf" && sleep 1 && synergys --debug WARNING -c $HOME/.synergys.conf &)
@@ -115,7 +114,8 @@ launchi3()
   rm $HOME/.i3/config
   cat $HOME/.dotfiles/i3config $HOME/.i3/config.local > $HOME/.i3/config
 
-  exec i3 -V > $HOME/.i3/i3.log 2>&1
+  exec i3 -V
+  # exec i3 -V > $HOME/.i3/i3.log 2>&1
 }
 
 case $WMCHOICE in
