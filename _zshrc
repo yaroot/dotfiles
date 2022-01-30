@@ -3,15 +3,10 @@
 
 eval `gnome-keyring-daemon --start`; export SSH_AUTH_SOCK
 
-# if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-if [ "$(fgconsole 2> /dev/null)" = 1 ]; then
-  if [ -f "$HOME/.xinitrc" ]; then
-    rm $HOME/.xorg.log
-    startx 2>&1 > $HOME/.xorg.log
-    logout
+if [ -z "$TMUX" ]; then
+  if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    exec startx
   fi
-  # (startx &); logout
-  # (startx xfce &); logout
 fi
 
 # if [ `uname` = Darwin -a ! -f /tmp/userconf_inited_boot ]; then
