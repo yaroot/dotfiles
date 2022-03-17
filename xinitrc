@@ -114,7 +114,7 @@ launchi3()
   rm $HOME/.i3/config
   cat $HOME/.dotfiles/i3config $HOME/.i3/config.local > $HOME/.i3/config
 
-  exec i3 -V
+  exec i3 -V  |& tee $HOME/.i3/i3.log
   # exec i3 -V > $HOME/.i3/i3.log 2>&1
 }
 
