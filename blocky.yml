@@ -1,0 +1,94 @@
+upstream:
+  default:
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+    - https://2606:4700:4700::1111/dns-query
+    - https://2606:4700:4700::1001/dns-query
+
+# optional: timeout to query the upstream resolver. Default: 2s
+upstreamTimeout: 5s
+
+
+# optional: use black and white lists to block queries (for example ads, trackers, adult pages etc.)
+blocking:
+  # definition of blacklist groups. Can be external link (http/https) or local file
+  blackLists:
+    ads:
+      - https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+      - http://sysctl.org/cameleon/hosts
+      - https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+      - https://mirror1.malwaredomains.com/files/justdomains
+      - https://warui.intaa.net/adhosts/hosts.txt
+      - https://sites.google.com/site/hosts2ch/ja
+      - https://logroid.github.io/adaway-hosts/hosts.txt
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+      - |
+        # inline
+        sentry.io
+    special:
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts
+  whiteLists:
+    ads:
+      - '/etc/blocky_whitelist.txt'
+  clientGroupsBlock:
+    default:
+      - ads
+      - special
+  blockType: zeroIp
+  blockTTL: 1m
+  refreshPeriod: 4h
+  downloadTimeout: 4m
+  downloadAttempts: 5
+  downloadCooldown: 10s
+  failStartOnListError: false
+
+# optional: configuration for caching of DNS responses
+caching:
+  minTime: 1m
+  maxTime: 5m
+  maxItemsCount: 0
+  prefetching: false
+  prefetchExpires: 2h
+  prefetchThreshold: 5
+  prefetchMaxItemsCount: 0
+
+## optional: configuration of client name resolution
+#clientLookup:
+#  # optional: this DNS resolver will be used to perform reverse DNS lookup (typically local router)
+#  upstream: 192.168.178.1
+#  # optional: some routers return multiple names for client (host name and user defined name). Define which single name should be used.
+#  # Example: take second name if present, if not take first name
+#  singleNameOrder:
+#    - 2
+#    - 1
+#  # optional: custom mapping of client name to IP addresses. Useful if reverse DNS does not work properly or just to have custom client names.
+#  clients:
+#    laptop:
+#      - 192.168.178.29
+
+prometheus:
+  # enabled if true
+  enable: true
+  # url path, optional (default '/metrics')
+  path: /metrics
+
+
+queryLog:
+  type: none # console
+
+
+port: 5333
+httpPort: 5334
+minTlsServeVersion: 1.3
+bootstrapDns: tcp+udp:1.1.1.1
+
+#filtering:
+## optional: drop all queries with following query types. Default: empty
+#  queryTypes:
+#    - AAAA
+
+logLevel: info
+logFormat: text
+logTimestamp: true
+logPrivacy: false
