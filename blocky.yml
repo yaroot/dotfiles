@@ -18,7 +18,7 @@ blocking:
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
       - http://sysctl.org/cameleon/hosts
       - https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-      - https://mirror1.malwaredomains.com/files/justdomains
+      #- https://mirror1.malwaredomains.com/files/justdomains
       - https://warui.intaa.net/adhosts/hosts.txt
       - https://sites.google.com/site/hosts2ch/ja
       - https://logroid.github.io/adaway-hosts/hosts.txt
