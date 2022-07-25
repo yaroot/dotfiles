@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 
-eval `gnome-keyring-daemon --start`; export SSH_AUTH_SOCK
+eval `gnome-keyring-daemon --start 2> /dev/null`; export SSH_AUTH_SOCK
 
 if [ -z "$TMUX" ]; then
   if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
