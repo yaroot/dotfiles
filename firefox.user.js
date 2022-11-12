@@ -1,3 +1,4 @@
+user_pref("app.update.auto", false);
 user_pref("beacon.enabled", false);
 user_pref("browser.cache.disk.enable", false);
 user_pref("browser.cache.memory.capacity", 102400);
