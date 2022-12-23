@@ -39,3 +39,10 @@ www.bit.ly
 www.msftncsi.com
 www.similarweb.com
 yt3.ggpht.com
+clickhouse.com
+posthog.com
+treasuredata.com
+www.treasuredata.com
+spotify.com
+wl.spotify.com
+plausible.io
