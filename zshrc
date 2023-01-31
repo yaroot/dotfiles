@@ -163,6 +163,11 @@ if [ $? -eq 0  ]; then
   alias diff='colordiff'
 fi
 
+which diffstat &> /dev/null
+if [ $? -eq 0 ]; then
+    alias diff='diffstat'
+fi
+
 alias -g L='| less'
 alias -g G='| grep --color=auto -n'
 alias -g H='| head'
