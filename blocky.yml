@@ -18,10 +18,11 @@ blocking:
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
       - http://sysctl.org/cameleon/hosts
       - https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-      #- https://mirror1.malwaredomains.com/files/justdomains
+        # - https://mirror1.malwaredomains.com/files/justdomains
       - https://warui.intaa.net/adhosts/hosts.txt
-      - https://sites.google.com/site/hosts2ch/ja
+        # - https://sites.google.com/site/hosts2ch/ja
       - https://logroid.github.io/adaway-hosts/hosts.txt
+        # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
       - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
       - |
         # inline
@@ -30,6 +31,7 @@ blocking:
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts
   whiteLists:
     ads:
+      - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
       - '/etc/blocky_whitelist.txt'
   clientGroupsBlock:
     default:
