@@ -1,0 +1,17 @@
+# Install
+
+https://github.com/DeterminateSystems/nix-installer
+
+# Packages
+
+    # initial install
+    nix profile install .
+
+    # list
+    nix profile list
+
+    # upgrade
+    nix profile upgrade 0
+
+
+
