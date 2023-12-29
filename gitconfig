@@ -1,3 +1,8 @@
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [user]
 #    name  = 
 #    email = 
@@ -30,12 +35,17 @@
     tool = vimdiff
 [diff]
     algorithm = patience
-    tool = bc3
-#    $ git config --global diff.tool bc3
-#    $ git config --global difftool.bc3 trustExitCode true
+    tool = difftastic
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
 [core]
     editor = vim
     quotepath = false
+	excludesfile = ~/.gitignore_global
 [push]
     default = upstream
     followTags = true
@@ -49,3 +59,5 @@
     autoDetach = false
 [includeIf "gitdir:~/work/**"]
     path = ~/.gitconfig_work
+[init]
+    defaultBranch = master
