@@ -28,6 +28,8 @@
         bat
         htop
 
+        difftastic
+
       ];
     };
   };
