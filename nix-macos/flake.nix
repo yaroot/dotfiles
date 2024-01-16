@@ -27,6 +27,7 @@
         zstd
         bat
         htop
+        brotli
 
         postgresql
 
