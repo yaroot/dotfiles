@@ -32,6 +32,7 @@
         postgresql
 
         difftastic
+        lego
 
       ];
     };
