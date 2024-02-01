@@ -33,7 +33,7 @@
 
         difftastic
         lego
-
+        httpie
       ];
     };
   };
