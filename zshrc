@@ -525,5 +525,11 @@ function bunpack() {
   fi
 }
 
+
+function checkip() {
+  curl -s -4 https://httpbingo.org/ip | jq -r '.origin'
+  curl -s -6 https://httpbingo.org/ip | jq -r '.origin'
+}
+
 #}}}
 
