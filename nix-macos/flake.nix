@@ -32,6 +32,7 @@
         postgresql
 
         difftastic
+        syncthing
         lego
         curlie
       ];
