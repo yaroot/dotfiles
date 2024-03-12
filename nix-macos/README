@@ -11,7 +11,7 @@ https://github.com/DeterminateSystems/nix-installer
     nix profile list
 
     # upgrade
-    nix profile upgrade 0
+    nix profile upgrade 0 --recreate-lock-file
 
 
 
