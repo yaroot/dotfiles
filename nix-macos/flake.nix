@@ -30,6 +30,7 @@
         brotli
 
         postgresql
+        prometheus
 
         difftastic
         syncthing
