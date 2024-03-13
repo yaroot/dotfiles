@@ -31,6 +31,7 @@
 
         postgresql
         prometheus
+        prometheus.cli
 
         difftastic
         syncthing
