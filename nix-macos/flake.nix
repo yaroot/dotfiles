@@ -32,6 +32,9 @@
         postgresql
         prometheus
 
+        lazygit
+        tig
+        delta
         difftastic
         syncthing
         lego
