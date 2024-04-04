@@ -11,7 +11,7 @@
     br = branch
     brl = branch -avv
     c = commit
-    d = diff
+    d = difftool
     ca = commit -am
     co = checkout
     f = fetch
