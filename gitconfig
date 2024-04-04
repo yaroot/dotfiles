@@ -11,7 +11,7 @@
     br = branch
     brl = branch -avv
     c = commit
-    d = difftool
+    d = diff
     ca = commit -am
     co = checkout
     f = fetch
@@ -37,6 +37,7 @@
 [diff]
     algorithm = patience
     tool = difftastic
+    external = difft
 [difftool]
     prompt = false
 [difftool "difftastic"]
