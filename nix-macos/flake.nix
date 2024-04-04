@@ -33,6 +33,9 @@
         prometheus
         prometheus.cli
 
+        lazygit
+        tig
+        delta
         difftastic
         syncthing
         lego
