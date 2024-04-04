@@ -35,7 +35,7 @@
     tool = vimdiff
 [diff]
     algorithm = patience
-    tool = difftastic
+    tool = difft
 [difftool]
     prompt = false
 [difftool "difftastic"]
