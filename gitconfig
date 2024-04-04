@@ -11,6 +11,7 @@
     br = branch
     brl = branch -avv
     c = commit
+    d = difftool
     ca = commit -am
     co = checkout
     f = fetch
@@ -35,7 +36,7 @@
     tool = vimdiff
 [diff]
     algorithm = patience
-    tool = difft
+    tool = difftastic
 [difftool]
     prompt = false
 [difftool "difftastic"]
