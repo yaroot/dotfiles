@@ -37,7 +37,6 @@
 [diff]
     algorithm = patience
     tool = difftastic
-    external = difft
 [difftool]
     prompt = false
 [difftool "difftastic"]
