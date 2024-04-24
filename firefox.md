@@ -9,6 +9,8 @@ cat extensions.json | jq -r '.addons[].defaultLocale.name'
 cat addons.json | jq -r '.addons[].name'
 ```
 
+https://github.com/liamengland1/miscfilters/blob/master/antipaywall.txt
+
 
 - Bitwarden - Free Password Manager
 - Bypass Paywalls Clean
