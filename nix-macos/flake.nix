@@ -35,7 +35,6 @@
         curlie
         delta
         difftastic
-        hugo
         lazygit
         lego
         syncthing
