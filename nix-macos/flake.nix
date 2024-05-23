@@ -39,6 +39,7 @@
         lego
         syncthing
         tig
+        zola
       ];
     };
   };
