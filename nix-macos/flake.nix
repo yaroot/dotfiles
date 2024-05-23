@@ -18,28 +18,28 @@
     in pkgs.buildEnv {
       name = "home-packages";
       paths = with pkgs; [
-
-        git
-        tmux
-        jq
-        silver-searcher
-        ripgrep
-        zstd
         bat
-        htop
         brotli
+        git
+        htop
+        jq
+        ripgrep
+        silver-searcher
+        tmux
+        zstd
 
         postgresql
         prometheus
         prometheus.cli
 
-        lazygit
-        tig
+        curlie
         delta
         difftastic
-        syncthing
+        hugo
+        lazygit
         lego
-        curlie
+        syncthing
+        tig
       ];
     };
   };
