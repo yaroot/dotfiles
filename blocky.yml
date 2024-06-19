@@ -27,6 +27,7 @@ blocking:
       - |
         # inline
         s3.amazonaws.com
+        telemetry.elastic.co
     special:
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts
   whiteLists:
