@@ -32,6 +32,7 @@
         prometheus
         prometheus.cli
 
+        nebula
         curlie
         delta
         difftastic
