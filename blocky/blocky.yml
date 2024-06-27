@@ -1,0 +1,80 @@
+upstreams:
+  init:
+    strategy: fast
+  groups:
+    default:
+      - https://1.1.1.1/dns-query
+      - https://1.0.0.1/dns-query
+      # - https://8.8.4.4/dns-query
+      # - https://8.8.8.8/dns-query
+      # - https://2606:4700:4700::1111/dns-query
+      # - https://2606:4700:4700::1001/dns-query
+  timeout: 3s
+
+
+blocking:
+  denylists:
+    ads:
+      - https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+      - http://sysctl.org/cameleon/hosts
+      - https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+        # - https://mirror1.malwaredomains.com/files/justdomains
+      - https://warui.intaa.net/adhosts/hosts.txt
+        # - https://sites.google.com/site/hosts2ch/ja
+      - https://logroid.github.io/adaway-hosts/hosts.txt
+        # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts
+      - |
+        s3.amazonaws.com
+        telemetry.elastic.co
+  allowlists:
+    ads:
+      - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+      - blocky_whitelist.txt
+  clientGroupsBlock:
+    default:
+      - ads
+  blockType: zeroIp
+  blockTTL: 1m
+  loading:
+    refreshPeriod: 4h
+    downloads:
+      timeout: 1m
+      attempts: 5
+      cooldown: 10s
+    concurrency: 10
+    strategy: failOnError
+    maxErrorsPerSource: -1
+
+caching:
+  minTime: 1m
+  maxTime: 5m
+  maxItemsCount: 999
+  prefetching: false
+
+prometheus:
+  enable: true
+  path: /metrics
+
+queryLog:
+  type: none
+
+ports:
+  dns: 5333
+  http: 5334
+
+connectIPVersion: v4
+minTlsServeVersion: 1.3
+
+bootstrapDns:
+  - tcp+udp:1.1.1.1
+  - tcp+udp:8.8.4.4
+  - https://1.1.1.1/dns-query
+
+log:
+  level: info
+  format: text
+  timestamp: true
+  privacy: false
