@@ -28,6 +28,9 @@
         tmux
         zstd
 
+        ldns
+        knot-dns
+
         postgresql
         prometheus
         prometheus.cli
