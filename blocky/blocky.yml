@@ -29,10 +29,60 @@ blocking:
       - |
         s3.amazonaws.com
         telemetry.elastic.co
+        ingest.sentry.io
   allowlists:
     ads:
       - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
-      - blocky_whitelist.txt
+      - |
+        a248.e.akamai.net
+        ads.google.com
+        alluremedia.com.au
+        api.ipify.org
+        bit.ly
+        c.kakaku.com
+        cdn.optimizely.com
+        chtbl.com
+        clients2.google.com
+        clients3.google.com
+        clients4.google.com
+        clients5.google.com
+        d2p8taqyjofgrq.cloudfront.net
+        dl.dropbox.com
+        downloadcenter.intel.com
+        ea.com
+        files.slack.com
+        goo.gl
+        gravatar.com
+        imgs.xkcd.com
+        j.mp
+        keystone.mwbsys.com
+        lh3.ggpht.com
+        lh3.googleusercontent.com
+        msftncsi.com
+        netflix.com
+        ocsp.apple.com
+        ow.ly
+        rdsig.yahoo.co.jp
+        res.cloudinary.com
+        rover.ebay.com
+        s.gravatar.com
+        s.shopify.com
+        s.yimg.jp
+        s3.amazonaws.com
+        tinyurl.com
+        tomshardware.com
+        www.bit.ly
+        www.msftncsi.com
+        www.similarweb.com
+        yt3.ggpht.com
+        clickhouse.com
+        posthog.com
+        treasuredata.com
+        www.treasuredata.com
+        sysdig.io
+        spotify.com
+        wl.spotify.com
+        plausible.io
   clientGroupsBlock:
     default:
       - ads
