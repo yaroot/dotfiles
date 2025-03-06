@@ -28,6 +28,8 @@
         tmux
         zstd
 
+        devenv
+
         ldns
         knot-dns
 
