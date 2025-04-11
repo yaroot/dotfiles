@@ -37,15 +37,21 @@
         prometheus
         prometheus.cli
 
-        nebula
+        blocky
         curlie
         delta
         difftastic
+        dnscontrol
+        duckdb
         lazygit
         lego
+        minio-client
+        nebula
+        rclone
         syncthing
         tig
         zola
+
       ];
     };
   };
