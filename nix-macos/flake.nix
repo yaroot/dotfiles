@@ -43,6 +43,7 @@
         difftastic
         dnscontrol
         duckdb
+        k9s
         lazygit
         lego
         minio-client
