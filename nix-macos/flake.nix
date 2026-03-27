@@ -27,6 +27,8 @@
         silver-searcher
         tmux
         zstd
+        yazi
+        lazygit
 
         devenv
 
