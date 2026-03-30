@@ -29,6 +29,7 @@
         zstd
         yazi
         lazygit
+        mergiraf
 
         devenv
 
