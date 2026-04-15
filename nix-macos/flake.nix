@@ -43,9 +43,13 @@
         blocky
         curlie
         delta
+        fd
         difftastic
         dnscontrol
         duckdb
+        dust
+        eza
+        fd
         k9s
         lazygit
         lego
@@ -55,6 +59,8 @@
         syncthing
         tig
         zola
+        #lsd
+        #lla
 
       ];
     };

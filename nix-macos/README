@@ -5,12 +5,13 @@ https://github.com/DeterminateSystems/nix-installer
 # Packages
 
     # initial install
-    nix profile install .
+    nix profile add --no-write-lock-file .
 
     # list
     nix profile list
 
     # upgrade
-    nix flake update --allow-dirty
+    nix profile upgrade --all --no-write-lock-file
+
 
 
