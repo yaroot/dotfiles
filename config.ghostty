@@ -1,5 +1,9 @@
+# should be in '/Users/<user>/Library/Application Support/com.mitchellh.ghostty/config'
+
 theme = "nord wave"
 font-family = "mononoki Regular"
 font-size = 18
-font-feature = "-dlig"
-
+font-feature = "-calt"
+# -liga -dlig"
+keybind = super+arrow_left=previous_tab
+keybind = super+arrow_right=next_tab
