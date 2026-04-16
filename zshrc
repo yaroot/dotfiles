@@ -531,5 +531,10 @@ function checkip() {
   curl -s -6 https://httpbingo.org/ip | jq -r '.origin'
 }
 
+function aur_clone() {
+  echo "==> Cloning https://aur.archlinux.org/$1.git"
+  git clone "https://aur.archlinux.org/$1.git"
+}
+
 #}}}
 
