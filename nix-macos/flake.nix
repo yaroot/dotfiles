@@ -28,7 +28,6 @@
         tmux
         zstd
         yazi
-        lazygit
         mergiraf
 
         devenv
@@ -43,13 +42,15 @@
         blocky
         curlie
         delta
-        fd
         difftastic
         dnscontrol
         duckdb
         dust
         eza
         fd
+        fd
+        gitui
+        jujutsu
         k9s
         lazygit
         lego
