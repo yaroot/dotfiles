@@ -24,7 +24,7 @@
         htop
         jq
         ripgrep
-        silver-searcher
+        silver-searcher-ng
         tmux
         zstd
         yazi
@@ -36,8 +36,8 @@
         knot-dns
 
         postgresql
-        prometheus
-        prometheus.cli
+        # prometheus
+        # prometheus.cli
 
         blocky
         curlie
@@ -62,7 +62,6 @@
         zola
         #lsd
         #lla
-
       ];
     };
   };
