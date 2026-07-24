@@ -23,12 +23,13 @@
         git
         htop
         jq
+        mergiraf
+        pv
         ripgrep
         silver-searcher-ng
         tmux
-        zstd
         yazi
-        mergiraf
+        zstd
 
         devenv
 
@@ -43,7 +44,6 @@
         curlie
         delta
         difftastic
-        dnscontrol
         duckdb
         dust
         eza
@@ -56,12 +56,14 @@
         lego
         minio-client
         nebula
+        rbw
         rclone
         syncthing
         tig
         zola
         #lsd
         #lla
+        #dnscontrol
       ];
     };
   };
