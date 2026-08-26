@@ -32,6 +32,7 @@
         zstd
 
         devenv
+        devbox
 
         ldns
         knot-dns
