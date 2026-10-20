@@ -55,7 +55,6 @@
         k9s
         lazygit
         lego
-        minio-client
         nebula
         rbw
         rclone
@@ -65,6 +64,7 @@
         #lsd
         #lla
         #dnscontrol
+        #minio-client
       ];
     };
   };
